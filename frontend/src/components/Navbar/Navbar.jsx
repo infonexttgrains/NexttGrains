@@ -72,13 +72,19 @@ useEffect(()=>{
   <Link to="/categories">
     Categories
   </Link>
-
+{/* 
   <Link to="/offers">
     Offers
-  </Link>
+  </Link> */}
 
   <Link to="/our-story">
     Our Story
+  </Link>
+      <Link to="/journal">
+    Journal
+  </Link>
+      <Link to="/contact-us">
+    Contact Us
   </Link>
         </nav>
 

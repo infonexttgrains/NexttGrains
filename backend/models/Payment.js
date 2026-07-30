@@ -63,7 +63,10 @@ const paymentSchema = new mongoose.Schema(
       type: String,
       default: "Razorpay",
     },
-
+sourceApp:{
+type:String,
+default:"NexttGrains"
+},
     paidAt: {
       type: Date,
     },

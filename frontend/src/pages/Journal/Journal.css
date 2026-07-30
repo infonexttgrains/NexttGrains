@@ -1,0 +1,445 @@
+/* ===========================
+   GOOGLE FONT
+=========================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap");
+
+/* ===========================
+   ROOT
+=========================== */
+
+.journal-page-container{
+    width:100%;
+    background:#FAF6EE;
+    padding:70px 7%;
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.journal-page-hero{
+    text-align:center;
+    max-width:850px;
+    margin:0 auto 70px;
+}
+
+.journal-page-label{
+    font-size:13px;
+    letter-spacing:5px;
+    color:#B77C2F;
+    font-weight:600;
+    margin-bottom:18px;
+}
+
+.journal-page-heading{
+    font-family:"Cormorant Garamond",serif;
+    font-size:68px;
+    line-height:1.08;
+    color:#15361D;
+    font-weight:700;
+    margin-bottom:22px;
+}
+
+.journal-page-subheading{
+    font-size:17px;
+    line-height:1.9;
+    color:#666;
+    max-width:650px;
+    margin:auto;
+}
+
+/* ===========================
+   SEARCH
+=========================== */
+
+.journal-page-search-section{
+    display:flex;
+    justify-content:center;
+    margin-bottom:45px;
+}
+
+.journal-page-search-box{
+    width:100%;
+    max-width:650px;
+    background:#fff;
+    display:flex;
+    align-items:center;
+    gap:15px;
+    padding:18px 24px;
+    border-radius:50px;
+    box-shadow:0 10px 35px rgba(0,0,0,.07);
+}
+
+.journal-page-search-icon{
+    color:#999;
+}
+
+.journal-page-search-input{
+    width:100%;
+    border:none;
+    outline:none;
+    background:none;
+    font-size:15px;
+    color:#333;
+}
+
+/* ===========================
+   CATEGORY
+=========================== */
+
+.journal-page-category-section{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:14px;
+    margin-bottom:65px;
+}
+
+.journal-page-category-btn{
+    border:none;
+    background:white;
+    padding:12px 24px;
+    border-radius:40px;
+    cursor:pointer;
+    font-size:14px;
+    transition:.35s;
+    color:#555;
+    font-weight:500;
+}
+
+.journal-page-category-btn:hover{
+    background:#15361D;
+    color:white;
+}
+
+.journal-page-category-active{
+    background:#15361D;
+    color:white;
+}
+
+/* ===========================
+   FEATURED
+=========================== */
+
+.journal-page-featured-section{
+    margin-bottom:90px;
+}
+
+.journal-page-featured-card{
+    position:relative;
+    overflow:hidden;
+    border-radius:28px;
+    cursor:pointer;
+    background:white;
+    box-shadow:0 20px 50px rgba(0,0,0,.10);
+}
+
+.journal-page-featured-image-wrapper{
+    height:420px;
+    position:relative;
+}
+
+.journal-page-featured-image{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.6s;
+}
+
+.journal-page-featured-card:hover
+.journal-page-featured-image{
+    transform:scale(1.08);
+}
+
+.journal-page-featured-overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(to top,
+    rgba(0,0,0,.80),
+    rgba(0,0,0,.10));
+}
+
+.journal-page-featured-content{
+    position:absolute;
+    left:60px;
+    bottom:60px;
+    color:white;
+    max-width:700px;
+}
+
+.journal-page-featured-meta{
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px;
+    align-items:center;
+    font-size:14px;
+    margin-bottom:18px;
+}
+
+.journal-page-featured-category{
+    background:#B77C2F;
+    padding:8px 16px;
+    border-radius:40px;
+}
+
+.journal-page-featured-title{
+    font-family:"Cormorant Garamond",serif;
+    font-size:56px;
+    line-height:1.15;
+    margin-bottom:18px;
+}
+
+.journal-page-featured-description{
+    line-height:1.9;
+    color:#f2f2f2;
+    margin-bottom:30px;
+    max-width:620px;
+}
+
+.journal-page-featured-button{
+    background:white;
+    color:#15361D;
+    border:none;
+    padding:15px 28px;
+    border-radius:50px;
+    cursor:pointer;
+    font-weight:600;
+    transition:.3s;
+}
+
+.journal-page-featured-button:hover{
+    transform:translateY(-4px);
+}
+
+/* ===========================
+   LATEST
+=========================== */
+
+.journal-page-latest-section{
+    margin-bottom:100px;
+}
+
+.journal-page-section-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:end;
+    margin-bottom:45px;
+}
+
+.journal-page-section-label{
+    color:#B77C2F;
+    letter-spacing:3px;
+    font-size:13px;
+    margin-bottom:8px;
+}
+
+.journal-page-section-title{
+    font-family:"Cormorant Garamond",serif;
+    font-size:48px;
+    color:#15361D;
+}
+
+.journal-page-total-count{
+    color:#666;
+}
+
+.journal-page-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:35px;
+}
+
+/* ===========================
+   SKELETON
+=========================== */
+
+.journal-page-skeleton-card{
+    background:white;
+    border-radius:20px;
+    padding:18px;
+}
+
+.journal-page-skeleton-image{
+    width:100%;
+    height:240px;
+    border-radius:18px;
+    background:#ececec;
+    margin-bottom:18px;
+}
+
+.journal-page-skeleton-line{
+    height:12px;
+    background:#ececec;
+    border-radius:20px;
+    margin-bottom:14px;
+}
+
+.journal-page-skeleton-line-small{
+    width:35%;
+}
+
+.journal-page-skeleton-line-last{
+    width:70%;
+}
+
+/* ===========================
+   EMPTY
+=========================== */
+
+.journal-page-empty-state{
+    background:white;
+    border-radius:20px;
+    padding:80px;
+    text-align:center;
+}
+
+.journal-page-empty-state h3{
+    font-size:30px;
+    color:#15361D;
+    margin-bottom:15px;
+}
+
+.journal-page-empty-state p{
+    color:#666;
+}
+
+/* ===========================
+   NEWSLETTER
+=========================== */
+
+.journal-page-newsletter-card{
+    background:#15361D;
+    border-radius:30px;
+    padding:70px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:50px;
+}
+
+.journal-page-newsletter-label{
+    color:#D9B16E;
+    letter-spacing:3px;
+    margin-bottom:12px;
+}
+
+.journal-page-newsletter-title{
+    color:white;
+    font-family:"Cormorant Garamond",serif;
+    font-size:56px;
+    margin-bottom:20px;
+}
+
+.journal-page-newsletter-description{
+    color:#ddd;
+    line-height:1.8;
+    max-width:520px;
+}
+
+.journal-page-newsletter-form{
+    display:flex;
+    gap:16px;
+    flex-wrap:wrap;
+}
+
+.journal-page-newsletter-input{
+    width:340px;
+    border:none;
+    outline:none;
+    border-radius:50px;
+    padding:18px 24px;
+    font-size:15px;
+}
+
+.journal-page-newsletter-button{
+    border:none;
+    background:#B77C2F;
+    color:white;
+    border-radius:50px;
+    padding:18px 34px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.journal-page-newsletter-button:hover{
+    background:#996520;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:992px){
+
+.journal-page-heading{
+    font-size:52px;
+}
+
+.journal-page-featured-title{
+    font-size:42px;
+}
+
+.journal-page-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.journal-page-newsletter-card{
+    flex-direction:column;
+    text-align:center;
+}
+
+}
+
+@media(max-width:768px){
+
+.journal-page-container{
+    padding:50px 20px;
+}
+
+.journal-page-heading{
+    font-size:40px;
+}
+
+.journal-page-featured-image-wrapper{
+    height:420px;
+}
+
+.journal-page-featured-content{
+    left:25px;
+    right:25px;
+    bottom:25px;
+}
+
+.journal-page-featured-title{
+    font-size:32px;
+}
+
+.journal-page-section-header{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:10px;
+}
+
+.journal-page-grid{
+    grid-template-columns:1fr;
+}
+
+.journal-page-newsletter-title{
+    font-size:38px;
+}
+
+.journal-page-newsletter-input{
+    width:100%;
+}
+
+.journal-page-newsletter-form{
+    width:100%;
+    flex-direction:column;
+}
+
+.journal-page-newsletter-button{
+    width:100%;
+}
+
+}

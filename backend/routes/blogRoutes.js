@@ -7,7 +7,7 @@ import {
     getBlogs,
 
     getBlogById,
-
+    getBlogBySlug,
     updateBlog,
 
     deleteBlog,
@@ -68,6 +68,10 @@ router.get(
 
 );
 
+// slug
+router.get("/slug/:slug", getBlogBySlug);
+
+
 // Get Blog By Id
 
 router.get(
@@ -81,6 +85,7 @@ router.get(
     getBlogById
 
 );
+
 
 // Update Blog
 router.put(

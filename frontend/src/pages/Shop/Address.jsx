@@ -449,35 +449,17 @@ const handleContinue = async () => {
     }
 
     // Cart Context se ye values aayengi
-
-const subtotal =
-cart.cart.items.reduce(
-
-(sum,item)=>
-
-sum + item.product.price * item.quantity,
-
-0
-
+const subtotal = cart.cart.items.reduce(
+    (sum, item) =>
+        sum + item.product.price * item.quantity,
+    0
 );
+const financeRes = await axios.get(
+    `http://localhost:5000/api/finance/calculate?subtotal=${subtotal}`
+);
+const charges = financeRes.data.charges;
 
-const deliveryCharge =
-subtotal>499 ? 0 : 40;
-
-const platformFee=20;
-
-const handlingCharge=10;
-
-const grandTotal=
-
-subtotal+
-
-deliveryCharge+
-
-platformFee+
-
-handlingCharge;
-
+// 
 const paymentData={
 
 addressId:selectedAddress._id,
@@ -508,15 +490,19 @@ items: cart.cart.items.map((item)=>{
 
 subtotal,
 
-deliveryCharge,
+deliveryCharge: charges.deliveryCharge,
 
-platformFee,
+platformFee: charges.platformFee,
 
-handlingCharge,
+handlingCharge: charges.handlingFee,
+
+packingCharge: charges.packagingFee,
+
+tax: charges.gstAmount,
 
 discount:0,
 
-grandTotal
+grandTotal: charges.grandTotal,
 
 };
     const data=await createPaymentOrder(paymentData);
@@ -528,7 +514,7 @@ const openRazorpay=(data)=>{
 
 const options={
 
-key:"rzp_test_T99Efd6smK9xBC",
+key:"rzp_live_Scs4EC8ZA09rTk",
 
 amount:data.razorpayOrder.amount,
 

@@ -715,6 +715,56 @@ export const getBlogById = async (req, res) => {
 
 };
 
+// get blog by slug
+export const getBlogBySlug = async (req, res) => {
+
+    try {
+
+        const { slug } = req.params;
+ console.log("URL SLUG =>", slug);
+
+        const allBlogs = await Blog.find();
+
+        console.log(
+            allBlogs.map(b => ({
+                title: b.title,
+                slug: b.slug
+            }))
+        );
+
+        const blog = await Blog.findOne({
+            slug: slug
+        });
+ console.log("FOUND BLOG =>", blog);
+
+        if (!blog) {
+
+            return res.status(404).json({
+                success: false,
+                message: "Blog not found"
+            });
+
+        }
+
+        return res.status(200).json({
+            success: true,
+            blog
+        });
+
+    }
+
+    catch (error) {
+
+        console.log(error);
+
+        return res.status(500).json({
+            success: false,
+            message: error.message
+        });
+
+    }
+
+};
 /* ==========================================================
    UPDATE BLOG
 ========================================================== */

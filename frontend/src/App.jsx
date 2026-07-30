@@ -10,6 +10,8 @@ import OurStoryPage from "./pages/OurStory/OurStoryPage";
 import OffersPage from "./pages/Offers/OfferPage";
 import Cart from "./pages/Shop/Cart";
 import Address from "./pages/Shop/Address";
+import Journal from "./pages/Journal/Journal";
+import BlogDetails from "./pages/Journal/BlogDetails";
 
 //Account
 import Account from "./pages/Account/Account";
@@ -99,7 +101,25 @@ element={<ProductDetails/>}
             </>
           }
         />
+<Route
+  path="/journal"
+  element={
+    <>
+      <Navbar />
+      <Journal />
+    </>
+  }
+/>
 
+<Route
+  path="/journal/:slug"
+  element={
+    <>
+      <Navbar />
+      <BlogDetails />
+    </>
+  }
+/>
         <Route
           path="/offers"
           element={

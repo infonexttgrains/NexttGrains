@@ -3,7 +3,7 @@ import crypto from "crypto";
 import Order from "../models/Order.js";
 import Payment from "../models/Payment.js";
 import Address from "../models/Address.js";
-
+import Finance from "../models/Finance.js";
 
 
 // =========================
@@ -14,26 +14,188 @@ export const createPaymentOrder = async (req, res) => {
 
     try {
 
-        const {
+        // const {
 
-            addressId,
+        //     addressId,
 
-            items,
+        //     items,
 
-            subtotal,
+        //     subtotal,
 
-            deliveryCharge,
+        //     deliveryCharge,
 
-            platformFee,
+        //     platformFee,
 
-            handlingCharge,
+        //     handlingCharge,
 
-            discount,
+        //     discount,
 
-            grandTotal,
+        //     grandTotal,
 
-        } = req.body;
+        // } = req.body;
+const {
 
+addressId,
+
+items,
+
+discount
+
+}=req.body;
+const subtotal = items.reduce(
+    (sum, item) =>
+        sum + (item.price * item.quantity),
+    0
+);
+
+const finance = await Finance.findOne();
+
+if (!finance) {
+    return res.status(404).json({
+        success: false,
+        message: "Finance settings not found"
+    });
+}
+
+// DELIVERY
+
+let deliveryCharge = 0;
+
+const deliveryRule = finance.deliveryRules.find(rule =>
+    subtotal >= rule.minAmount &&
+    subtotal <= rule.maxAmount
+);
+
+if (deliveryRule) {
+    deliveryCharge = deliveryRule.deliveryCharge;
+}
+
+
+// PLATFORM
+
+let platformFee = 0;
+
+if (finance.platformFee.enabled) {
+
+    if (finance.platformFee.feeType === "Flat") {
+
+        platformFee = finance.platformFee.amount;
+
+    } else {
+
+        platformFee =
+            subtotal *
+            finance.platformFee.amount /
+            100;
+    }
+
+    if (
+        platformFee >
+        finance.platformFee.maximumFee
+    ) {
+        platformFee =
+            finance.platformFee.maximumFee;
+    }
+}
+
+
+// HANDLING
+
+let handlingCharge = 0;
+
+if (finance.handlingFee.enabled) {
+
+    if (finance.handlingFee.feeType === "Flat") {
+
+        handlingCharge =
+            finance.handlingFee.amount;
+
+    } else {
+
+        handlingCharge =
+            subtotal *
+            finance.handlingFee.amount /
+            100;
+    }
+
+}
+
+
+// PACKAGING
+
+const packingCharge =
+finance.packagingFee.enabled
+? finance.packagingFee.amount
+: 0;
+
+
+// RAIN
+
+const rainFee =
+finance.rainFee.enabled
+? finance.rainFee.amount
+: 0;
+
+
+// SURGE
+
+const surgeFee =
+finance.surgeFee.enabled
+? finance.surgeFee.amount
+: 0;
+
+
+// GST
+
+const taxableAmount =
+
+subtotal +
+
+deliveryCharge +
+
+platformFee +
+
+handlingCharge +
+
+packingCharge +
+
+rainFee +
+
+surgeFee;
+
+const gstAmount =
+finance.gst.enabled
+?
+Number(
+(
+taxableAmount *
+finance.gst.percentage /
+100
+).toFixed(2)
+)
+:
+0;
+
+const grandTotal =
+Number(
+(
+taxableAmount +
+gstAmount
+).toFixed(2)
+);
+
+// 
+console.log("========== PAYMENT CALCULATION ==========");
+console.log("Subtotal:", subtotal);
+console.log("Delivery:", deliveryCharge);
+console.log("Platform:", platformFee);
+console.log("Handling:", handlingCharge);
+console.log("Packing:", packingCharge);
+console.log("GST:", gstAmount);
+console.log("Grand Total:", grandTotal);
+console.log("=========================================");
+
+// 
         const user = req.user.id;
 
 
@@ -93,29 +255,52 @@ const order = await Order.create({
         0
     ),
 
-    subtotal,
+    
+subtotal,
 
-    deliveryCharge,
+deliveryCharge,
 
-    discount,
+platformFee,
 
-    grandTotal,
+handlingCharge,
+
+packingCharge,
+
+tax:gstAmount,
+
+discount,
+
+grandTotal,
 
 });
 
 
 
         // Razorpay Order
+console.log("Creating Razorpay Order...");
+       const razorpayOrder = await razorpay.orders.create({
 
-        const razorpayOrder = await razorpay.orders.create({
+    amount: grandTotal * 100,
 
-            amount: grandTotal * 100,
+    currency: "INR",
 
-            currency: "INR",
+    receipt: order.orderNumber,
 
-            receipt: order._id.toString(),
+    notes: {
 
-        });
+        website: "NexttGrains",
+
+        source: "NexttGrains",
+
+        orderNumber: order.orderNumber,
+
+        mongoOrderId: order._id.toString(),
+
+        customerId: user,
+
+    },
+
+});
 
 
 
@@ -140,6 +325,7 @@ const order = await Order.create({
             amount: grandTotal,
 
             paymentStatus: "Pending",
+             sourceApp:"NexttGrains"
 
         });
 
@@ -223,7 +409,7 @@ export const verifyPayment = async (req, res) => {
         const order = await Order.findById(payment.order);
 
         order.paymentStatus = "Paid";
-        order.paymentMethod = "Razorpay";
+        order.paymentMethod = "UPI";
         order.razorpayPaymentId = razorpay_payment_id;
         order.razorpaySignature = razorpay_signature;
 

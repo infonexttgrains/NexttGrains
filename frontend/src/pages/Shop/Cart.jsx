@@ -1,6 +1,7 @@
 import "./Cart.css";
 import { useCart } from "../../context/CartContext";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 import {
   IoClose,
@@ -30,6 +31,14 @@ function Cart({ open, onClose, onCheckout, }) {
     decreaseQty,
     removeFromCart,
   } = useCart();
+  const [charges, setCharges] = useState({
+    deliveryCharge: 0,
+    handlingFee: 0,
+    platformFee: 0,
+    packagingFee: 0,
+    gstAmount: 0,
+    grandTotal: 0
+});
 
   useEffect(() => {
     if (open) {
@@ -37,15 +46,63 @@ function Cart({ open, onClose, onCheckout, }) {
     }
   }, [open]);
 
+  useEffect(() => {
+
+    const loadCharges = async () => {
+
+        if (!cart?.cart) return;
+
+        const subtotal = cart.cart.items.reduce(
+
+            (sum, item) =>
+
+                sum + item.product.price * item.quantity,
+
+            0
+
+        );
+
+        try {
+
+            const res = await axios.get(
+
+                `http://localhost:5000/api/finance/calculate?subtotal=${subtotal}`
+
+            );
+
+            setCharges(res.data.charges);
+
+        }
+
+        catch (err) {
+
+            console.log(err);
+
+        }
+
+    };
+
+    if (open) {
+
+        loadCharges();
+
+    }
+
+}, [cart, open]);
+
   if (!open) return null;
-  const handlingCharge = cart?.handlingCharge || 0; 
-  const platformFee = cart?.platformFee || 0;
-  const subtotal = cart?.subtotal || 0;
-  const delivery = cart?.delivery || 0;
-  const savings = cart?.savings || 0;
-
-const totalPay= subtotal+ delivery+ handlingCharge+ platformFee;
-
+const subtotal = cart?.cart
+    ? cart.cart.items.reduce(
+        (sum, item) =>
+            sum + item.product.price * item.quantity,
+        0
+    )
+    : 0;
+const savings = cart?.savings || 0;
+const delivery = charges.deliveryCharge || 0;
+const handlingCharge = charges.handlingFee || 0;
+const platformFee = charges.platformFee || 0;
+const totalPay = charges.grandTotal || 0;
   const freeLeft = Math.max(
     0,
     cart.freeDeliveryLimit || 499 - subtotal
@@ -411,7 +468,39 @@ Items
 
               </strong>
 
+
             </div>
+            <div className="ngCartBillRow">
+
+    <div className="ngCartBillLeft">
+
+        <span>Packaging Fee</span>
+
+    </div>
+
+    <strong>
+
+        ₹{charges.packagingFee}
+
+    </strong>
+
+</div>
+
+<div className="ngCartBillRow">
+
+    <div className="ngCartBillLeft">
+
+        <span>GST</span>
+
+    </div>
+
+    <strong>
+
+        ₹{charges.gstAmount}
+
+    </strong>
+
+</div>
 
             <div className="ngCartBillDivider"/>
 
