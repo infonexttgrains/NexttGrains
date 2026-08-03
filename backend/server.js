@@ -15,6 +15,7 @@ import wishlistRoutes from "./routes/wishlistRoutes.js";
 import couponRoutes from "./routes/couponRoutes.js";
 import blogRoutes from "./routes/blogRoutes.js"
 import financeRoutes from "./routes/financeRoutes.js";
+import contactRoutes from "./routes/contactRoutes.js";
 import reportRoutes from "./routes/reportRoutes.js";
 import profileRoutes from "./routes/ProfileRoutes.js";
 import adminVendorRoutes from "./routes/AdminVendorRoutes.js";
@@ -38,6 +39,7 @@ app.use("/api/wishlist", wishlistRoutes);
 app.use("/api/coupons", couponRoutes);
 app.use("/api/blogs", blogRoutes);
 app.use("/api/finance", financeRoutes);
+app.use("/api/contact", contactRoutes);
 app.use("/api/reports",reportRoutes);
 app.use("/api/vendor/profile", profileRoutes);
 app.use( "/api/admin/vendors", adminVendorRoutes);

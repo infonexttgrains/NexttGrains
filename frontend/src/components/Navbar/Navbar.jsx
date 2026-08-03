@@ -83,7 +83,7 @@ useEffect(()=>{
       <Link to="/journal">
     Journal
   </Link>
-      <Link to="/contact-us">
+      <Link to="/contact">
     Contact Us
   </Link>
         </nav>

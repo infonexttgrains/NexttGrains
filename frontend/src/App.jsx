@@ -12,6 +12,7 @@ import Cart from "./pages/Shop/Cart";
 import Address from "./pages/Shop/Address";
 import Journal from "./pages/Journal/Journal";
 import BlogDetails from "./pages/Journal/BlogDetails";
+import Contact from "./pages/Contact/Contact";
 
 //Account
 import Account from "./pages/Account/Account";
@@ -120,6 +121,7 @@ element={<ProductDetails/>}
     </>
   }
 />
+
         <Route
           path="/offers"
           element={
@@ -129,6 +131,15 @@ element={<ProductDetails/>}
             </>
           }
         />
+<Route
+  path="/contact"
+  element={
+    <>
+      <Navbar />
+      <Contact />
+    </>
+  }
+/>
 
 <Route
     path="/payment/:status"
