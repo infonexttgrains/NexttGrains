@@ -131,6 +131,45 @@ deliveryTime:{
 type:String,
 default: "5-7 Business Days",
 },
+
+
+/* ==========================================
+   SHIPPING DETAILS
+========================================== */
+
+weight:{
+
+type:Number,
+
+default:0.5
+
+},
+
+length:{
+
+type:Number,
+
+default:20
+
+},
+
+breadth:{
+
+type:Number,
+
+default:15
+
+},
+
+height:{
+
+type:Number,
+
+default:10
+
+},
+
+
 averageRating:{
 type:Number,
 default:4.5

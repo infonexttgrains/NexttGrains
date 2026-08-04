@@ -225,6 +225,85 @@ trackingUrl: {
     trim: true,
     default: ""
 },
+
+/* ==========================================
+   NIMBUS SHIPPING
+========================================== */
+
+shipmentCreated:{
+    type:Boolean,
+    default:false
+},
+
+shipmentId:{
+    type:String,
+    default:""
+},
+
+awbNumber:{
+    type:String,
+    default:""
+},
+
+courierId:{
+    type:String,
+    default:""
+},
+
+courierName:{
+    type:String,
+    default:""
+},
+
+shipmentStatus:{
+    type:String,
+    default:"Not Created"
+},
+
+labelUrl:{
+    type:String,
+    default:""
+},
+
+manifestUrl:{
+    type:String,
+    default:""
+},
+
+shippingCharge:{
+    type:Number,
+    default:0
+},
+
+pickupDate:{
+    type:Date,
+    default:null
+},
+
+trackingEvents:[
+{
+    status:{
+        type:String,
+        default:""
+    },
+
+    location:{
+        type:String,
+        default:""
+    },
+
+    activity:{
+        type:String,
+        default:""
+    },
+
+    date:{
+        type:Date,
+        default:null
+    }
+}
+],
+
     deliveredAt: {
       type: Date,
       default: null,
@@ -339,6 +418,8 @@ lastUpdatedBy: {
     }
 }
 );
+
+
 
 orderSchema.virtual("totalCharges").get(function () {
 

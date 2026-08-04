@@ -4,6 +4,8 @@ import Order from "../models/Order.js";
 import Payment from "../models/Payment.js";
 import Address from "../models/Address.js";
 import Finance from "../models/Finance.js";
+// Nimbus Shipment Service
+import { createNimbusShipment } from "../services/nimbusService.js";
 
 
 // =========================
@@ -414,6 +416,63 @@ export const verifyPayment = async (req, res) => {
         order.razorpaySignature = razorpay_signature;
 
         await order.save();
+        
+/* ==========================================================
+   CREATE NIMBUS SHIPMENT
+========================================================== */
+/* ==========================================================
+   CREATE NIMBUS SHIPMENT
+========================================================== */
+
+try {
+
+    const populatedOrder = await Order.findById(order._id)
+
+        .populate("address")
+
+        .populate("user")
+
+        .populate("items.product");
+
+    const shipment = await createNimbusShipment(
+        populatedOrder
+    );
+
+    console.log(
+        "Nimbus Shipment Created",
+        shipment
+    );
+
+    /* -----------------------------
+       Save Tracking Details
+    ----------------------------- */
+
+    order.deliveryPartner = "NimbusPost";
+
+    order.trackingId =
+        shipment.awb_number ||
+        shipment.awb ||
+        "";
+
+    order.trackingUrl =
+        shipment.tracking_url ||
+        "";
+
+    order.orderStatus = "Confirmed";
+
+    await order.save();
+
+}
+
+catch(error){
+
+    console.log(
+        "Nimbus Shipment Error"
+    );
+
+    console.log(error.message);
+
+}
 
         return res.json({
             success: true,
