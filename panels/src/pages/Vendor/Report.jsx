@@ -5,7 +5,7 @@ useMemo
 } from "react";
 
 import "./Report.css";
-
+import { BACKEND_URL } from "../config/api";
 import axios from "axios";
 
 import {
@@ -82,7 +82,7 @@ setLoading(true);
 
 const res=await axios.get(
 
-"http://localhost:5000/api/reports/vendor/dashboard",
+`${BACKEND_URL}/api/reports/vendor/dashboard`,
 
 {
 

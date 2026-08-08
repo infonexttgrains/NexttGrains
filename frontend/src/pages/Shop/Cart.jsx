@@ -1,6 +1,7 @@
 import "./Cart.css";
 import { useCart } from "../../context/CartContext";
 import { useEffect, useState } from "react";
+import { BACKEND_URL } from "../config/api";
 import axios from "axios";
 
 import {
@@ -66,7 +67,7 @@ function Cart({ open, onClose, onCheckout, }) {
 
             const res = await axios.get(
 
-                `http://localhost:5000/api/finance/calculate?subtotal=${subtotal}`
+                `${BACKEND_URL}/api/finance/calculate?subtotal=${subtotal}`
 
             );
 

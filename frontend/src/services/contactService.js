@@ -1,3 +1,4 @@
+import { BACKEND_URL } from "../config/api";
 import axios from "axios";
 
 const BASE_URL =

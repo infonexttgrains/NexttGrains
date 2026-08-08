@@ -1,6 +1,7 @@
 import "./CouponManagement.css";
 
 import { useEffect, useState } from "react";
+import { BACKEND_URL } from "../config/api";
 import axios from "axios";
 
 import {
@@ -16,7 +17,7 @@ import {
 
 import CouponAdd from "./CouponAdd";
 
-const API = "http://localhost:5000/api/coupons";
+const API = `${BACKEND_URL}/api/coupons`;
 
 function CouponManagement() {
   /* =====================================================

@@ -2,6 +2,7 @@ import "./BestSellers.css";
 import { Heart, Star, Zap, Plus, ChevronRight } from "lucide-react";
 import { useEffect,useState } from "react";
 import { Link,useNavigate } from "react-router-dom";
+import { BACKEND_URL } from "../config/api";
 import axios from "axios";
 import { useWishlist } from "../../context/WishlistContext";
 import { useCart } from "../../context/CartContext";
@@ -37,12 +38,7 @@ const getProducts=async()=>{
 
 try{
 
-const res=await axios.get(
-
-"http://localhost:5000/api/products/best-sellers"
-
-);
-
+const res=await axios.get(`${BACKEND_URL}/api/products/best-sellers`);
 setProducts(
 
 res.data.products

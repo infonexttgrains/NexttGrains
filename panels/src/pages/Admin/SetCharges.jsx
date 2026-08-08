@@ -1,6 +1,7 @@
 import "./SetCharges.css";
 
 import { useEffect, useState } from "react";
+import { BACKEND_URL } from "../config/api";
 import axios from "axios";
 
 import {
@@ -37,7 +38,7 @@ FaTrash
 
 } from "react-icons/fa";
 
-const API="http://localhost:5000/api/finance";
+const API=`${BACKEND_URL}/api/finance`;
 
 function SetCharges({
 

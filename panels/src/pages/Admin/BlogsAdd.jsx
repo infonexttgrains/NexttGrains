@@ -1,6 +1,6 @@
 import "./BlogsAdd.css";
-
 import { useEffect, useState } from "react";
+import { BACKEND_URL } from "../config/api";
 import axios from "axios";
 
 import {
@@ -29,7 +29,7 @@ FaCheckCircle
 
 } from "react-icons/fa";
 
-const API="http://localhost:5000/api/blogs";
+const API=`${BACKEND_URL}/api/blogs`;
 
 function BlogsAdd({
 

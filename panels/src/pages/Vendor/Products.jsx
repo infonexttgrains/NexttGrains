@@ -1,5 +1,6 @@
 import "./Products.css";
 import React, { useEffect, useState } from "react";
+import { BACKEND_URL } from "../config/api";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import {
@@ -51,7 +52,7 @@ const vendor = vendorData
     try {
 console.log(vendor);
         const res = await axios.get(
-            `http://localhost:5000/api/products/vendor/${vendor._id}`
+            `${BACKEND_URL}/api/products/vendor/${vendor._id}`
         );
 console.log(res.data);
 
@@ -73,7 +74,7 @@ try{
 
 await axios.patch(
 
-`http://localhost:5000/api/products/status/${id}`,
+`${BACKEND_URL}/api/products/status/${id}`,
 
 {
 
@@ -103,7 +104,7 @@ console.log(err);
 
         await axios.delete(
 
-            `http://localhost:5000/api/products/delete/${id}`
+            `${BACKEND_URL}/api/products/delete/${id}`
 
         );
 

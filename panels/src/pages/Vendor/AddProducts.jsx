@@ -1,5 +1,6 @@
 import "./AddProducts.css";
 import React,{useState, useEffect} from "react";
+import { BACKEND_URL } from "../config/api";
 import axios from "axios";
 import {useNavigate,useParams} from "react-router-dom";
 import {toast} from "react-toastify";
@@ -62,7 +63,7 @@ try{
 
 const res=await axios.get(
 
-`http://localhost:5000/api/products/${id}`
+`${BACKEND_URL}/api/products/${id}`
 
 );
 
@@ -339,7 +340,7 @@ data.append("images",img);
 
 if(isEdit){
 await axios.put(
-`http://localhost:5000/api/products/update/${id}`,
+`${BACKEND_URL}/api/products/update/${id}`,
 data,
 {
 headers:{
@@ -352,7 +353,7 @@ toast.success("Product Updated");
 }
 else{
 await axios.post(
-    "http://localhost:5000/api/products/add",
+    `${BACKEND_URL}/api/products/add`,
     data,
     {
         headers:{

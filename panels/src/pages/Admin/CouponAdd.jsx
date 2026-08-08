@@ -1,6 +1,7 @@
 import "./CouponAdd.css";
 
 import { useEffect, useState } from "react";
+import { BACKEND_URL } from "../config/api";
 import axios from "axios";
 
 import {
@@ -12,7 +13,7 @@ import {
   FaSave,
 } from "react-icons/fa";
 
-const API = "http://localhost:5000/api/coupons";
+const API = `${BACKEND_URL}/api/coupons`;
 
 function CouponAdd({
   coupon,

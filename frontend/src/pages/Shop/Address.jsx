@@ -1,4 +1,5 @@
 import "./Address.css";
+import { BACKEND_URL } from "../config/api";
 import axios from "axios";
 import { createPaymentOrder, verifyPayment } from "../../services/paymentApi";
 import { useCart } from "../../context/CartContext";
@@ -455,7 +456,7 @@ const subtotal = cart.cart.items.reduce(
     0
 );
 const financeRes = await axios.get(
-    `http://localhost:5000/api/finance/calculate?subtotal=${subtotal}`
+    `${BACKEND_URL}/api/finance/calculate?subtotal=${subtotal}`
 );
 const charges = financeRes.data.charges;
 

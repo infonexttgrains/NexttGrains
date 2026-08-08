@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Auth.css";
+import { BACKEND_URL } from "../config/api";
 import axios from "axios";
 import { Link,useNavigate } from "react-router-dom";
 import { FiMail, FiEye, FiEyeOff } from "react-icons/fi";
@@ -99,7 +100,7 @@ const res=
 
 await axios.post(
 
-"http://localhost:5000/api/auth/register",
+`${BACKEND_URL}/api/auth/register`,
 
 form
 

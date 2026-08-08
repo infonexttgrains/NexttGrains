@@ -3,6 +3,7 @@ import "./VendorSignup.css";
 import React,{useState} from "react";
 import {Link,useNavigate} from "react-router-dom";
 import {Store,Eye,EyeOff} from "lucide-react";
+import { BACKEND_URL } from "../config/api";
 import axios from "axios";
 import {toast} from "react-toastify";
 
@@ -104,7 +105,7 @@ setLoading(true);
 
 const res=await axios.post(
 
-"http://localhost:5000/api/auth/vendor-register",
+`${BACKEND_URL}/api/auth/vendor-register`,
 
 form
 

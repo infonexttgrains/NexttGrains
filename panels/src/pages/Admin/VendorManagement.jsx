@@ -1,5 +1,6 @@
 import "./VendorManagement.css";
 import { useEffect, useState } from "react";
+import { BACKEND_URL } from "../config/api";
 import axios from "axios";
 import VendorDetailsModal from "../../components/Admin/VendorDetailsModal";
 import {
@@ -28,7 +29,7 @@ const token = localStorage.getItem("adminToken");
 console.log("Admin Token :", token);
 const api = axios.create({
 
-baseURL: "http://localhost:5000/api",
+baseURL: `${BACKEND_URL}/api`,
 
 headers:{
 
@@ -223,7 +224,7 @@ const downloadFile = async (url, fileName) => {
 
     const response = await axios.get(
 
-      `http://localhost:5000/api${url}`,
+      `${BACKEND_URL}/api${url}`,
 
       {
 

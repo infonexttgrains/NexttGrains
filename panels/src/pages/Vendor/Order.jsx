@@ -1,6 +1,7 @@
 import "./Order.css";
 
 import { useEffect, useMemo, useState } from "react";
+import { BACKEND_URL } from "../config/api";
 import axios from "axios";
 
 import {
@@ -24,7 +25,7 @@ Info,
    API
 ========================================================== */
 
-const API = "http://localhost:5000/api/orders";
+const API = `${BACKEND_URL}/api/orders`;
 
 function Order() {
   /* ==========================================================

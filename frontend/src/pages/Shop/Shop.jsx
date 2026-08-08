@@ -4,6 +4,7 @@ import Cart from "./Cart";
 import { useCart } from "../../context/CartContext";
 import { useEffect,useState } from "react";
 import { Link } from "react-router-dom";
+import { BACKEND_URL } from "../config/api";
 import axios from "axios";
 import {
   Heart,
@@ -32,7 +33,7 @@ const getProducts = async()=>{
 try{
 
 const res = await axios.get(
-"http://localhost:5000/api/products/all"
+`${BACKEND_URL}/api/products/all`
 );
 
 setProducts(res.data.products);

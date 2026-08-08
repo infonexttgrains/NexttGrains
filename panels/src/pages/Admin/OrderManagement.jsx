@@ -1,6 +1,7 @@
 import "./OrderManagement.css";
 import toast from "react-hot-toast";
 import { useEffect, useState } from "react";
+import { BACKEND_URL } from "../config/api";
 import axios from "axios";
 
 import {
@@ -24,7 +25,7 @@ import {
   IoEyeOutline,
 } from "react-icons/io5";
 
-const API = "http://localhost:5000/api/orders";
+const API =`${BACKEND_URL}/api/orders`;
 
 function OrderManagement() {
 

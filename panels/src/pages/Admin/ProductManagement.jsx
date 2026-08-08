@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useMemo } from "react";
+import { BACKEND_URL } from "../config/api";
 import axios from "axios";
 import "./ProductManagement.css";
 import { toast } from "react-toastify";
@@ -28,7 +29,7 @@ import {
   MdInventory2
 } from "react-icons/md";
 
-const API = "http://localhost:5000/api/products/admin";
+const API = `${BACKEND_URL}/api/products/admin`;
 
 const ProductManagement = () => {
 
@@ -412,7 +413,7 @@ const res = await axios.get(`${API}/all`);
       if (!selectedProduct) return;
 
      await axios.delete(
-`http://localhost:5000/api/products/delete/${selectedProduct._id}`,
+`${BACKEND_URL}/api/products/delete/${selectedProduct._id}`,
 {
 headers:{
 Authorization:`Bearer ${token}`
@@ -506,7 +507,7 @@ if (
 const token = localStorage.getItem("adminToken");
 
 await axios.patch(
-`http://localhost:5000/api/products/new-arrival/${product._id}`,
+`${BACKEND_URL}/api/products/new-arrival/${product._id}`,
 {
     newArrival: !product.newArrival
 },
@@ -726,7 +727,7 @@ console.log(err);
 
         const response = await axios.get(
 
-            "http://localhost:5000/api/products/admin/export/pdf",
+            `${BACKEND_URL}/api/products/admin/export/pdf`,
 
             {
                 responseType:"blob"

@@ -1,6 +1,7 @@
 import "./Auth.css";
 
 import React,{useState} from "react";
+import { BACKEND_URL } from "../config/api";
 import axios from "axios";
 import {Link,useNavigate} from "react-router-dom";
 import {FiEye,FiEyeOff} from "react-icons/fi";
@@ -96,7 +97,7 @@ const res=
 
 await axios.post(
 
-"http://localhost:5000/api/auth/login",
+`${BACKEND_URL}/api/auth/login`,
 
 form
 

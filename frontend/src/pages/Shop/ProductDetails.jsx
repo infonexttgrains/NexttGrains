@@ -3,6 +3,7 @@ import "./ProductDetails.css";
 import { useCart } from "../../context/CartContext";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { BACKEND_URL } from "../config/api";
 import axios from "axios";
 import {
   Heart,
@@ -42,7 +43,7 @@ console.log("Fetching Product", id);
     try {
         setLoading(true);
         const res = await axios.get(
-            `http://localhost:5000/api/products/${id}`
+            `${BACKEND_URL}/api/products/${id}`
         );
         console.log(res.data);
         setProduct(res.data.product);
@@ -51,7 +52,7 @@ console.log("Fetching Product", id);
             res.data.product.thumbnail
         );
         const related = await axios.get(
-            `http://localhost:5000/api/products/recommended/${id}`
+            `${BACKEND_URL}/api/products/recommended/${id}`
         );
         setRelatedProducts(related.data.products);
     }

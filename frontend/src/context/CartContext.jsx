@@ -1,4 +1,5 @@
 import { createContext, useContext, useState } from "react";
+import { BACKEND_URL } from "../config/api";
 import axios from "axios";
 import { toast } from "react-toastify";
 
@@ -41,8 +42,7 @@ export const CartProvider = ({ children }) => {
         if (!userId) return;
 
         try {
-const res = await axios.get(
-  `http://localhost:5000/api/cart/${userId}`,
+const res = await axios.get(`${BACKEND_URL}/api/cart/${userId}`,
   {
     headers: {
       Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -98,8 +98,7 @@ const res = await axios.get(
 
         try {
 
-            await axios.post(
-"http://localhost:5000/api/cart/add",
+            await axios.post(`${BACKEND_URL}/api/cart/add`,
 {
   userId,
   productId,
@@ -136,7 +135,7 @@ const res = await axios.get(
 
     const increase = async (productId) => {
 await axios.patch(
-  "http://localhost:5000/api/cart/increase",
+ `${BACKEND_URL}/api/cart/increase`,
   {
     userId,
     productId
@@ -161,7 +160,7 @@ toast.success("Quantity Updated");
 
     const decrease = async (productId) => {
 await axios.patch(
-  "http://localhost:5000/api/cart/decrease",
+  `${BACKEND_URL}/api/cart/decrease`,
   {
     userId,
     productId
@@ -184,7 +183,7 @@ await axios.patch(
     const removeItem = async (productId) => {
 
        await axios.delete(
-    "http://localhost:5000/api/cart/remove",
+    `${BACKEND_URL}/api/cart/remove`,
     {
         headers:{
             Authorization:`Bearer ${localStorage.getItem("token")}`
@@ -207,7 +206,7 @@ await axios.patch(
     const clearCart = async () => {
 
        await axios.delete(
-    "http://localhost:5000/api/cart/clear",
+   `${BACKEND_URL}/api/cart/clear`,
     {
         headers:{
             Authorization:`Bearer ${localStorage.getItem("token")}`

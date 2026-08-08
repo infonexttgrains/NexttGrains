@@ -1,7 +1,7 @@
 import "./Report.css";
 
 import { useEffect,useState } from "react";
-
+import { BACKEND_URL } from "../config/api";
 import axios from "axios";
 
 import {
@@ -53,7 +53,7 @@ import {
 Cell
 } from "recharts";
 
-const API="http://localhost:5000/api/reports";
+const API=`${BACKEND_URL}/api/reports`;
 
 function Report(){
 

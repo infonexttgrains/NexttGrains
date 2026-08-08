@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./AdminLogin.css";
-
+import { BACKEND_URL } from "../config/api";
 import { useNavigate } from "react-router-dom";
 
 import {
@@ -58,7 +58,7 @@ export default function AdminLogin() {
 
       const response = await fetch(
 
-        "http://localhost:5000/api/auth/admin-login",
+        `${BACKEND_URL}/api/auth/admin-login`,
 
         {
 

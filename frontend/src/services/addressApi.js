@@ -1,6 +1,7 @@
+import { BACKEND_URL } from "../config/api";
 import axios from "axios";
 
-const API = "http://localhost:5000";
+const API = `${BACKEND_URL}/api`;
 
 export const getAddresses = async () => {
 

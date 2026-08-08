@@ -3,6 +3,7 @@ import "./VendorLogin.css";
 import { Store } from "lucide-react";
 import { Link,useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { BACKEND_URL } from "../config/api";
 import axios from "axios";
 import { toast } from "react-toastify";
 
@@ -31,7 +32,7 @@ setLoading(true);
 
 const res=await axios.post(
 
-"http://localhost:5000/api/auth/vendor-login",
+`${BACKEND_URL}/api/auth/vendor-login`,
 
 {
 

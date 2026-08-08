@@ -1,6 +1,7 @@
 import "./ProfileManagement.css";
 
 import { useEffect, useRef, useState } from "react";
+import { BACKEND_URL } from "../config/api";
 import axios from "axios";
 
 import {
@@ -21,7 +22,7 @@ import {
   Trash2,
 } from "lucide-react";
 
-const API = "http://localhost:5000/api/vendor/profile";
+const API = `${BACKEND_URL}/api/vendor/profile`;
 
 function ProfileManagement() {
 
