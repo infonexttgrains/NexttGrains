@@ -17,7 +17,7 @@ const authHeader = () => ({
 
 export const getMyOrders = (userId) => {
   return axios.get(
-    `${API}/orders/user/${userId}`,
+    `${API}/api/orders/user/${userId}`,
     authHeader()
   );
 };
@@ -28,7 +28,7 @@ export const getMyOrders = (userId) => {
 
 export const getOrderDetails = (orderId) => {
   return axios.get(
-    `${API}/orders/${orderId}`,
+    `${API}/api/orders/${orderId}`,
     authHeader()
   );
 };
@@ -39,7 +39,7 @@ export const getOrderDetails = (orderId) => {
 
 export const cancelOrder = (orderId, reason) => {
   return axios.put(
-    `${API}/orders/cancel/${orderId}`,
+    `${API}/api/orders/cancel/${orderId}`,
     {
       cancelReason: reason
     },

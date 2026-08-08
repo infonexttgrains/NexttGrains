@@ -23,7 +23,7 @@ export const getDashboard = () => {
 
     return axios.get(
 
-        `${API}/account/dashboard`,
+        `${API}/api/account/dashboard`,
 
         authHeader()
 
@@ -41,7 +41,7 @@ export const updateProfile = (data) => {
 
     return axios.put(
 
-        `${API}/account/profile`,
+        `${API}/api/account/profile`,
 
         data,
 
@@ -61,7 +61,7 @@ export const uploadProfileImage = (data) => {
 
     return axios.put(
 
-        `${API}/account/profile/image`,
+        `${API}/api/account/profile/image`,
 
         data,
 
@@ -81,7 +81,7 @@ export const removeProfileImage = () => {
 
     return axios.delete(
 
-        `${API}/account/profile/image`,
+        `${API}/api/account/profile/image`,
 
         authHeader()
 
@@ -99,7 +99,7 @@ export const logout = () => {
 
     return axios.post(
 
-        `${API}/account/logout`,
+        `${API}/api/account/logout`,
 
         {},
 

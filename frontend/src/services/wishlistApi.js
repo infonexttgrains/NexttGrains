@@ -16,7 +16,7 @@ const authHeader = () => ({
 // =====================
 
 export const getWishlist = () =>
-  axios.get(`${API}/wishlist`, authHeader());
+  axios.get(`${API}/api/wishlist`, authHeader());
 
 // =====================
 // TOGGLE WISHLIST
@@ -24,7 +24,7 @@ export const getWishlist = () =>
 
 export const toggleWishlist = (productId) =>
   axios.post(
-    `${API}/wishlist/toggle`,
+    `${API}/api/wishlist/toggle`,
     { productId },
     authHeader()
   );
@@ -35,7 +35,7 @@ export const toggleWishlist = (productId) =>
 
 export const removeWishlistItem = (productId) =>
   axios.delete(
-    `${API}/wishlist/${productId}`,
+    `${API}/api/wishlist/${productId}`,
     authHeader()
   );
 
@@ -45,6 +45,6 @@ export const removeWishlistItem = (productId) =>
 
 export const clearWishlist = () =>
   axios.delete(
-    `${API}/wishlist`,
+    `${API}/api/wishlist`,
     authHeader()
   );
