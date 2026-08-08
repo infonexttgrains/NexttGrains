@@ -1,2 +1,3 @@
-export const BACKEND_URL =
-  import.meta.env.VITE_BACKEND_URL || "http://localhost:5000";
+export const BACKEND_URL = import.meta.env.PROD
+  ? "https://nextt-grains-ikmj.vercel.app"
+  : "http://localhost:5000";

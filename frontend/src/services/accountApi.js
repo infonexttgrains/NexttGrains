@@ -1,7 +1,7 @@
 import { BACKEND_URL } from "../config/api";
 import axios from "axios";
 
-const API = `${BACKEND_URL}/api`;
+const API = `${BACKEND_URL}`;
 
 const getToken = () => {
     return localStorage.getItem("token");

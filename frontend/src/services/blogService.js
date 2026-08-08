@@ -1,8 +1,9 @@
 import { BACKEND_URL } from "../config/api";
 import axios from "axios";
 
-const BASE_URL = `${import.meta.env.VITE_BACKEND_URL}/api/blogs`;
-console.log("BASE URL =", BASE_URL);
+const BASE_URL =
+  `${BACKEND_URL}/api/blogs`;
+  console.log("BASE URL =", BASE_URL);
 
 /* ==========================================
     GET ALL PUBLISHED BLOGS
