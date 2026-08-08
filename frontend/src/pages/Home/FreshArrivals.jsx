@@ -1,7 +1,7 @@
 import "./FreshArrivals.css";
 import "./BestSellers.css";
 import { useState, useEffect } from "react";
-import { BACKEND_URL } from "../config/api";
+import { BACKEND_URL } from "../../config/api";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { useWishlist } from "../../context/WishlistContext";

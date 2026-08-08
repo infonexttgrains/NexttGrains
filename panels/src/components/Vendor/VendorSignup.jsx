@@ -3,7 +3,7 @@ import "./VendorSignup.css";
 import React,{useState} from "react";
 import {Link,useNavigate} from "react-router-dom";
 import {Store,Eye,EyeOff} from "lucide-react";
-import { BACKEND_URL } from "../config/api";
+import { BACKEND_URL } from "../../config/api";
 import axios from "axios";
 import {toast} from "react-toastify";
 

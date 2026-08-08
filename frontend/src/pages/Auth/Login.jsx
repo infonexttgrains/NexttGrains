@@ -1,7 +1,7 @@
 import "./Auth.css";
 
 import React,{useState} from "react";
-import { BACKEND_URL } from "../config/api";
+import { BACKEND_URL } from "../../config/api";
 import axios from "axios";
 import {Link,useNavigate} from "react-router-dom";
 import {FiEye,FiEyeOff} from "react-icons/fi";

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from "react";
-import { BACKEND_URL } from "../config/api";
+import { BACKEND_URL } from "../../config/api";
 import axios from "axios";
 import "./ProductManagement.css";
 import { toast } from "react-toastify";

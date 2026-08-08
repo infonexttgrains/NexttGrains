@@ -1,5 +1,5 @@
 import { createContext, useContext, useState } from "react";
-import { BACKEND_URL } from "../config/api";
+import { BACKEND_URL } from "../../config/api";
 import axios from "axios";
 import { toast } from "react-toastify";
 

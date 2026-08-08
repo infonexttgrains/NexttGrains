@@ -3,7 +3,7 @@ import "./VendorLogin.css";
 import { Store } from "lucide-react";
 import { Link,useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { BACKEND_URL } from "../config/api";
+import { BACKEND_URL } from "../../config/api";
 import axios from "axios";
 import { toast } from "react-toastify";
 

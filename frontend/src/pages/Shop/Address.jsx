@@ -1,5 +1,5 @@
 import "./Address.css";
-import { BACKEND_URL } from "../config/api";
+import { BACKEND_URL } from "../../config/api";
 import axios from "axios";
 import { createPaymentOrder, verifyPayment } from "../../services/paymentApi";
 import { useCart } from "../../context/CartContext";

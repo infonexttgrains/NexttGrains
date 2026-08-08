@@ -5,7 +5,7 @@ useMemo
 } from "react";
 
 import "./Report.css";
-import { BACKEND_URL } from "../config/api";
+import { BACKEND_URL } from "../../config/api";
 import axios from "axios";
 
 import {

@@ -4,7 +4,7 @@ import Cart from "./Cart";
 import { useCart } from "../../context/CartContext";
 import { useEffect,useState } from "react";
 import { Link } from "react-router-dom";
-import { BACKEND_URL } from "../config/api";
+import { BACKEND_URL } from "../../config/api";
 import axios from "axios";
 import {
   Heart,

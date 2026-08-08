@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./AdminLogin.css";
-import { BACKEND_URL } from "../config/api";
+import { BACKEND_URL } from "../../config/api";
 import { useNavigate } from "react-router-dom";
 
 import {

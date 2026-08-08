@@ -1,6 +1,6 @@
 import "./AddProducts.css";
 import React,{useState, useEffect} from "react";
-import { BACKEND_URL } from "../config/api";
+import { BACKEND_URL } from "../../config/api";
 import axios from "axios";
 import {useNavigate,useParams} from "react-router-dom";
 import {toast} from "react-toastify";

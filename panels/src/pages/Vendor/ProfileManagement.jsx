@@ -1,7 +1,7 @@
 import "./ProfileManagement.css";
 
 import { useEffect, useRef, useState } from "react";
-import { BACKEND_URL } from "../config/api";
+import { BACKEND_URL } from "../../config/api";
 import axios from "axios";
 
 import {

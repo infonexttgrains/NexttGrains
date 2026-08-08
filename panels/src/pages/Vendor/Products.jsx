@@ -1,6 +1,6 @@
 import "./Products.css";
 import React, { useEffect, useState } from "react";
-import { BACKEND_URL } from "../config/api";
+import { BACKEND_URL } from "../../config/api";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import {
