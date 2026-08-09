@@ -1,4 +1,5 @@
 import "./Hero.css";
+import { useNavigate } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import {
   PiLeafLight,
@@ -7,6 +8,7 @@ import {
 } from "react-icons/pi";
 
 function Hero() {
+  const navigate = useNavigate();
   return (
     <section className="hero">
       <div className="hero-overlay">
@@ -32,10 +34,13 @@ function Hero() {
         </p>
 
         {/* CTA */}
-        <button className="hero-btn">
-          Shop Now
-          <ArrowRight />
-        </button>
+       <button
+  className="hero-btn"
+  onClick={() => navigate("/shop")}
+>
+  Shop Now
+  <ArrowRight />
+</button>
 
         {/* Features */}
         <div className="hero-features">
