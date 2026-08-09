@@ -1,3 +1,5 @@
+// NOT USED ANYWHERE IN THE PROJECT. JUST FOR REFERENCE.
+
 import "./PantrySection.css";
 
 import flourImg from "../../assets/pi8.jpg";

@@ -94,12 +94,12 @@ return Math.round(
 
 <button
 
-className="view-all-btn"
+className="best-view-all-btn"
 
 onClick={()=>navigate("/shop")}
 
 >
-            View all
+            View All
           <ChevronRight size={18} />
         </button>
 

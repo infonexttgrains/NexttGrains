@@ -32,8 +32,8 @@
 /* ========================= */
 
 .cta-content h2 {
-  font-size: 62px;
- font-family: "Cormorant Garamond", serif;
+  font-size: 54px;
+ font-family: "Times New Roman", Times, serif;
   font-weight: 800;
   line-height: 1.1;
   color: #f8f4ec;
@@ -42,6 +42,8 @@
 
 .cta-content h2 span {
   color: #efb34d;
+   font-size: 54px;
+ font-family: "Times New Roman", Times, serif;
 }
 
 /* ========================= */
@@ -52,7 +54,7 @@
   font-size: 16px;
   line-height: 1.7;
 
-  color: rgba(255,255,255,.85);
+  color: #b9b0a0;
 
   margin-bottom: 28px;
 }
@@ -65,39 +67,63 @@
   gap: 14px;
 }
 
+
 /* ========================= */
+.cta-primary-btn{
 
-.cta-primary-btn {
-  border: none;
+    position:relative;
 
-  height: 48px;
-  padding: 0 28px;
-  border-radius: 999px;
+    z-index:2;
 
-  background: #efb34d;
-  color: #111;
+    margin-top:40px;
 
-  font-size: 16px;
-  font-weight: 700;
+    display:inline-flex;
 
-  display: flex;
-  align-items: center;
-  gap: 8px;
+    align-items:center;
 
-  cursor: pointer;
+    gap:12px;
 
-  transition: .3s;
+    padding:15px 30px;
+
+    border:none;
+
+    border-radius:60px;
+
+    background:#B77C2F;
+
+    color:#ffffff;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    transition:.35s;
+
 }
 
-.cta-primary-btn svg {
-  width: 16px;
-  height: 16px;
+.cta-primary-btn:hover{
+
+    background:#ffffff;
+
+    color:#15361D;
+
+    transform:translateY(-4px);
+
 }
 
-.cta-primary-btn:hover {
-  transform: translateY(-2px);
+.cta-primary-btn:hover svg{
+
+    transition:.35s;
+
 }
 
+.cta-primary-btn:hover svg{
+
+    transform:translateX(5px);
+
+}
 /* ========================= */
 
 .cta-secondary-btn {

@@ -13,30 +13,28 @@
 }
 
 .fresh-tag {
-  color: #4c6a2d;
+  color: #B77C2F;
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 3px;
 }
 
 .fresh-header h2 {
-  margin-top: 8px;
-
-  font-size: 42px;
-  font-weight: 800;
+  margin-top: 4px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 54px;
+  font-weight: 700;
   line-height: 1.05;
-
   color: #241605;
 }
 
 .fresh-header p {
-  margin-top: 10px;
-
+  margin-top: 6px;
   font-size: 16px;
-  color: #706b63;
+  color: #756e63;
 }
 
-.view-btn {
+.fresh-view-btn {
   border: none;
   background: transparent;
 
@@ -46,9 +44,44 @@
 
   cursor: pointer;
 
-  color: #4c6a2d;
+  color: #B77C2F;
   font-size: 16px;
   font-weight: 500;
+}
+/* Underline */
+.fresh-view-btn::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 0;
+  height: 2px;
+
+  background: #B77C2F;
+  border-radius: 10px;
+
+  transition: width 0.3s ease;
+}
+
+/* Hover */
+.fresh-view-btn:hover {
+  color: #8F5E20;
+  gap: 10px;
+}
+
+.fresh-view-btn:hover::after {
+  width: calc(100% - 24px);
+}
+
+/* Arrow animation */
+.fresh-view-btn svg {
+  transition: transform 0.3s ease;
+}
+
+.fresh-view-btn:hover svg {
+  transform: translateX(4px);
 }
 
 /* GRID */

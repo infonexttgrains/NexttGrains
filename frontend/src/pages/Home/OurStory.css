@@ -39,7 +39,7 @@
 .our-story-tag {
   display: block;
 
-  color: #d89a3c;
+  color: #B77C2F;
 
   font-size: 13px;
   font-weight: 700;
@@ -50,9 +50,9 @@
 }
 
 .our-story-content h2 {
-  font-size: 62px;
-  font-weight: 800;
-  font-family: 'Cormorant Garamond', serif;
+  font-size: 54px;
+  font-weight: 700;
+  font-family: "Times New Roman", Times, serif;
   line-height: 1.01;
 
   color: #0f2b14;
@@ -63,37 +63,108 @@
 .our-story-content p {
   font-size: 16px;
   line-height: 1.9;
-  color: #58655b;
+  color:  #756e63;
   margin-bottom: 12px;
 }
 
-.story-btn {
-  margin-top: 18px;
 
-  width: 200px;
-  height: 50px;
+.story-btn{
 
-  border: none;
-  border-radius: 999px;
+    margin-top:20px;
 
-  background: #1f5b2d;
-  color: white;
+    width:max-content;
 
-  font-size: 16px;
-  font-weight: 600;
+    display:flex;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
+    align-items:center;
 
-  cursor: pointer;
+    gap:12px;
 
-  transition: 0.3s ease;
+    border:none;
+
+    outline:none;
+
+    padding:18px 34px;
+
+    border-radius:60px;
+
+    cursor:pointer;
+
+    background:#15361D;
+
+    color:#ffffff;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    font-family:"Inter",sans-serif;
+
+    overflow:hidden;
+
+    position:relative;
+
+    transition:all .35s ease;
+
+    box-shadow:
+    0 12px 30px rgba(21,54,29,.18);
+
 }
 
-.story-btn:hover {
-  transform: translateY(-2px);
+
+.story-btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:120%;
+
+    height:100%;
+
+    background:
+    linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.35),
+        transparent
+    );
+
+    transition:.8s;
+
+}
+
+.story-btn:hover::before{
+
+    left:120%;
+
+}
+
+.story-btn:hover{
+
+    background:#B77C2F;
+
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 20px 40px rgba(183,124,47,.28);
+
+}
+
+.story-btn svg{
+
+    transition:transform .35s ease;
+
+}
+
+.story-btn:hover svg{
+
+    transform:translateX(6px);
+
 }
 
 /* ===================== */

@@ -35,7 +35,7 @@ function OurStory({
 )}
 
         <h2>
-          Goodness grown at the source.
+          Goodness grown at the source
         </h2>
 
         {/* <p>

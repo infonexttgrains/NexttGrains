@@ -65,7 +65,7 @@ getProducts();
           </p>
         </div>
 
-        <button className="view-btn">
+        <button className="fresh-view-btn">
           View all
           <ChevronRight size={18} />
         </button>

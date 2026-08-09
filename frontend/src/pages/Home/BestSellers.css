@@ -9,12 +9,11 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-
   margin-bottom: 34px;
 }
 
 .section-tag {
-  color: #49632d;
+  color: #B77C2F;
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 3px;
@@ -22,37 +21,66 @@
 
 .best-header h2 {
   margin-top: 8px;
-
-  font-size: 42px;
-  font-weight: 800;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 54px;
+  font-weight: 700;
   line-height: 1.05;
-
-  color: #221505;
+  color: #15361D;
 }
 
 .best-header p {
-  margin-top: 12px;
-
+  margin-top: 10px;
   font-size: 16px;
-  color: #6f6b63;
+  color: #756e63;
 }
 
-.view-all-btn {
+.best-view-all-btn {
   border: none;
   background: transparent;
-
   display: flex;
   align-items: center;
   gap: 6px;
-
-  color: #49632d;
-
+  color: #B77C2F;
   font-size: 16px;
-  font-weight: 500;
-
+  font-weight: 600;
   cursor: pointer;
 }
 
+/* Underline */
+.best-view-all-btn::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 0;
+  height: 2px;
+
+  background: #B77C2F;
+  border-radius: 10px;
+
+  transition: width 0.3s ease;
+}
+
+/* Hover */
+.best-view-all-btn:hover {
+  color: #8F5E20;
+  gap: 10px;
+}
+
+.best-view-all-btn:hover::after {
+  width: calc(100% - 24px);
+}
+
+/* Arrow animation */
+.best-view-all-btn svg {
+  transition: transform 0.3s ease;
+}
+
+.best-view-all-btn:hover svg {
+  transform: translateX(4px);
+}
 /* ================= GRID ================= */
 
 .product-grid {

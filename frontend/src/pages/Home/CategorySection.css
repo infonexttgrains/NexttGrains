@@ -1,5 +1,5 @@
 .category-section {
-  padding: 55px 36px 70px;
+  padding: 45px 36px 70px;
   background: #fdf3e0;
 }
 
@@ -16,24 +16,24 @@
 
 .category-tag {
   display: block;
-  color: #c5b798;
+  color: #B77C2F;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 4px;
-  margin-bottom: 10px;
+  margin-bottom: 4px;
 }
 
 .category-header h2 {
-  font-size: 64px;
-  font-family: "Cormorant Garamond", serif;
-  font-weight: 800;
+  font-size: 54px;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 700;
   line-height: 1.05;
-  color: #171211;
+  color: #15361D;
   margin-bottom: 10px;
 }
 
 .category-header p {
-  font-size: 18px;
+  font-size: 16px;
   color: #756e63;
 }
 
@@ -45,7 +45,7 @@
   gap: 8px;
   font-size: 16px;
   font-weight: 700;
-  color: #171211;
+  color: #B77C2F;
   cursor: pointer;
   margin-top: 55px;
 }

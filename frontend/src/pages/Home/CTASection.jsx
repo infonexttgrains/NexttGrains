@@ -38,9 +38,9 @@ function CTASection() {
               <ArrowRight size={18} />
             </button>
 
-            <button className="cta-secondary-btn">
+            {/* <button className="cta-secondary-btn">
               Meet the Farmers
-            </button>
+            </button> */}
 
           </div>
 
