@@ -262,44 +262,631 @@
 /* ===================== */
 /* RESPONSIVE */
 /* ===================== */
+/* ==========================
+   RESPONSIVE
+========================== */
 
-@media (max-width: 1100px) {
 
-  .grain-standard-grid {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
+/* ==========================
+   TABLET / SMALL LAPTOP
+   769px - 1100px
+========================== */
+
+/* ==========================
+   TABLET ONLY
+   769px - 1100px
+========================== */
+
+@media (min-width: 601px) and (max-width: 1100px) {
+
+  .grain-standard {
+    padding: 50px 28px 60px;
   }
 
-  .grain-standard-purity-card,
-  .grain-standard-dark-card,
-  .grain-standard-quality-card {
-    grid-column: auto;
-    grid-row: auto;
-  }
-
-  .grain-standard-dark-card,
-  .grain-standard-quality-card {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 18px;
+  .grain-standard-header {
+    margin-bottom: 28px;
   }
 
   .grain-standard-header h2 {
-    font-size: 42px;
+    font-size: 44px;
   }
+
+  .grain-standard-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: auto;
+    gap: 18px;
+  }
+
+
+  /* ==========================
+     ALL CARDS = 1 GRID CELL
+  ========================== */
+
+  .grain-standard-purity-card,
+  .grain-standard-dark-card,
+  .grain-standard-yellow-card,
+  .grain-standard-trace-card,
+  .grain-standard-natural-card,
+  .grain-standard-quality-card {
+
+    grid-column: span 1;
+    grid-row: auto;
+
+    min-width: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+
+  /* ==========================
+     PURITY
+  ========================== */
+
+  .grain-standard-purity-card {
+    padding: 24px;
+  }
+
+  .grain-standard-purity-card img {
+    height: 220px;
+  }
+
+
+  /* ==========================
+     DARK
+  ========================== */
+
+  .grain-standard-dark-card {
+    padding: 28px;
+    min-height: 190px;
+
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .grain-standard-dark-card h4 {
+    font-size: 26px;
+  }
+
+  .grain-standard-dark-card p {
+    font-size: 15px;
+    max-width: 100%;
+  }
+
+  .grain-standard-dark-card svg {
+    flex-shrink: 0;
+  }
+
+
+  /* ==========================
+     DIRECT
+  ========================== */
+
+  .grain-standard-yellow-card {
+    min-height: 190px;
+  }
+
+
+  /* ==========================
+     TRACEABLE
+  ========================== */
+
+  .grain-standard-trace-card {
+    min-height: 190px;
+    padding: 24px;
+  }
+
+
+  /* ==========================
+     NATURAL
+  ========================== */
+
+  .grain-standard-natural-card {
+    min-height: 190px;
+    padding: 24px;
+  }
+
+
+  /* ==========================
+     QUALITY
+  ========================== */
+
+  .grain-standard-quality-card {
+    min-height: 190px;
+    padding: 28px;
+
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .grain-standard-quality-card svg {
+    flex-shrink: 0;
+  }
+
+}
+/* ==========================
+   TABLET
+   769px - 900px
+========================== */
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .grain-standard {
+    padding: 45px 22px 55px;
+  }
+
+  .grain-standard-header h2 {
+    font-size: 40px;
+  }
+
+  .grain-standard-tag {
+    font-size: 11px;
+    letter-spacing: 4px;
+  }
+
+  .grain-standard-grid {
+    gap: 16px;
+  }
+
+  .grain-standard-purity-card img {
+    height: 220px;
+  }
+
+  .grain-standard-dark-card {
+    padding: 28px;
+  }
+
+  .grain-standard-dark-card h4 {
+    font-size: 26px;
+  }
+
+  .grain-standard-dark-card p {
+    font-size: 15px;
+  }
+
+  .grain-standard-quality-card h4 {
+    font-size: 25px;
+  }
+
 }
 
-@media (max-width: 768px) {
+
+/* ==========================
+   MOBILE
+   0px - 768px
+========================== */
+
+@media (max-width: 600px) {
 
   .grain-standard {
-    padding: 40px 20px 50px;
+    padding: 40px 16px 50px;
+
+    overflow: hidden;
+  }
+
+
+  /* HEADER */
+
+  .grain-standard-header {
+    margin-bottom: 24px;
+  }
+
+  .grain-standard-tag {
+    font-size: 10px;
+    letter-spacing: 3px;
+    margin-bottom: 7px;
   }
 
   .grain-standard-header h2 {
     font-size: 34px;
+    line-height: 1.1;
+  }
+
+
+  /* GRID */
+
+  .grain-standard-grid {
+    width: 100%;
+
+    grid-template-columns: 1fr;
+
+    grid-template-rows: auto;
+
+    gap: 16px;
+  }
+
+
+  /* ==========================
+     ALL CARDS → FULL WIDTH
+  ========================== */
+
+  .grain-standard-purity-card,
+  .grain-standard-dark-card,
+  .grain-standard-yellow-card,
+  .grain-standard-trace-card,
+  .grain-standard-natural-card,
+  .grain-standard-quality-card {
+
+    grid-column: auto;
+
+    grid-row: auto;
+
+    width: 100%;
+
+    box-sizing: border-box;
+  }
+
+
+  /* ==========================
+     PURITY
+  ========================== */
+
+  .grain-standard-purity-card {
+    padding: 20px;
+
+    border-radius: 22px;
+  }
+
+  .grain-standard-icon-circle {
+    width: 52px;
+    height: 52px;
+
+    margin-bottom: 15px;
+  }
+
+  .grain-standard-purity-card h3 {
+    font-size: 25px;
+    line-height: 1.2;
+  }
+
+  .grain-standard-purity-card p {
+    font-size: 14px;
+    line-height: 1.65;
+
+    margin-bottom: 20px;
+  }
+
+  .grain-standard-purity-card img {
+    width: 100%;
+    height: 210px;
+
+    border-radius: 16px;
+  }
+
+
+  /* ==========================
+     DARK
+  ========================== */
+
+  .grain-standard-dark-card {
+
+    min-height: 180px;
+
+    padding: 24px;
+
+    border-radius: 22px;
+
+    flex-direction: row;
+
+    align-items: center;
+
+    gap: 20px;
+  }
+
+  .grain-standard-dark-card h4 {
+    font-size: 24px;
+    line-height: 1.2;
+
+    margin-bottom: 8px;
+  }
+
+  .grain-standard-dark-card p {
+    font-size: 14px;
+    line-height: 1.6;
+
+    max-width: none;
+  }
+
+  .grain-standard-dark-card svg {
+    flex-shrink: 0;
+
+    width: 42px;
+    height: 42px;
+  }
+
+
+  /* ==========================
+     DIRECT
+  ========================== */
+
+  .grain-standard-yellow-card {
+
+    min-height: 170px;
+
+    padding: 22px;
+
+    border-radius: 22px;
+  }
+
+  .grain-standard-yellow-card svg {
+    width: 38px;
+    height: 38px;
+  }
+
+  .grain-standard-yellow-card h4 {
+    font-size: 24px;
+  }
+
+
+  /* ==========================
+     TRACEABLE
+  ========================== */
+
+  .grain-standard-trace-card {
+
+    min-height: 170px;
+
+    padding: 22px;
+
+    border-radius: 22px;
+  }
+
+  .grain-standard-trace-card svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .grain-standard-trace-card h4 {
+    font-size: 21px;
+  }
+
+  .grain-standard-trace-card p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+
+  /* ==========================
+     NATURAL
+  ========================== */
+
+  .grain-standard-natural-card {
+
+    min-height: 170px;
+
+    padding: 22px;
+
+    border-radius: 22px;
+  }
+
+  .grain-standard-natural-card svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .grain-standard-natural-card h4 {
+    font-size: 21px;
+  }
+
+  .grain-standard-natural-card p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+
+  /* ==========================
+     QUALITY
+  ========================== */
+
+  .grain-standard-quality-card {
+
+    min-height: 170px;
+
+    padding: 24px;
+
+    border-radius: 22px;
+
+    flex-direction: row;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+  }
+
+  .grain-standard-quality-card h4 {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+
+  .grain-standard-quality-card p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .grain-standard-quality-card svg {
+    flex-shrink: 0;
+
+    width: 42px;
+    height: 42px;
+  }
+
+}
+
+
+/* ==========================
+   SMALL MOBILE
+   480px
+========================== */
+
+@media (max-width: 480px) {
+
+  .grain-standard {
+    padding: 34px 12px 42px;
+  }
+
+  .grain-standard-header {
+    margin-bottom: 20px;
+  }
+
+  .grain-standard-tag {
+    font-size: 9px;
+    letter-spacing: 2.5px;
+  }
+
+  .grain-standard-header h2 {
+    font-size: 29px;
+  }
+
+  .grain-standard-grid {
+    gap: 14px;
+  }
+
+
+  /* PURITY */
+
+  .grain-standard-purity-card {
+    padding: 18px;
+
+    border-radius: 20px;
+  }
+
+  .grain-standard-icon-circle {
+    width: 48px;
+    height: 48px;
+  }
+
+  .grain-standard-purity-card h3 {
+    font-size: 22px;
+  }
+
+  .grain-standard-purity-card p {
+    font-size: 13px;
+
+    line-height: 1.6;
   }
 
   .grain-standard-purity-card img {
     height: 180px;
+
+    border-radius: 15px;
   }
+
+
+  /* DARK */
+
+  .grain-standard-dark-card {
+
+    min-height: 165px;
+
+    padding: 20px;
+
+    border-radius: 20px;
+
+    gap: 14px;
+  }
+
+  .grain-standard-dark-card h4 {
+    font-size: 22px;
+  }
+
+  .grain-standard-dark-card p {
+    font-size: 13px;
+  }
+
+  .grain-standard-dark-card svg {
+    width: 36px;
+    height: 36px;
+  }
+
+
+  /* DIRECT */
+
+  .grain-standard-yellow-card {
+    min-height: 155px;
+
+    padding: 18px;
+
+    border-radius: 20px;
+  }
+
+  .grain-standard-yellow-card svg {
+    width: 34px;
+    height: 34px;
+  }
+
+  .grain-standard-yellow-card h4 {
+    font-size: 22px;
+  }
+
+  .grain-standard-yellow-card span {
+    font-size: 10px;
+  }
+
+
+  /* TRACEABLE */
+
+  .grain-standard-trace-card {
+    min-height: 155px;
+
+    padding: 20px;
+
+    border-radius: 20px;
+  }
+
+  .grain-standard-trace-card h4 {
+    font-size: 20px;
+  }
+
+  .grain-standard-trace-card p {
+    font-size: 12px;
+  }
+
+
+  /* NATURAL */
+
+  .grain-standard-natural-card {
+    min-height: 155px;
+
+    padding: 20px;
+
+    border-radius: 20px;
+  }
+
+  .grain-standard-natural-card h4 {
+    font-size: 20px;
+  }
+
+  .grain-standard-natural-card p {
+    font-size: 12px;
+  }
+
+
+  /* QUALITY */
+
+  .grain-standard-quality-card {
+    min-height: 155px;
+
+    padding: 20px;
+
+    border-radius: 20px;
+
+    gap: 12px;
+  }
+
+  .grain-standard-quality-card h4 {
+    font-size: 21px;
+  }
+
+  .grain-standard-quality-card p {
+    font-size: 12px;
+  }
+
+  .grain-standard-quality-card svg {
+    width: 36px;
+    height: 36px;
+  }
+
 }

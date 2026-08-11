@@ -135,7 +135,7 @@
 /* ==========================
    RESPONSIVE
 ========================== */
-
+/* 
 @media (max-width: 1200px) {
   .subscribe-container {
     flex-direction: column;
@@ -187,5 +187,254 @@
   .subscribe-image img {
     height: 220px;
     border-radius: 18px;
+  }
+} */
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+/* Large Laptop / Small Desktop */
+@media (max-width: 1400px) {
+  .subscribe-container {
+    padding: 28px 40px;
+  }
+
+  .subscribe-content {
+    width: 43%;
+  }
+
+  .subscribe-image {
+    width: 52%;
+  }
+
+  .subscribe-content h2 {
+    font-size: 46px;
+  }
+
+  .subscribe-image img {
+    max-width: 520px;
+  }
+}
+
+
+/* ==========================
+   LAPTOP / TABLET
+========================== */
+
+@media (max-width: 1100px) {
+  .subscribe-wrapper {
+    padding: 20px 24px;
+  }
+
+  .subscribe-container {
+    padding: 32px;
+    gap: 30px;
+  }
+
+  .subscribe-content {
+    width: 45%;
+  }
+
+  .subscribe-image {
+    width: 52%;
+  }
+
+  .subscribe-content h2 {
+    font-size: 40px;
+  }
+
+  .subscribe-content p {
+    font-size: 14px;
+  }
+
+  .subscribe-image img {
+    height: 300px;
+  }
+}
+
+
+/* ==========================
+   TABLET
+========================== */
+
+@media (max-width: 900px) {
+  .subscribe-container {
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    padding: 36px;
+  }
+
+  .subscribe-content {
+    width: 100%;
+    text-align: center;
+  }
+
+  .subscribe-content h2 {
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 38px;
+  }
+
+  .subscribe-content p {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .subscribe-btn {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .subscribe-image {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .subscribe-image img {
+    width: 100%;
+    max-width: 650px;
+    height: 280px;
+  }
+}
+
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media (max-width: 768px) {
+  .subscribe-wrapper {
+    padding: 20px 16px;
+  }
+
+  .subscribe-container {
+    min-height: auto;
+    padding: 30px 20px;
+    border-radius: 24px;
+    gap: 26px;
+  }
+
+  .subscribe-content {
+    width: 100%;
+    text-align: center;
+  }
+
+  .subscribe-tag {
+    font-size: 11px;
+    letter-spacing: 1.7px;
+    margin-bottom: 14px;
+  }
+
+  .subscribe-content h2 {
+    max-width: 100%;
+    font-size: 30px;
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+
+  .subscribe-content p {
+    max-width: 100%;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 22px;
+  }
+
+  .subscribe-btn {
+    width: 180px;
+    height: 48px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 14px;
+  }
+
+  .subscribe-image {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .subscribe-image img {
+    width: 100%;
+    max-width: 100%;
+    height: 220px;
+    border-radius: 18px;
+  }
+}
+
+
+/* ==========================
+   SMALL MOBILE
+========================== */
+
+@media (max-width: 480px) {
+  .subscribe-wrapper {
+    padding: 16px 12px;
+  }
+
+  .subscribe-container {
+    padding: 26px 16px;
+    border-radius: 22px;
+    gap: 24px;
+  }
+
+  .subscribe-content h2 {
+    font-size: 27px;
+  }
+
+  .subscribe-content p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .subscribe-btn {
+    width: 175px;
+    height: 46px;
+  }
+
+  .subscribe-image img {
+    height: 190px;
+    border-radius: 16px;
+  }
+}
+
+
+/* ==========================
+   VERY SMALL MOBILE
+========================== */
+
+@media (max-width: 360px) {
+  .subscribe-wrapper {
+    padding: 14px 10px;
+  }
+
+  .subscribe-container {
+    padding: 24px 14px;
+    border-radius: 20px;
+  }
+
+  .subscribe-tag {
+    font-size: 10px;
+    letter-spacing: 1.4px;
+  }
+
+  .subscribe-content h2 {
+    font-size: 24px;
+  }
+
+  .subscribe-content p {
+    font-size: 13px;
+  }
+
+  .subscribe-btn {
+    width: 165px;
+    height: 44px;
+    font-size: 13px;
+  }
+
+  .subscribe-image img {
+    height: 170px;
   }
 }

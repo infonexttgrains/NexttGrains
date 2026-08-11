@@ -154,3 +154,716 @@
 .hero-dots .active {
   background: #648d22;
 }
+
+/*  */
+/* =========================================================
+   HERO RESPONSIVE
+   Desktop UI remains untouched
+========================================================= */
+
+
+/* =========================================================
+   LARGE TABLETS / SMALL LAPTOPS
+   1200px and below
+========================================================= */
+
+@media (max-width: 1200px) {
+
+  .hero {
+    height: 600px;
+  }
+
+  .hero-overlay {
+    padding-top: 25px;
+    padding-left: 42px;
+    padding-right: 42px;
+  }
+
+  .hero-title {
+    font-size: 52px;
+    max-width: 500px;
+  }
+
+  .hero-description {
+    max-width: 470px;
+  }
+
+  .hero-features {
+    gap: 28px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+   992px and below
+========================================================= */
+
+@media (max-width: 992px) {
+
+  .hero {
+    height: 560px;
+
+    /*
+      Keep the original banner ratio/visual balance.
+      Do not zoom unnecessarily.
+    */
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .hero-overlay {
+    padding-top: 28px;
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+  .hero-badge {
+    font-size: 13px;
+  }
+
+  .hero-badge svg {
+    font-size: 22px;
+  }
+
+  .hero-title {
+    margin-top: 18px;
+    font-size: 46px;
+    line-height: 1.06;
+    max-width: 450px;
+  }
+
+  .hero-description {
+    margin-top: 20px;
+    max-width: 430px;
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
+  .hero-btn {
+    width: 175px;
+    height: 46px;
+    margin-top: 22px;
+    font-size: 17px;
+  }
+
+  .hero-btn svg {
+    width: 21px;
+    height: 21px;
+  }
+
+  .hero-features {
+    margin-top: 28px;
+    gap: 24px;
+  }
+
+  .feature {
+    gap: 9px;
+  }
+
+  .feature-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .feature-icon svg {
+    font-size: 23px;
+  }
+
+  .feature h4 {
+    font-size: 16px;
+  }
+
+  .feature p {
+    font-size: 13px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE / TABLET PORTRAIT
+   768px and below
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .hero {
+    /*
+      Important:
+      Background is no longer allowed to zoom into the
+      product image like the previous version.
+    */
+    height: 620px;
+
+    background-size: cover;
+    background-position: 72% center;
+  }
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  background: linear-gradient(
+    90deg,
+    rgba(255, 244, 219, 0.94) 0%,
+    rgba(238, 221, 186, 0.78) 30%,
+    rgba(182, 124, 8, 0.38) 55%,
+    rgba(250, 242, 226, 0.08) 78%,
+    rgba(250, 242, 226, 0) 100%
+  );
+}
+  .hero-overlay {
+    padding-top: 24px;
+    padding-left: 28px;
+    padding-right: 28px;
+
+    /*
+      Keep content above the background visually.
+    */
+    position: relative;
+    z-index: 2;
+  }
+  
+
+  .hero-badge {
+    font-size: 12px;
+    letter-spacing: 1.7px;
+  }
+
+  .hero-badge svg {
+    font-size: 21px;
+  }
+
+  .hero-title {
+    margin-top: 17px;
+    font-size: 40px;
+    line-height: 1.07;
+    max-width: 390px;
+  }
+
+  .hero-description {
+    margin-top: 18px;
+    max-width: 390px;
+    font-size: 14px;
+    line-height: 1.55;
+  }
+
+  .hero-btn {
+    width: 170px;
+    height: 45px;
+    margin-top: 20px;
+    border-radius: 16px;
+    font-size: 16px;
+    gap: 10px;
+  }
+
+  .hero-btn svg {
+    width: 20px;
+    height: 20px;
+  }
+
+
+  /* =========================================
+     FEATURES
+     Tablet/mobile: keep them in one row
+     until actual mobile.
+  ========================================= */
+
+  .hero-features {
+    margin-top: 28px;
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 20px;
+
+    flex-wrap: nowrap;
+  }
+
+  .feature {
+    gap: 8px;
+  }
+
+  .feature-icon {
+    width: 40px;
+    height: 40px;
+
+    flex-shrink: 0;
+  }
+
+  .feature-icon svg {
+    font-size: 22px;
+  }
+
+  .feature h4 {
+    font-size: 15px;
+  }
+
+  .feature p {
+    margin-top: 3px;
+    font-size: 12px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   576px and below
+========================================================= */
+
+@media (max-width: 576px) {
+
+  .hero {
+    /*
+      Taller hero so all content has enough breathing room.
+    */
+    height: 700px;
+    min-height: 700px;
+
+    /*
+      Keep image proportion and move product area
+      toward the right side.
+    */
+    
+    background-size: cover;
+ background-position:  82% center;  
+}
+
+  .hero-overlay {
+    padding-top: 24px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    width: 100%;
+    box-sizing: border-box;
+
+    position: relative;
+    z-index: 2;
+  }
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  background: linear-gradient(
+    90deg,
+    rgba(234, 220, 190, 0.94) 0%,
+    rgba(250, 242, 226, 0.78) 30%,
+    rgba(250, 242, 226, 0.38) 55%,
+    rgba(250, 242, 226, 0.08) 78%,
+    rgba(250, 242, 226, 0) 100%
+  );
+
+  pointer-events: none;
+}
+
+  /* =========================================
+     BADGE
+  ========================================= */
+
+  .hero-badge {
+    gap: 4px;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+  }
+
+  .hero-badge svg {
+    font-size: 19px;
+    flex-shrink: 0;
+  }
+
+
+  /* =========================================
+     TITLE
+  ========================================= */
+
+  .hero-title {
+    margin-top: 15px;
+
+    font-size: 34px;
+    line-height: 1.08;
+
+    max-width: 340px;
+  }
+
+
+  /* =========================================
+     DESCRIPTION
+  ========================================= */
+
+  .hero-description {
+    margin-top: 17px;
+
+    max-width: 330px;
+
+    font-size: 13px;
+    line-height: 1.55;
+  }
+
+
+  /* =========================================
+     BUTTON
+  ========================================= */
+
+  .hero-btn {
+    width: 158px;
+    height: 44px;
+
+    margin-top: 19px;
+
+    border-radius: 15px;
+
+    font-size: 15px;
+    gap: 9px;
+  }
+
+  .hero-btn svg {
+    width: 19px;
+    height: 19px;
+  }
+
+
+  /* =========================================
+     FEATURES
+     
+     IMPORTANT:
+     Mobile = ONE BELOW ANOTHER
+  ========================================= */
+
+  .hero-features {
+
+    margin-top: 30px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 16px;
+
+    width: 100%;
+  }
+
+  .feature {
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    width: 100%;
+  }
+
+  .feature-icon {
+
+    width: 40px;
+    height: 40px;
+
+    flex-shrink: 0;
+  }
+
+  .feature-icon svg {
+    font-size: 21px;
+  }
+
+  .feature h4 {
+    font-size: 15px;
+  }
+
+  .feature p {
+    margin-top: 3px;
+    font-size: 12px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   400px and below
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .hero {
+
+    /*
+      Extra height prevents content collision.
+    */
+    height: 690px;
+    min-height: 690px;
+
+    /*
+      Product image stays toward right side.
+    */
+    background-size: cover;
+ background-position:  82% center; 
+ }
+
+  .hero-overlay {
+    padding-top: 21px;
+    padding-left: 17px;
+    padding-right: 17px;
+  }
+
+/* =========================================================
+   HERO BACKGROUND OVERLAY
+   Keeps background visible while protecting content
+========================================================= */
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  background: linear-gradient(
+    90deg,
+    rgba(250, 242, 226, 0.94) 0%,
+    rgba(250, 242, 226, 0.78) 30%,
+    rgba(250, 242, 226, 0.38) 55%,
+    rgba(250, 242, 226, 0.08) 78%,
+    rgba(250, 242, 226, 0) 100%
+  );
+
+  pointer-events: none;
+}
+  /* Badge */
+
+  .hero-badge {
+    font-size: 10px;
+    letter-spacing: 1.3px;
+  }
+
+  .hero-badge svg {
+    font-size: 18px;
+  }
+
+
+  /* Title */
+
+  .hero-title {
+
+    margin-top: 14px;
+
+    font-size: 30px;
+    line-height: 1.08;
+
+    max-width: 300px;
+  }
+
+
+  /* Description */
+
+  .hero-description {
+
+    margin-top: 15px;
+
+    max-width: 300px;
+
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+
+  /* Button */
+
+  .hero-btn {
+
+    width: 150px;
+    height: 42px;
+
+    margin-top: 18px;
+
+    font-size: 14px;
+
+    border-radius: 14px;
+  }
+
+  .hero-btn svg {
+    width: 18px;
+    height: 18px;
+  }
+
+
+  /* Features */
+
+  .hero-features {
+
+    margin-top: 28px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+
+    width: 100%;
+  }
+
+  .feature {
+
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+  }
+
+  .feature-icon {
+
+    width: 38px;
+    height: 38px;
+
+    flex-shrink: 0;
+  }
+
+  .feature-icon svg {
+    font-size: 19px;
+  }
+
+  .feature h4 {
+    font-size: 14px;
+  }
+
+  .feature p {
+    font-size: 11px;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   360px and below
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .hero {
+
+    height: 680px;
+    min-height: 680px;
+
+    background-size: cover;
+    background-position: 82% center;
+  }
+
+  .hero-overlay {
+
+    padding-top: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+
+  /* Badge */
+
+  .hero-badge {
+    font-size: 10px;
+    letter-spacing: 1.2px;
+  }
+
+  .hero-badge svg {
+    font-size: 17px;
+  }
+
+
+  /* Title */
+
+  .hero-title {
+
+    margin-top: 13px;
+
+    font-size: 28px;
+    line-height: 1.08;
+
+    max-width: 285px;
+  }
+
+
+  /* Description */
+
+  .hero-description {
+
+    margin-top: 14px;
+
+    max-width: 285px;
+
+    font-size: 11.5px;
+    line-height: 1.5;
+  }
+
+
+  /* Button */
+
+  .hero-btn {
+
+    width: 145px;
+    height: 41px;
+
+    margin-top: 17px;
+
+    font-size: 13px;
+
+    border-radius: 13px;
+  }
+
+  .hero-btn svg {
+    width: 18px;
+    height: 18px;
+  }
+
+
+  /* Features */
+
+  .hero-features {
+
+    margin-top: 27px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 14px;
+
+    width: 100%;
+  }
+
+  .feature {
+
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+  }
+
+  .feature-icon {
+
+    width: 36px;
+    height: 36px;
+
+    flex-shrink: 0;
+  }
+
+  .feature-icon svg {
+    font-size: 18px;
+  }
+
+  .feature h4 {
+    font-size: 13px;
+  }
+
+  .feature p {
+    margin-top: 2px;
+    font-size: 10px;
+  }
+}

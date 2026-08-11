@@ -4,12 +4,66 @@
 }
 
 /* ================= HEADER ================= */
-
 .best-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 34px;
+}
+/* ================= HEADER ACTIONS ================= */
+
+.best-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+
+/* ================= HEADER CAROUSEL ARROWS ================= */
+
+.best-header-arrows {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.best-header-arrow {
+  width: 42px;
+  height: 42px;
+
+  border: 1px solid #d8d2c6;
+  border-radius: 50%;
+
+  background: #ffffff;
+  color: #4f7127;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.best-header-arrow:hover {
+  background: #4f7127;
+  color: #ffffff;
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 5px 14px rgba(0, 0, 0, 0.12);
+}
+
+
+.best-header-arrow:active {
+  transform: translateY(0);
 }
 
 .section-tag {
@@ -284,5 +338,491 @@ margin-left:4px;
 white-space:nowrap;
 
 color:#6d675d;
+
+}
+
+/* =========================================================
+   BEST SELLERS RESPONSIVE
+   Existing desktop UI remains unchanged
+   ========================================================= */
+
+
+/* =========================================================
+   CAROUSEL WRAPPER
+   ========================================================= */
+
+.best-products-carousel {
+  position: relative;
+  width: 100%;
+}
+
+/* =========================
+   DESKTOP - 4 CARDS
+   ========================= */
+.best-product-track {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  width: 100%;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.best-product-track::-webkit-scrollbar {
+  display: none;
+}
+
+.best-product-track .product-card {
+  flex: 0 0 calc((100% - 60px) / 4);
+  min-width: 0;
+}
+
+/* =========================================================
+   LARGE LAPTOP
+   1100px and below
+   ========================================================= */
+@media (max-width: 1100px) {
+
+  .best-sellers {
+    padding: 45px 30px 60px;
+  }
+
+  .best-header {
+    margin-bottom: 28px;
+  }
+
+  .best-header h2 {
+    font-size: 48px;
+  }
+
+  .best-header p {
+    font-size: 15px;
+  }
+
+
+  /* =========================
+     CAROUSEL VIEWPORT
+     ========================= */
+
+  .best-products-carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+
+
+  /* =========================
+     3 CARD TRACK
+     ========================= */
+.best-product-track {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  width: 100%;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+
+  /* =========================
+     CAROUSEL ARROWS
+     ========================= */
+
+
+  .product-image-wrapper {
+    height: 280px;
+  }
+
+}
+
+/* =========================================================
+   TABLET
+   900px and below
+   ========================================================= */
+@media (max-width: 900px) {
+
+  .best-sellers {
+    padding: 40px 24px 55px;
+  }
+
+  .best-header {
+    margin-bottom: 26px;
+  }
+
+  .best-header h2 {
+    font-size: 44px;
+  }
+
+  .best-header p {
+    font-size: 14px;
+  }
+
+  .best-view-all-btn {
+    font-size: 15px;
+  }
+
+  /* =========================
+     TABLET CAROUSEL
+     2 CARDS
+     ========================= */
+
+  .best-products-carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+
+.best-product-track {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 18px;
+  width: 100%;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.best-product-track .product-card {
+  flex: 0 0 calc((100% - 18px) / 2);
+  min-width: calc((100% - 18px) / 2);
+  max-width: calc((100% - 18px) / 2);
+}
+
+  .product-image-wrapper {
+    height: 270px;
+  }
+
+  .product-content {
+    padding: 15px 16px 17px;
+  }
+
+}
+@media (min-width: 901px) {
+
+  .best-header-arrows {
+    display: none;
+  }
+
+}
+/* =========================================================
+   SMALL TABLET / LARGE MOBILE
+   700px and below
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  .best-sellers {
+    padding: 38px 20px 50px;
+  }
+
+  .best-header {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 24px;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .best-header-actions {
+    flex-shrink: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    gap: 10px;
+  }
+
+  .best-header-arrows {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .best-header-arrow {
+    width: 36px;
+    height: 36px;
+  }
+
+  .best-header h2 {
+    font-size: 40px;
+    line-height: 1.08;
+  }
+
+  .best-header p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .best-view-all-btn {
+    margin-top: 0;
+    font-size: 15px;
+  }
+
+  .product-image-wrapper {
+    height: 250px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE CAROUSEL
+   576px and below
+   ========================================================= */
+
+@media (max-width: 576px) {
+
+  .best-sellers {
+    padding: 34px 16px 45px;
+  }
+
+  .best-header {
+    gap: 14px;
+    margin-bottom: 22px;
+  }
+
+  .best-header-actions {
+  gap: 10px;
+}
+
+.best-header-arrows {
+  gap: 6px;
+}
+
+.best-header-arrow {
+  width: 36px;
+  height: 36px;
+}
+
+.best-view-all-btn {
+  font-size: 14px;
+}
+
+  .section-tag {
+    font-size: 11px;
+    letter-spacing: 2.5px;
+  }
+
+  .best-header h2 {
+    font-size: 34px;
+    line-height: 1.08;
+  }
+
+  .best-header p {
+    font-size: 13px;
+  }
+
+
+  /* =========================
+     MOBILE CAROUSEL
+     ========================= */
+
+  .best-products-carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+
+
+.best-product-track {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 14px;
+  width: 100%;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+  /* =========================
+     ONE CARD ONLY
+     ========================= */
+
+.best-product-track .product-card {
+  flex: 0 0 100%;
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  /* transform: none !important; */
+}
+
+
+  .product-card:hover {
+    transform: none !important;
+  }
+
+
+  .product-image-wrapper {
+    height: 290px;
+  }
+
+  .product-content {
+    padding: 16px 18px 18px;
+  }
+
+  .discount-badge {
+    top: 12px;
+    left: 12px;
+  }
+
+  .organic-badge {
+    top: 12px;
+    right: 56px;
+  }
+
+  .wishlist-btn {
+    top: 12px;
+    right: 12px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   400px and below
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+  .best-sellers {
+    padding: 30px 14px 40px;
+  }
+
+  .best-header {
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .section-tag {
+    font-size: 10px;
+    letter-spacing: 2.2px;
+  }
+
+  .best-header h2 {
+    font-size: 30px;
+  }
+
+  .best-header p {
+    font-size: 12px;
+  }
+
+.best-header-actions {
+  gap: 8px;
+}
+
+.best-header-arrows {
+  gap: 6px;
+}
+
+.best-header-arrow {
+  width: 34px;
+  height: 34px;
+}
+
+.best-view-all-btn {
+  font-size: 13px;
+}
+
+.best-product-track {
+  gap: 12px;
+  scroll-behavior: smooth;
+}
+
+
+  .best-product-track .product-card {
+    flex: 0 0 100%;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+
+  .product-image-wrapper {
+    height: 250px;
+  }
+
+  .product-content {
+    padding: 14px 15px 16px;
+  }
+
+  .product-content h3 {
+    font-size: 16px;
+  }
+
+  .product-desc {
+    font-size: 11px;
+  }
+
+  .price {
+    font-size: 15px;
+  }
+
+  .old-price {
+    font-size: 11px;
+  }
+
+  .add-btn {
+    width: 76px;
+    height: 38px;
+    font-size: 12px;
+  }
+}
+
+/* =========================================================
+   VERY SMALL MOBILE
+   360px and below
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+  .best-sellers {
+    padding: 28px 12px 36px;
+  }
+
+  .best-header h2 {
+    font-size: 28px;
+  }
+
+  .best-header p {
+    font-size: 11px;
+  }
+
+
+  .product-image-wrapper {
+    height: 230px;
+  }
+
+
+  .product-content {
+    padding: 13px 14px 15px;
+  }
+
+
+  .product-content h3 {
+    font-size: 15px;
+  }
+
+
+  .product-desc {
+    font-size: 10.5px;
+  }
+
+  .best-header-arrow {
+  width: 32px;
+  height: 32px;
+}
+
+.best-header-arrows {
+  gap: 5px;
+}
+
+.best-header-actions {
+  gap: 8px;
+}
 
 }
