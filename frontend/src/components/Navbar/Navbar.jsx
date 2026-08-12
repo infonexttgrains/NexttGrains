@@ -1,32 +1,32 @@
 import "./Navbar.css";
 import { useWishlist } from "../../context/WishlistContext";
 import { useCart } from "../../context/CartContext";
-import { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import {
   Search,
   User,
   Heart,
   ShoppingCart,
   MapPin,
+  Menu,
+  X,
 } from "lucide-react";
 import { PiLeafLight } from "react-icons/pi";
 
 function Navbar() {
+const [menuOpen, setMenuOpen] = useState(false);
+const [searchQuery, setSearchQuery] = useState("");
+const [searchFocused, setSearchFocused] = useState(false);
+const navigate = useNavigate();
 const {
-
 cartCount,
-
 openCart,
-
 loadCart
-
 }=useCart();
 
 const {
-
 wishlistCount
-
 }=useWishlist();
 
 useEffect(()=>{
@@ -38,7 +38,7 @@ useEffect(()=>{
       <div className="navbar-container">
 
         {/* Logo */}
-        <div className="nav-logo">
+       <Link to="/" className="nav-logo">
           <div className="logo-circle">
             <PiLeafLight className="leaf-icon" />
           </div>
@@ -53,7 +53,7 @@ useEffect(()=>{
               <span>Delivering to Bengaluru · 24 hrs</span>
             </div>
           </div>
-        </div>
+        </Link>
 
         {/* Search */}
         <div className="search-box">
@@ -66,60 +66,126 @@ useEffect(()=>{
         </div>
 
         {/* Navigation */}
-        <nav className="nav-links">
-          <Link to="/shop">Shop</Link>
+<nav className="nav-links">
+
+  <Link to="/shop">
+    Shop
+  </Link>
 
   <Link to="/categories">
     Categories
   </Link>
-{/* 
-  <Link to="/offers">
-    Offers
-  </Link> */}
 
   <Link to="/our-story">
     Our Story
   </Link>
-      <Link to="/journal">
+
+  <Link to="/journal">
     Journal
   </Link>
-      <Link to="/contact">
+
+  <Link to="/contact">
     Contact Us
   </Link>
-        </nav>
+
+</nav>
 
         {/* Actions */}
-        <div className="nav-actions">
-          <Link
-  to="/account"
-  className="icon-btn"
->
-  <User />
-</Link>
+<div className="nav-actions">
 
-<Link
+  {/* ACCOUNT */}
+  <Link
+    to="/account"
+    className="icon-btn"
+    aria-label="Account"
+  >
+    <User />
+  </Link>
 
-to="/wishlist"
 
-className="icon-btn"
+  {/* WISHLIST */}
+  <Link
+    to="/wishlist"
+    className="icon-btn"
+    aria-label="Wishlist"
+  >
+    <Heart />
+  </Link>
 
->
 
-<Heart/>
-</Link>
+  {/* CART */}
+  <button
+    type="button"
+    className="cart-btn"
+    onClick={openCart}
+    aria-label="Open cart"
+  >
+    <ShoppingCart />
+    <span>Cart</span>
+    <strong>{cartCount}</strong>
+  </button>
 
-<button
-className="cart-btn"
-onClick={openCart}
->
-<ShoppingCart />
-<span>Cart</span>
-<strong>{cartCount}</strong>
-</button>
 
-        </div>
+  {/* MOBILE / TABLET MENU */}
+  <button
+    type="button"
+    className="menu-btn"
+    onClick={() => setMenuOpen(!menuOpen)}
+    aria-label={menuOpen ? "Close menu" : "Open menu"}
+    aria-expanded={menuOpen}
+  >
+    {menuOpen ? <X /> : <Menu />}
+  </button>
+
+</div>
+      </div>
+
+
+      {/* MOBILE MENU */}
+      <div
+        className={`mobile-menu ${
+          menuOpen ? "mobile-menu-open" : ""
+        }`}
+      >
+
+        <Link
+          to="/shop"
+          onClick={() => setMenuOpen(false)}
+        >
+          Shop
+        </Link>
+
+        <Link
+          to="/categories"
+          onClick={() => setMenuOpen(false)}
+        >
+          Categories
+        </Link>
+
+        <Link
+          to="/our-story"
+          onClick={() => setMenuOpen(false)}
+        >
+          Our Story
+        </Link>
+
+        <Link
+          to="/journal"
+          onClick={() => setMenuOpen(false)}
+        >
+          Journal
+        </Link>
+
+        <Link
+          to="/contact"
+          onClick={() => setMenuOpen(false)}
+        >
+          Contact Us
+        </Link>
 
       </div>
+
+
     </header>
   );
 }

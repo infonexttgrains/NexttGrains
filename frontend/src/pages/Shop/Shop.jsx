@@ -11,6 +11,7 @@ import {
   Star,
   Plus,
   Zap,
+  ChevronDown,
 } from "lucide-react";
 
 function Shop() {
@@ -21,37 +22,38 @@ const [loading,setLoading] = useState(true);
 const [selectedCategories, setSelectedCategories] = useState([]);
 const [maxPrice, setMaxPrice] = useState(5000);
 const [sortBy, setSortBy] = useState("popular");
+const [filtersOpen, setFiltersOpen] = useState(true);
+
+useEffect(() => {
+  const handleResize = () => {
+    if (window.innerWidth > 900) {
+      setFiltersOpen(true);
+    }
+  };
+  window.addEventListener("resize", handleResize);
+  handleResize();
+  return () => {
+    window.removeEventListener("resize", handleResize);
+  };
+}, []);
 
 useEffect(()=>{
-
 getProducts();
-
 },[]);
 
 const getProducts = async()=>{
-
 try{
-
 const res = await axios.get(
 `${BACKEND_URL}/api/products/all`
 );
-
 setProducts(res.data.products);
-
 }
-
 catch(err){
-
 console.log(err);
-
 }
-
 finally{
-
 setLoading(false);
-
 }
-
 };
 
 const getDiscount=(mrp,price)=>{
@@ -149,77 +151,115 @@ Latest
 
       <div className="shop-layout">
 
-        <aside className="shop-sidebar">
+<aside className="shop-sidebar">
 
-          <h3>Category</h3>
+  {/* FILTER HEADER */}
+  <div className="shop-filter-header">
 
-          {
-categories.map(cat=>(
+    <h3>Filters</h3>
 
-<label key={cat}>
+    <button
+      type="button"
+      className={`shop-filter-toggle ${
+        filtersOpen ? "shop-filter-toggle-open" : ""
+      }`}
+      onClick={() => setFiltersOpen(!filtersOpen)}
+      aria-label={
+        filtersOpen
+          ? "Close filters"
+          : "Open filters"
+      }
+      aria-expanded={filtersOpen}
+    >
+      <ChevronDown size={20} />
+    </button>
 
-<input
-type="checkbox"
+  </div>
 
-checked={selectedCategories.includes(cat)}
 
-onChange={(e)=>{
+  {/* ALL FILTERS */}
+  {filtersOpen && (
 
-if(e.target.checked){
+    <div className="shop-filter-content">
 
-setSelectedCategories([
-...selectedCategories,
-cat
-]);
+      {/* CATEGORY */}
 
-}else{
+      <h3 className="shop-filter-title">
+        Category
+      </h3>
 
-setSelectedCategories(
+      <div className="shop-category-options">
 
-selectedCategories.filter(c=>c!==cat)
+        {categories.map(cat => (
 
-);
+          <label key={cat}>
 
-}
+            <input
+              type="checkbox"
 
-}}
-/>
+              checked={selectedCategories.includes(cat)}
 
-{cat}
+              onChange={(e) => {
 
-</label>
+                if (e.target.checked) {
 
-))
-}
+                  setSelectedCategories([
+                    ...selectedCategories,
+                    cat
+                  ]);
 
-          <h3 className="shop-quality-title">Price Range</h3>
+                } else {
 
-          <input
+                  setSelectedCategories(
+                    selectedCategories.filter(
+                      c => c !== cat
+                    )
+                  );
 
-type="range"
+                }
 
-min="0"
+              }}
+            />
 
-max="5000"
+            {cat}
 
-step="50"
+          </label>
 
-value={maxPrice}
+        ))}
 
-onChange={(e)=>
+      </div>
 
-setMaxPrice(Number(e.target.value))
 
-}
+      {/* PRICE RANGE */}
 
-/>
+      <h3 className="shop-filter-title shop-quality-title">
+        Price Range
+      </h3>
 
-<p>
+      <div className="shop-price-options">
 
-Under ₹{maxPrice}
+        <input
+          type="range"
+          min="0"
+          max="5000"
+          step="50"
+          value={maxPrice}
+          onChange={(e) =>
+            setMaxPrice(Number(e.target.value))
+          }
+        />
 
-</p>
-        </aside>
+        <p>
+          Under ₹{maxPrice}
+        </p>
+
+      </div>
+
+    </div>
+
+  )}
+
+</aside>
 
 <div className="shop-products-scroll">
         <div className="shop-product-grid">
