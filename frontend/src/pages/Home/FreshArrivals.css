@@ -4,7 +4,6 @@
 }
 
 /* HEADER */
-
 .fresh-header {
   display: flex;
   justify-content: space-between;
@@ -25,7 +24,7 @@
   font-size: 54px;
   font-weight: 700;
   line-height: 1.05;
-  color: #241605;
+  color: #15361D;
 }
 
 .fresh-header p {

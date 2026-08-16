@@ -932,255 +932,1100 @@
     gap:35px;
 
 }
+/* ==========================================================
+   RESPONSIVE DESIGN
+   ==========================================================
+   IMPORTANT:
+   Desktop / Laptop design above 992px remains unchanged.
+   All responsive changes start below 992px.
+   ========================================================== */
 
-/* ==========================================
-    RESPONSIVE
-========================================== */
 
-@media(max-width:1200px){
+/* ==========================================================
+   TABLET
+   769px - 992px
+   ========================================================== */
 
-    .journal-page-details-title{
+@media (max-width: 992px) {
 
-        font-size:56px;
+    /* =========================
+       MAIN CONTAINER
+    ========================= */
 
+    .journal-page-details-container {
+        padding: 45px 5% 80px;
     }
 
-    .journal-page-details-content-grid{
 
-        grid-template-columns:1fr 330px;
+    /* =========================
+       BACK BUTTON
+    ========================= */
 
-        gap:40px;
+    .journal-page-details-back-button {
+        margin-bottom: 28px;
+        padding: 13px 21px;
+        font-size: 14px;
+    }
 
+
+    /* =========================
+       HERO / BANNER
+    ========================= */
+
+    .journal-page-details-hero {
+        margin-bottom: 65px;
+    }
+
+    .journal-page-details-banner-wrapper {
+        min-height: 580px;
+        border-radius: 26px;
+    }
+
+    .journal-page-details-banner-image {
+        height: 580px;
+    }
+
+    .journal-page-details-banner-content {
+        left: 42px;
+        right: 42px;
+        bottom: 42px;
+        max-width: 760px;
+    }
+
+    .journal-page-details-category {
+        font-size: 13px;
+        padding: 8px 18px;
+        margin-bottom: 18px;
+    }
+
+    .journal-page-details-title {
+        font-size: 48px;
+        line-height: 1.08;
+        margin-bottom: 18px;
+    }
+
+    .journal-page-details-short-description {
+        max-width: 650px;
+        font-size: 16px;
+        line-height: 1.75;
+        margin-bottom: 24px;
+    }
+
+    .journal-page-details-meta {
+        gap: 18px;
+        margin-bottom: 20px;
+    }
+
+    .journal-page-details-meta-item {
+        font-size: 14px;
+    }
+
+    .journal-page-details-author {
+        font-size: 15px;
+    }
+
+
+    /* =========================
+       CONTENT
+    ========================= */
+
+    .journal-page-details-content-section {
+        margin-bottom: 75px;
+    }
+
+    .journal-page-details-content-grid {
+        display:grid;
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+
+    /* =========================
+       ARTICLE
+    ========================= */
+
+    .journal-page-details-article {
+        width: 100%;
+        padding: 45px 38px;
+        border-radius: 24px;
+    }
+
+    .journal-page-details-description {
+        width: 100%;
+        max-width: 100%;
+        font-size: 16px;
+        line-height: 1.9;
+
+        /*
+          Prevent long content from
+          creating horizontal overflow.
+        */
+        overflow-wrap: anywhere;
+        word-wrap: break-word;
+    }
+
+    .journal-page-details-description h1 {
+        font-size: 48px;
+        line-height: 1.12;
+        margin: 42px 0 18px;
+    }
+
+    .journal-page-details-description h2 {
+        font-size: 38px;
+        line-height: 1.15;
+        margin: 38px 0 16px;
+    }
+
+    .journal-page-details-description h3 {
+        font-size: 31px;
+        line-height: 1.2;
+        margin: 34px 0 15px;
+    }
+
+    .journal-page-details-description h4 {
+        font-size: 26px;
+    }
+
+    .journal-page-details-description h5 {
+        font-size: 21px;
+    }
+
+
+    /* =========================
+       ARTICLE IMAGES
+    ========================= */
+
+    .journal-page-details-description img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+        border-radius: 18px;
+        margin: 32px 0;
+    }
+
+
+    /* =========================
+       LISTS
+    ========================= */
+
+    .journal-page-details-description ul,
+    .journal-page-details-description ol {
+        margin: 18px 0 26px 25px;
+        padding-right: 5px;
+    }
+
+    .journal-page-details-description li {
+        line-height: 1.8;
+        margin-bottom: 11px;
+    }
+
+
+    /* =========================
+       BLOCKQUOTE
+    ========================= */
+
+    .journal-page-details-description blockquote {
+        margin: 32px 0;
+        padding: 22px;
+        font-size: 20px;
+        line-height: 1.7;
+    }
+
+
+    /* =========================
+       TABLE
+    ========================= */
+
+    /*
+       Very important for mobile/tablet:
+       tables should scroll horizontally
+       instead of breaking the page.
+    */
+
+    .journal-page-details-description table {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        margin: 32px 0;
+        border-collapse: collapse;
+    }
+
+    .journal-page-details-description th,
+    .journal-page-details-description td {
+        min-width: 120px;
+        padding: 13px;
+        white-space: nowrap;
+        font-size: 14px;
+    }
+
+
+    /* =========================
+       CODE
+    ========================= */
+
+    .journal-page-details-description pre {
+        max-width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        padding: 20px;
+        font-size: 13px;
+        border-radius: 14px;
+    }
+
+    .journal-page-details-description code {
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+
+
+    /* =========================
+       SIDEBAR
+    ========================= */
+
+    .journal-page-details-sidebar {
+        position: static;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+    }
+
+    .journal-page-details-sidebar-card {
+        width: 100%;
+        padding: 25px;
+        border-radius: 22px;
+    }
+
+    .journal-page-details-sidebar-title {
+        font-size: 31px;
+        line-height: 1.1;
+    }
+
+
+    /* =========================
+       SIDEBAR INFO
+    ========================= */
+
+    .journal-page-details-info-list {
+        gap: 15px;
+    }
+
+    .journal-page-details-info-item {
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .journal-page-details-info-item span,
+    .journal-page-details-info-item strong {
+        font-size: 14px;
+    }
+
+
+    /* =========================
+       TAGS
+    ========================= */
+
+    .journal-page-details-tags {
+        gap: 9px;
+    }
+
+    .journal-page-details-tag {
+        padding: 8px 14px;
+        font-size: 13px;
+    }
+
+
+    /* =========================
+       SHARE
+    ========================= */
+
+    .journal-page-details-share-button {
+        padding: 13px 18px;
+        font-size: 14px;
+    }
+
+
+    /* =========================
+       RELATED STORIES
+    ========================= */
+
+    .journal-page-details-related-section {
+        margin-top: 75px;
+    }
+
+    .journal-page-details-related-header {
+        margin-bottom: 35px;
+    }
+
+    .journal-page-details-related-title {
+        font-size: 44px;
+    }
+
+    .journal-page-details-related-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 28px;
     }
 
 }
 
-@media(max-width:992px){
 
-    .journal-page-details-container{
+/* ==========================================================
+   MOBILE
+   577px - 768px
+   ========================================================== */
 
-        padding:45px 5% 80px;
+@media (max-width: 768px) {
 
+    .journal-page-details-container {
+        padding: 38px 20px 60px;
     }
 
-    .journal-page-details-banner-wrapper{
 
-        min-height:580px;
+    /* =========================
+       BACK BUTTON
+    ========================= */
 
+    .journal-page-details-back-button {
+        margin-bottom: 22px;
+        padding: 11px 18px;
+        font-size: 13px;
+        gap: 8px;
     }
 
-    .journal-page-details-banner-image{
 
-        height:580px;
+    /* =========================
+       HERO
+    ========================= */
 
+    .journal-page-details-hero {
+        margin-bottom: 55px;
     }
 
-    .journal-page-details-banner-content{
-
-        left:40px;
-        right:40px;
-        bottom:40px;
-
+    .journal-page-details-banner-wrapper {
+        min-height: 510px;
+        border-radius: 22px;
     }
 
-    .journal-page-details-title{
-
-        font-size:48px;
-
+    .journal-page-details-banner-image {
+        height: 510px;
     }
 
-    .journal-page-details-short-description{
-
-        font-size:16px;
-
+    .journal-page-details-banner-content {
+        left: 24px;
+        right: 24px;
+        bottom: 25px;
     }
 
-    .journal-page-details-content-grid{
-
-        grid-template-columns:1fr;
-
+    .journal-page-details-category {
+        font-size: 12px;
+        padding: 7px 15px;
+        margin-bottom: 14px;
     }
 
-    .journal-page-details-sidebar{
-
-        position:static;
-
+    .journal-page-details-title {
+        font-size: 38px;
+        line-height: 1.08;
+        margin-bottom: 14px;
     }
 
-    .journal-page-details-related-grid{
+    .journal-page-details-short-description {
+        font-size: 14px;
+        line-height: 1.7;
+        margin-bottom: 20px;
+    }
 
-        grid-template-columns:repeat(2,1fr);
+    .journal-page-details-meta {
+        gap: 11px 16px;
+        margin-bottom: 17px;
+    }
 
+    .journal-page-details-meta-item {
+        font-size: 12px;
+        gap: 6px;
+    }
+
+    .journal-page-details-meta-item svg {
+        width: 14px;
+        height: 14px;
+    }
+
+    .journal-page-details-author {
+        font-size: 14px;
+    }
+
+
+    /* =========================
+       ARTICLE + SIDEBAR
+    ========================= */
+
+    .journal-page-details-content-grid {
+        gap: 28px;
+    }
+
+    .journal-page-details-article {
+        padding: 32px 24px;
+        border-radius: 21px;
+    }
+
+    .journal-page-details-description {
+        font-size: 15px;
+        line-height: 1.85;
+    }
+
+
+    /* =========================
+       ARTICLE HEADINGS
+    ========================= */
+
+    .journal-page-details-description h1 {
+        font-size: 38px;
+        line-height: 1.12;
+        margin: 36px 0 16px;
+    }
+
+    .journal-page-details-description h2 {
+        font-size: 32px;
+        line-height: 1.15;
+        margin: 32px 0 15px;
+    }
+
+    .journal-page-details-description h3 {
+        font-size: 27px;
+        margin: 28px 0 14px;
+    }
+
+    .journal-page-details-description h4 {
+        font-size: 23px;
+        margin: 26px 0 13px;
+    }
+
+    .journal-page-details-description h5 {
+        font-size: 20px;
+    }
+
+
+    /* =========================
+       PARAGRAPHS
+    ========================= */
+
+    .journal-page-details-description p {
+        margin-bottom: 20px;
+        line-height: 1.85;
+    }
+
+
+    /* =========================
+       IMAGES
+    ========================= */
+
+    .journal-page-details-description img {
+        width: 100%;
+        height: auto;
+        border-radius: 16px;
+        margin: 28px 0;
+    }
+
+
+    /* =========================
+       BLOCKQUOTE
+    ========================= */
+
+    .journal-page-details-description blockquote {
+        border-left-width: 4px;
+        padding: 18px;
+        margin: 28px 0;
+        border-radius: 0 14px 14px 0;
+        font-size: 19px;
+        line-height: 1.65;
+    }
+
+
+    /* =========================
+       TABLE
+    ========================= */
+
+    .journal-page-details-description table {
+        width: 100%;
+        margin: 28px 0;
+    }
+
+    .journal-page-details-description th,
+    .journal-page-details-description td {
+        min-width: 110px;
+        padding: 11px;
+        font-size: 12px;
+    }
+
+
+    /* =========================
+       CODE
+    ========================= */
+
+    .journal-page-details-description pre {
+        padding: 16px;
+        margin: 25px 0;
+        border-radius: 12px;
+        font-size: 12px;
+        line-height: 1.6;
+    }
+
+
+    /* =========================
+       LIST
+    ========================= */
+
+    .journal-page-details-description ul,
+    .journal-page-details-description ol {
+        margin-left: 21px;
+    }
+
+    .journal-page-details-description li {
+        font-size: 14px;
+        line-height: 1.75;
+    }
+
+
+    /* =========================
+       SIDEBAR
+    ========================= */
+
+    .journal-page-details-sidebar {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .journal-page-details-sidebar-card {
+        padding: 22px;
+        border-radius: 20px;
+    }
+
+    .journal-page-details-sidebar-title {
+        font-size: 29px;
+        margin-bottom: 20px;
+    }
+
+
+    /* =========================
+       INFO
+    ========================= */
+
+    .journal-page-details-info-list {
+        gap: 14px;
+    }
+
+    .journal-page-details-info-item {
+        padding-bottom: 13px;
+    }
+
+    .journal-page-details-info-item span,
+    .journal-page-details-info-item strong {
+        font-size: 13px;
+    }
+
+
+    /* =========================
+       TAGS
+    ========================= */
+
+    .journal-page-details-tags {
+        gap: 8px;
+    }
+
+    .journal-page-details-tag {
+        padding: 8px 13px;
+        font-size: 12px;
+    }
+
+
+    /* =========================
+       SHARE
+    ========================= */
+
+    .journal-page-details-share-button {
+        padding: 13px 18px;
+        font-size: 13px;
+    }
+
+
+    /* =========================
+       RELATED
+    ========================= */
+
+    .journal-page-details-related-section {
+        margin-top: 60px;
+    }
+
+    .journal-page-details-related-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+        margin-bottom: 30px;
+    }
+
+    .journal-page-details-related-label {
+        font-size: 11px;
+        letter-spacing: 2.5px;
+    }
+
+    .journal-page-details-related-title {
+        font-size: 38px;
+    }
+
+    .journal-page-details-view-all-button {
+        width: 100%;
+        padding: 14px 22px;
+        font-size: 13px;
+    }
+
+    .journal-page-details-related-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
     }
 
 }
 
-@media(max-width:768px){
 
-    .journal-page-details-container{
+/* ==========================================================
+   SMALL PHONES
+   401px - 576px
+   ========================================================== */
 
-        padding:35px 20px 60px;
+@media (max-width: 576px) {
 
+    .journal-page-details-container {
+        padding: 32px 16px 50px;
     }
 
-    .journal-page-details-back-button{
 
-        margin-bottom:25px;
+    /* =========================
+       BACK BUTTON
+    ========================= */
 
-        padding:12px 20px;
-
-        font-size:14px;
-
+    .journal-page-details-back-button {
+        padding: 10px 16px;
+        font-size: 12px;
+        margin-bottom: 18px;
     }
 
-    .journal-page-details-banner-wrapper{
-
-        min-height:500px;
-
-        border-radius:22px;
-
+    .journal-page-details-back-button svg {
+        width: 16px;
+        height: 16px;
     }
 
-    .journal-page-details-banner-image{
 
-        height:500px;
+    /* =========================
+       BANNER
+    ========================= */
 
+    .journal-page-details-banner-wrapper {
+        min-height: 560px;
+        border-radius: 19px;
     }
 
-    .journal-page-details-banner-content{
-
-        left:24px;
-        right:24px;
-        bottom:24px;
-
+    .journal-page-details-banner-image {
+        height: 560px;
     }
 
-    .journal-page-details-title{
-
-        font-size:38px;
-
+    .journal-page-details-banner-content {
+        left: 17px;
+        right: 17px;
+        bottom: 19px;
     }
 
-    .journal-page-details-short-description{
 
-        font-size:15px;
+    /* =========================
+       CATEGORY
+    ========================= */
 
-        line-height:1.8;
-
+    .journal-page-details-category {
+        font-size: 10px;
+        padding: 6px 12px;
+        margin-bottom: 11px;
     }
 
-    .journal-page-details-meta{
 
-        gap:16px;
+    /* =========================
+       TITLE
+    ========================= */
 
+    .journal-page-details-title {
+        font-size: 32px;
+        line-height: 1.08;
+        margin-bottom: 11px;
     }
 
-    .journal-page-details-article{
 
-        padding:35px 25px;
+    /* =========================
+       SHORT DESCRIPTION
+    ========================= */
 
+    .journal-page-details-short-description {
+        font-size: 12.5px;
+        line-height: 1.6;
+        margin-bottom: 16px;
     }
 
-    .journal-page-details-sidebar-card{
 
-        padding:24px;
+    /* =========================
+       META
+    ========================= */
 
+    .journal-page-details-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        margin-bottom: 13px;
     }
 
-    .journal-page-details-related-header{
-
-        flex-direction:column;
-
-        align-items:flex-start;
-
+    .journal-page-details-meta-item {
+        font-size: 11px;
     }
 
-    .journal-page-details-related-title{
-
-        font-size:40px;
-
+    .journal-page-details-author {
+        font-size: 12px;
     }
 
-    .journal-page-details-related-grid{
 
-        grid-template-columns:1fr;
+    /* =========================
+       ARTICLE
+    ========================= */
 
+    .journal-page-details-article {
+        padding: 26px 18px;
+        border-radius: 18px;
+    }
+
+    .journal-page-details-description {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+
+    /* =========================
+       ARTICLE HEADINGS
+    ========================= */
+
+    .journal-page-details-description h1 {
+        font-size: 34px;
+        margin: 30px 0 14px;
+    }
+
+    .journal-page-details-description h2 {
+        font-size: 29px;
+        margin: 28px 0 13px;
+    }
+
+    .journal-page-details-description h3 {
+        font-size: 25px;
+        margin: 25px 0 12px;
+    }
+
+    .journal-page-details-description h4 {
+        font-size: 21px;
+    }
+
+    .journal-page-details-description h5 {
+        font-size: 18px;
+    }
+
+
+    /* =========================
+       PARAGRAPHS
+    ========================= */
+
+    .journal-page-details-description p {
+        margin-bottom: 18px;
+        line-height: 1.8;
+    }
+
+
+    /* =========================
+       IMAGES
+    ========================= */
+
+    .journal-page-details-description img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        border-radius: 14px;
+        margin: 24px 0;
+    }
+
+
+    /* =========================
+       BLOCKQUOTE
+    ========================= */
+
+    .journal-page-details-description blockquote {
+        padding: 16px;
+        margin: 24px 0;
+        font-size: 18px;
+        line-height: 1.6;
+    }
+
+
+    /* =========================
+       TABLE
+    ========================= */
+
+    .journal-page-details-description table {
+        margin: 24px 0;
+    }
+
+    .journal-page-details-description th,
+    .journal-page-details-description td {
+        min-width: 100px;
+        padding: 9px;
+        font-size: 11px;
+    }
+
+
+    /* =========================
+       CODE
+    ========================= */
+
+    .journal-page-details-description pre {
+        padding: 13px;
+        margin: 22px 0;
+        border-radius: 10px;
+        font-size: 11px;
+    }
+
+
+    /* =========================
+       SIDEBAR
+    ========================= */
+
+    .journal-page-details-sidebar-card {
+        padding: 20px;
+        border-radius: 18px;
+    }
+
+    .journal-page-details-sidebar-title {
+        font-size: 27px;
+    }
+
+
+    /* =========================
+       RELATED
+    ========================= */
+
+    .journal-page-details-related-title {
+        font-size: 34px;
     }
 
 }
 
-@media(max-width:576px){
 
-    .journal-page-details-title{
+/* ==========================================================
+   VERY SMALL PHONES
+   320px - 400px
+   ========================================================== */
 
-        font-size:32px;
+@media (max-width: 400px) {
 
+    .journal-page-details-container {
+        padding: 28px 12px 45px;
     }
 
-    .journal-page-details-category{
 
-        font-size:12px;
+    /* =========================
+       BACK
+    ========================= */
 
-        padding:8px 16px;
-
+    .journal-page-details-back-button {
+        padding: 9px 14px;
+        font-size: 11px;
+        margin-bottom: 16px;
     }
 
-    .journal-page-details-meta{
 
-        flex-direction:column;
+    /* =========================
+       BANNER
+    ========================= */
 
-        align-items:flex-start;
-
-        gap:12px;
-
+    .journal-page-details-banner-wrapper {
+        min-height: 540px;
+        border-radius: 17px;
     }
 
-    .journal-page-details-author{
-
-        font-size:15px;
-
+    .journal-page-details-banner-image {
+        height: 540px;
     }
 
-    .journal-page-details-description{
-
-        font-size:15px;
-
+    .journal-page-details-banner-content {
+        left: 14px;
+        right: 14px;
+        bottom: 16px;
     }
 
-    .journal-page-details-description h1{
 
-        font-size:36px;
+    /* =========================
+       HERO
+    ========================= */
 
+    .journal-page-details-category {
+        font-size: 9px;
+        padding: 5px 10px;
     }
 
-    .journal-page-details-description h2{
-
-        font-size:30px;
-
+    .journal-page-details-title {
+        font-size: 28px;
     }
 
-    .journal-page-details-description h3{
-
-        font-size:26px;
-
+    .journal-page-details-short-description {
+        font-size: 11.5px;
+        line-height: 1.55;
     }
 
-    .journal-page-details-sidebar-title{
-
-        font-size:28px;
-
+    .journal-page-details-meta-item {
+        font-size: 10px;
     }
 
-    .journal-page-details-related-title{
-
-        font-size:34px;
-
+    .journal-page-details-author {
+        font-size: 11px;
     }
 
-    .journal-page-details-view-all-button{
 
-        width:100%;
+    /* =========================
+       ARTICLE
+    ========================= */
 
+    .journal-page-details-article {
+        padding: 23px 15px;
+    }
+
+    .journal-page-details-description {
+        font-size: 13px;
+        line-height: 1.75;
+    }
+
+
+    /* =========================
+       HEADINGS
+    ========================= */
+
+    .journal-page-details-description h1 {
+        font-size: 30px;
+    }
+
+    .journal-page-details-description h2 {
+        font-size: 26px;
+    }
+
+    .journal-page-details-description h3 {
+        font-size: 23px;
+    }
+
+    .journal-page-details-description h4 {
+        font-size: 20px;
+    }
+
+
+    /* =========================
+       TABLE
+    ========================= */
+
+    .journal-page-details-description th,
+    .journal-page-details-description td {
+        min-width: 90px;
+        padding: 8px;
+        font-size: 10px;
+    }
+
+
+    /* =========================
+       BLOCKQUOTE
+    ========================= */
+
+    .journal-page-details-description blockquote {
+        padding: 14px;
+        font-size: 16px;
+    }
+
+
+    /* =========================
+       SIDEBAR
+    ========================= */
+
+    .journal-page-details-sidebar-card {
+        padding: 18px;
+    }
+
+    .journal-page-details-sidebar-title {
+        font-size: 25px;
+    }
+
+
+    /* =========================
+       RELATED
+    ========================= */
+
+    .journal-page-details-related-title {
+        font-size: 30px;
+    }
+
+    .journal-page-details-view-all-button {
+        padding: 13px 18px;
+        font-size: 12px;
+    }
+
+}
+
+
+/* ==========================================================
+   EXTRA SMALL
+   320px AND BELOW
+   ========================================================== */
+
+@media (max-width: 320px) {
+
+    .journal-page-details-container {
+        padding: 25px 10px 40px;
+    }
+
+    .journal-page-details-banner-wrapper {
+        min-height: 520px;
+    }
+
+    .journal-page-details-banner-image {
+        height: 520px;
+    }
+
+    .journal-page-details-title {
+        font-size: 25px;
+    }
+
+    .journal-page-details-short-description {
+        font-size: 10.5px;
+    }
+
+    .journal-page-details-article {
+        padding: 20px 13px;
+    }
+
+    .journal-page-details-description {
+        font-size: 12.5px;
+    }
+
+    .journal-page-details-description h1 {
+        font-size: 27px;
+    }
+
+    .journal-page-details-description h2 {
+        font-size: 24px;
+    }
+
+    .journal-page-details-description h3 {
+        font-size: 21px;
+    }
+
+    .journal-page-details-related-title {
+        font-size: 27px;
     }
 
 }

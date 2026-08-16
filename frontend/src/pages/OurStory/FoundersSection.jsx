@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./FoundersSection.css";
-
+import { X } from "lucide-react";
 import ashwin from "../../assets/ashwin_founder.png";
 import vaibhav from "../../assets/vaibhav_founder.jpg";
 import pranit from "../../assets/pranit_founder.png";
@@ -25,7 +25,7 @@ function FoundersSection() {
       id: 2,
       image: ashwin,
       name: "Ashwin Rajendra Khanzode",
-      role: "Co-Founder & CEO",
+      role: "Founder & CEO",
 
       short:
         "Agronomist, researcher and agriculture innovator.",
@@ -38,7 +38,7 @@ function FoundersSection() {
       id: 3,
       image: vaibhav,
       name: "Vaibhav Gajanan Rithe",
-      role: "Co-Founder & Operations",
+      role: "Founder & Operations",
 
       short:
         "Building sustainable farm-to-home supply chains.",
@@ -104,11 +104,19 @@ function FoundersSection() {
             className="founder-modal"
             onClick={(e) => e.stopPropagation()}
           >
+          <button
+    type="button"
+    className="founder-modal-close"
+    onClick={() => setSelectedFounder(null)}
+    aria-label="Close founder story"
+  >
+    <X size={22} />
+  </button>
 
-            <img
-              src={selectedFounder.image}
-              alt=""
-            />
+  <img
+    src={selectedFounder.image}
+    alt=""
+  />
 
             <h2>{selectedFounder.name}</h2>
 

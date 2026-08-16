@@ -477,28 +477,861 @@ display:grid;
  cursor:pointer;
 }
 
-@media(max-width:1100px){
- .ngpdHero{grid-template-columns:1fr;}
- .ngpdHeroLeft{position:static;}
- .ngpdSectionGrid,
- .ngpdInfoGrid,
- .ngpdDeliveryGrid,
- .ngpdRelatedGrid,
- .ngpdTrustGrid{
-   grid-template-columns:1fr 1fr;
- }
+/* ==========================================================
+   RESPONSIVE DESIGN
+   Desktop / Laptop above 1100px remains UNCHANGED.
+   ========================================================== */
+
+
+/* ==========================================================
+   LARGE TABLETS / SMALL LAPTOPS
+   901px - 1100px
+   ========================================================== */
+
+@media (max-width: 1100px) {
+
+  .ngpdPage {
+    padding: 26px 0 50px;
+  }
+
+  .ngpdWrapper {
+    width: min(94%, 1000px);
+  }
+
+  /*
+    Hero becomes stacked only when the screen
+    can no longer comfortably fit 530px image
+    + product information.
+  */
+
+  .ngpdHero {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .ngpdHeroLeft {
+    position: static;
+    width: 100%;
+  }
+
+  .ngpdHeroRight {
+    width: 100%;
+    padding: 0;
+  }
+
+  .ngpdMainImage {
+    width: 100%;
+  }
+
+  .ngpdMainImage img {
+    width: 100%;
+    height: min(520px, 60vw);
+    min-height: 420px;
+    object-fit: cover;
+  }
+
+  .ngpdThumbStrip {
+    overflow-x: auto;
+    scrollbar-width: none;
+    padding-bottom: 4px;
+  }
+
+  .ngpdThumbStrip::-webkit-scrollbar {
+    display: none;
+  }
+
+  .ngpdThumbItem {
+    flex: 0 0 84px;
+  }
+
+  .ngpdTitle {
+    font-size: 30px;
+  }
+
+  .ngpdTrustGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+
+  .ngpdTrustCard {
+    width: 100%;
+  }
+
+  .ngpdNutritionGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .ngpdDeliveryList {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .ngpdRelatedGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+
+  .ngpdRelatedImage img {
+    height: 190px;
+  }
 }
 
-@media(max-width:700px){
- .ngpdTitle{font-size:38px;}
- .ngpdMainImage img{height:360px;}
- .ngpdCartRow{grid-template-columns:1fr;}
- .ngpdSectionGrid,
- .ngpdInfoGrid,
- .ngpdDeliveryGrid,
- .ngpdNutritionGrid,
- .ngpdRelatedGrid,
- .ngpdTrustGrid{
-   grid-template-columns:1fr;
- }
+
+/* ==========================================================
+   TABLETS
+   601px - 900px
+   ========================================================== */
+
+@media (max-width: 900px) {
+
+  .ngpdPage {
+    padding: 22px 0 45px;
+  }
+
+  .ngpdWrapper {
+    width: calc(100% - 36px);
+  }
+
+  .ngpdBreadcrumb {
+    gap: 8px;
+    font-size: 13px;
+    margin-bottom: 20px;
+
+    /* Keep long product names from breaking layout */
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+  }
+
+  .ngpdBreadcrumb::-webkit-scrollbar {
+    display: none;
+  }
+
+  .ngpdHero {
+    gap: 30px;
+  }
+
+  .ngpdMainImage img {
+    height: min(500px, 65vw);
+    min-height: 360px;
+  }
+
+  .ngpdHeroRight {
+    padding: 0;
+  }
+
+  .ngpdTitle {
+    font-size: 30px;
+    line-height: 1.2;
+  }
+
+  .ngpdSubtitle {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .ngpdRatingRow {
+    margin-bottom: 8px;
+  }
+
+  .ngpdRatingBox {
+    font-size: 20px;
+  }
+
+  .ngpdPriceRow {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .ngpdCartRow {
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 26px;
+  }
+
+  .ngpdQtyBox {
+    width: 120px;
+    flex-shrink: 0;
+  }
+
+  .ngpdCartBtn {
+    flex: 1;
+    min-width: 180px;
+  }
+
+  .ngpdWishlistBtn {
+    flex-shrink: 0;
+  }
+
+  .ngpdTrustGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .ngpdTrustCard {
+    padding: 10px 8px;
+  }
+
+  .ngpdTrustCard h4 {
+    font-size: 13px;
+  }
+
+  .ngpdTrustCard p {
+    font-size: 11px;
+  }
+
+  .ngpdSectionTitle {
+    font-size: 30px;
+  }
+
+  .ngpdInfoRow {
+    padding: 16px 0;
+  }
+
+  .ngpdDeliveryList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ngpdRelatedGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* ==========================================================
+   MOBILE
+   401px - 600px
+   ========================================================== */
+
+@media (max-width: 600px) {
+
+  .ngpdPage {
+    padding: 16px 0 36px;
+  }
+
+  .ngpdWrapper {
+    width: calc(100% - 24px);
+  }
+
+  /* ---------------- BREADCRUMB ---------------- */
+
+  .ngpdBreadcrumb {
+    font-size: 12px;
+    gap: 7px;
+    margin-bottom: 16px;
+  }
+
+
+  /* ---------------- HERO ---------------- */
+
+  .ngpdHero {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .ngpdHeroLeft {
+    width: 100%;
+  }
+
+  .ngpdHeroRight {
+    width: 100%;
+    padding: 0;
+  }
+
+
+  /* ---------------- MAIN IMAGE ---------------- */
+
+  .ngpdMainImage {
+    border-radius: 18px;
+  }
+
+  .ngpdMainImage img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    min-height: 0;
+    object-fit: cover;
+  }
+
+
+  /* ---------------- THUMBNAILS ---------------- */
+
+  .ngpdThumbStrip {
+    display: flex;
+    gap: 9px;
+    margin-top: 12px;
+    margin-bottom: 4px;
+
+    overflow-x: auto;
+    padding-bottom: 4px;
+
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .ngpdThumbStrip::-webkit-scrollbar {
+    display: none;
+  }
+
+  .ngpdThumbItem {
+    width: 68px;
+    height: 68px;
+    min-width: 68px;
+    flex: 0 0 68px;
+    border-radius: 11px;
+  }
+
+
+  /* ---------------- BADGES ---------------- */
+
+  .ngpdBadgeRow {
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-bottom: 10px;
+  }
+
+  .ngpdBadge {
+    padding: 6px 12px;
+    font-size: 11px;
+  }
+
+
+  /* ---------------- PRODUCT TITLE ---------------- */
+
+  .ngpdTitle {
+    font-size: 26px;
+    line-height: 1.22;
+    margin-bottom: 9px;
+  }
+
+  .ngpdSubtitle {
+    font-size: 13px;
+    line-height: 1.65;
+    margin-bottom: 12px;
+  }
+
+
+  /* ---------------- RATING ---------------- */
+
+  .ngpdRatingRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 7px;
+  }
+
+  .ngpdRatingBox {
+    gap: 6px;
+    font-size: 18px;
+  }
+
+  .ngpdRatingBox svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .ngpdRatingRow p {
+    font-size: 13px;
+    margin: 0;
+  }
+
+
+  /* ---------------- PRICE ---------------- */
+
+  .ngpdPriceRow {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px 11px;
+    margin-bottom: 0;
+  }
+
+  .ngpdPriceRow h2 {
+    font-size: 24px;
+    margin-bottom: 5px;
+  }
+
+  .ngpdPriceRow del {
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+
+  .ngpdDiscount {
+    padding: 4px 9px;
+    font-size: 10px;
+    margin-bottom: 5px;
+  }
+
+  .ngpdTax {
+    font-size: 12px;
+    margin-bottom: 12px;
+  }
+
+
+  /* ---------------- CART ---------------- */
+
+  .ngpdCartRow {
+    width: 100%;
+    display: grid;
+
+    /*
+      Quantity + Add button in first row
+      Wishlist in second row only when needed.
+    */
+    grid-template-columns: 110px 1fr;
+    gap: 10px;
+
+    margin-bottom: 22px;
+  }
+
+  .ngpdQtyBox {
+    width: 110px;
+    height: 42px;
+    padding: 0 13px;
+  }
+
+  .ngpdQtyBox button {
+    width: 22px;
+    height: 24px;
+  }
+
+  .ngpdQtyBox span {
+    font-size: 16px;
+  }
+
+  .ngpdCartBtn {
+    width: 100%;
+    min-width: 0;
+    height: 44px;
+    font-size: 14px;
+  }
+
+  .ngpdWishlistBtn {
+    width: 44px;
+    height: 44px;
+
+    /* Keep wishlist compact */
+    grid-column: 2;
+    justify-self: end;
+  }
+
+
+  /* ---------------- TRUST CARDS ---------------- */
+
+  .ngpdTrustGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 7px;
+  }
+
+  .ngpdTrustCard {
+    min-width: 0;
+    padding: 9px 5px;
+    border-radius: 14px;
+  }
+
+  .ngpdTrustCard svg {
+    width: 19px;
+    height: 19px;
+    margin-bottom: 3px;
+  }
+
+  .ngpdTrustCard h4 {
+    font-size: 11px;
+    line-height: 1.25;
+  }
+
+  .ngpdTrustCard p {
+    font-size: 9px;
+    line-height: 1.3;
+  }
+
+
+  /* ---------------- DIVIDER ---------------- */
+
+  .ngpdDivider {
+    margin: 18px 0;
+  }
+
+
+  /* ---------------- ABOUT ---------------- */
+
+  .ngpdAboutSection {
+    width: 100%;
+  }
+
+  .ngpdAboutSection h3 {
+    font-size: 15px;
+    margin-bottom: 7px;
+  }
+
+  .ngpdAboutSection p {
+    font-size: 13px;
+    line-height: 1.75;
+  }
+
+
+  /* ---------------- NUTRITION ---------------- */
+
+  .ngpdNutritionHeading {
+    margin-top: 20px;
+    margin-bottom: 12px;
+  }
+
+  .ngpdNutritionGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .ngpdNutritionCard {
+    border-radius: 12px;
+    padding: 10px 7px;
+    margin-bottom: 0;
+  }
+
+  .ngpdNutritionCard h4 {
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+
+  .ngpdNutritionCard p {
+    font-size: 11px;
+    line-height: 1.35;
+    margin: 0;
+  }
+
+
+  /* ---------------- PRODUCT INFORMATION ---------------- */
+
+  .ngpdInfoList {
+    width: 100%;
+  }
+
+  .ngpdInfoRow {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 12px;
+
+    padding: 13px 0;
+  }
+
+  .ngpdInfoRow span,
+  .ngpdInfoRow b {
+    font-size: 12px;
+  }
+
+  .ngpdInfoRow b {
+    text-align: right;
+    max-width: 55%;
+    overflow-wrap: anywhere;
+  }
+
+
+  /* ---------------- DELIVERY ---------------- */
+
+  .ngpdDeliveryList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 9px;
+    margin-top: 8px;
+  }
+
+  .ngpdDeliveryRow {
+    min-height: 115px;
+    padding: 12px 7px;
+    border-radius: 14px;
+  }
+
+  .ngpdDeliveryIcon {
+    font-size: 25px;
+    margin-bottom: 4px;
+  }
+
+  .ngpdDeliveryRow h4 {
+    font-size: 13px;
+    margin-bottom: 3px;
+  }
+
+  .ngpdDeliveryRow p {
+    font-size: 10px;
+    line-height: 1.45;
+    margin: 0;
+  }
+
+
+  /* ---------------- SECTION TITLES ---------------- */
+
+  .ngpdSectionTitle {
+    font-size: 25px;
+    line-height: 1.25;
+    margin-bottom: 15px;
+  }
+
+  .ngpdReviewSection,
+  .ngpdRelatedSection {
+    margin-top: 30px;
+  }
+
+
+  /* ---------------- REVIEWS ---------------- */
+
+  .ngpdReviewCard {
+    padding: 13px 0;
+  }
+
+  .ngpdReviewTop {
+    gap: 10px;
+    margin-bottom: 7px;
+  }
+
+  .ngpdReviewTop h4 {
+    font-size: 14px;
+  }
+
+  .ngpdReviewTop span {
+    font-size: 12px;
+  }
+
+  .ngpdReviewCard p {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+
+  /* ---------------- RELATED PRODUCTS ---------------- */
+
+  .ngpdRelatedGrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .ngpdRelatedCard {
+    border-radius: 13px;
+  }
+
+  .ngpdRelatedImage img {
+    width: 100%;
+    height: 145px;
+    object-fit: cover;
+  }
+
+  .ngpdRelatedContent {
+    padding: 10px;
+  }
+
+  .ngpdRelatedContent h4 {
+    font-size: 13px;
+    line-height: 1.3;
+    margin-bottom: 4px;
+  }
+
+  .ngpdRelatedContent p {
+    font-size: 11px;
+    margin: 0;
+  }
+
+  .ngpdRelatedPrice {
+    gap: 7px;
+    margin: 7px 0;
+  }
+
+  .ngpdRelatedPrice strong {
+    font-size: 14px;
+  }
+
+  .ngpdRelatedPrice span {
+    font-size: 11px;
+  }
+
+  .ngpdViewBtn {
+    height: 38px;
+    border-radius: 10px;
+    font-size: 12px;
+  }
+}
+
+
+/* ==========================================================
+   SMALL PHONES
+   320px - 400px
+   ========================================================== */
+
+@media (max-width: 400px) {
+
+  .ngpdPage {
+    padding-top: 12px;
+  }
+
+  .ngpdWrapper {
+    width: calc(100% - 18px);
+  }
+
+  .ngpdTitle {
+    font-size: 23px;
+  }
+
+  .ngpdSubtitle {
+    font-size: 12px;
+  }
+
+  .ngpdRatingBox {
+    font-size: 17px;
+  }
+
+  .ngpdRatingRow p {
+    font-size: 11px;
+  }
+
+  .ngpdPriceRow h2 {
+    font-size: 22px;
+  }
+
+  .ngpdPriceRow del {
+    font-size: 14px;
+  }
+
+  .ngpdDiscount {
+    font-size: 9px;
+    padding: 4px 8px;
+  }
+
+  .ngpdCartRow {
+    grid-template-columns: 100px 1fr;
+    gap: 8px;
+  }
+
+  .ngpdQtyBox {
+    width: 100px;
+    padding: 0 11px;
+  }
+
+  .ngpdCartBtn {
+    font-size: 13px;
+  }
+
+  .ngpdTrustGrid {
+    gap: 5px;
+  }
+
+  .ngpdTrustCard {
+    padding: 8px 3px;
+  }
+
+  .ngpdTrustCard h4 {
+    font-size: 10px;
+  }
+
+  .ngpdTrustCard p {
+    font-size: 8px;
+  }
+
+  .ngpdNutritionGrid {
+    gap: 7px;
+  }
+
+  .ngpdNutritionCard {
+    padding: 9px 5px;
+  }
+
+  .ngpdNutritionCard h4 {
+    font-size: 13px;
+  }
+
+  .ngpdNutritionCard p {
+    font-size: 10px;
+  }
+
+  .ngpdInfoRow {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .ngpdInfoRow span,
+  .ngpdInfoRow b {
+    font-size: 11px;
+  }
+
+  .ngpdInfoRow b {
+    max-width: 100%;
+  }
+
+  .ngpdDeliveryList {
+    gap: 7px;
+  }
+
+  .ngpdDeliveryRow {
+    min-height: 108px;
+    padding: 10px 5px;
+  }
+
+  .ngpdDeliveryRow h4 {
+    font-size: 12px;
+  }
+
+  .ngpdDeliveryRow p {
+    font-size: 9px;
+  }
+
+  .ngpdRelatedGrid {
+    gap: 8px;
+  }
+
+  .ngpdRelatedImage img {
+    height: 125px;
+  }
+
+  .ngpdRelatedContent {
+    padding: 8px;
+  }
+
+  .ngpdRelatedContent h4 {
+    font-size: 12px;
+  }
+
+  .ngpdRelatedPrice strong {
+    font-size: 13px;
+  }
+
+  .ngpdViewBtn {
+    height: 36px;
+    font-size: 11px;
+  }
+}
+
+
+/* ==========================================================
+   VERY SMALL PHONES
+   320px and below
+   ========================================================== */
+
+@media (max-width: 320px) {
+
+  .ngpdWrapper {
+    width: calc(100% - 14px);
+  }
+
+  .ngpdTitle {
+    font-size: 21px;
+  }
+
+  .ngpdTrustCard h4 {
+    font-size: 9px;
+  }
+
+  .ngpdTrustCard p {
+    display: none;
+  }
+
+  .ngpdDeliveryRow {
+    min-height: 100px;
+  }
+
+  .ngpdRelatedImage img {
+    height: 115px;
+  }
 }

@@ -54,9 +54,7 @@
   font-weight: 700;
   font-family: "Times New Roman", Times, serif;
   line-height: 1.01;
-
   color: #0f2b14;
-
   margin-bottom: 20px;
 }
 
@@ -166,58 +164,495 @@
     transform:translateX(6px);
 
 }
+/* ==========================================================
+   FULL RESPONSIVE
+   Desktop / Laptop above 900px = NO CHANGE
+   ========================================================== */
 
-/* ===================== */
-/* RESPONSIVE */
-/* ===================== */
+
+/* ==========================================================
+   TABLET
+   601px - 900px
+   ========================================================== */
+
 @media (max-width: 900px) {
+
+  /* ===================== */
+  /* STORY SECTION */
+  /* ===================== */
 
   .our-story {
     grid-template-columns: 1fr;
+
+    gap: 45px;
+
+    padding: 70px 28px 70px;
+
+    align-items: center;
   }
 
-  /* CONTENT FIRST */
-  .our-story-content {
-    order: 1;
-    text-align: center;
-    margin: 0 auto;
+
+  /* ===================== */
+  /* STORY PAGE */
+  /* ===================== */
+
+  /*
+    IMPORTANT:
+    Desktop page has 160px top padding.
+    Reduce it on tablet so there is no huge
+    empty space below navbar.
+  */
+
+  .our-story-page {
+    padding: 90px 28px 70px;
   }
 
-  /* IMAGE SECOND */
+
+  /* ===================== */
+  /* IMAGE */
+  /* ===================== */
+
   .our-story-image {
-    order: 2;
-    text-align: center;
-  }
+    order: 1;
 
-  .our-story-content h2 {
-    font-size: 42px;
-  }
+    width: 100%;
+    max-width: 750px;
 
-  .our-story-content p {
-    text-align: center;
-  }
-
-  .story-btn {
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
   }
 
   .our-story-image img {
     display: block;
+
     width: 100%;
-    height: 420px;
+    height: 430px;
+
+    object-fit: cover;
+    object-position: center center;
+
+    border-radius: 26px;
+  }
+
+
+  /* ===================== */
+  /* CONTENT */
+  /* ===================== */
+
+  .our-story-content {
+    order: 2;
+
+    width: 100%;
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    text-align: center;
+  }
+
+
+  .our-story-tag {
+    font-size: 12px;
+
+    letter-spacing: 3.5px;
+
+    margin-bottom: 15px;
+  }
+
+
+  .our-story-content h2 {
+    font-size: 46px;
+
+    line-height: 1.05;
+
+    margin-bottom: 20px;
+  }
+
+
+  .our-story-content p {
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    margin-bottom: 14px;
+  }
+
+
+  /* ===================== */
+  /* BUTTON */
+  /* ===================== */
+
+  .story-btn {
+    margin: 24px auto 0;
+
+    padding: 16px 30px;
+
+    font-size: 15px;
+  }
+}
+
+
+/* ==========================================================
+   MOBILE
+   401px - 600px
+   ========================================================== */
+
+@media (max-width: 600px) {
+
+  /* ===================== */
+  /* STORY SECTION */
+  /* ===================== */
+
+  .our-story {
+
+    grid-template-columns: 1fr;
+
+    gap: 32px;
+
+    padding: 45px 16px 55px;
+
+    width: 100%;
+
+    overflow: hidden;
+  }
+
+
+  /* ===================== */
+  /* STORY PAGE */
+  /* ===================== */
+
+  .our-story-page {
+
+    /*
+      DO NOT keep desktop 160px here.
+      This fixes the huge blank space visible
+      in your screenshot.
+    */
+
+    padding: 45px 16px 55px;
+  }
+
+
+  /* ===================== */
+  /* IMAGE */
+  /* ===================== */
+
+  .our-story-image {
+
+    order: 1;
+
+    width: 100%;
+
     margin: 0 auto;
   }
-  .our-story-image img {
-  object-fit: cover;
-  object-position: center center;
-}
-}
-@media (max-width: 576px) {
+
 
   .our-story-image img {
+
+    display: block;
+
+    width: 100%;
+
+    height: 330px;
+
     object-fit: cover;
+
+    /*
+      Slightly higher crop on mobile
+      so the important part of the image
+      remains visible.
+    */
+
+    object-position: center 40%;
+
+    border-radius: 22px;
+  }
+
+
+  /* ===================== */
+  /* CONTENT */
+  /* ===================== */
+
+  .our-story-content {
+
+    order: 2;
+
+    width: 100%;
+
+    max-width: 100%;
+
+    margin: 0 auto;
+
+    text-align: center;
+  }
+
+
+  /* ===================== */
+  /* TAG */
+  /* ===================== */
+
+  .our-story-tag {
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 13px;
+  }
+
+
+  /* ===================== */
+  /* HEADING */
+  /* ===================== */
+
+  .our-story-content h2 {
+
+    font-size: 38px;
+
+    line-height: 1.05;
+
+    margin-bottom: 18px;
+
+    /*
+      Prevent text from becoming wider
+      than the mobile screen.
+    */
+
+    overflow-wrap: break-word;
+  }
+
+
+  /* ===================== */
+  /* PARAGRAPHS */
+  /* ===================== */
+
+  .our-story-content p {
+
+    width: 100%;
+
+    font-size: 14px;
+
+    line-height: 1.75;
+
+    color: #756e63;
+
+    margin-bottom: 13px;
+
+    text-align: center;
+  }
+
+
+  /* ===================== */
+  /* BUTTON */
+  /* ===================== */
+
+  .story-btn {
+
+    width: auto;
+
+    max-width: 100%;
+
+    margin: 22px auto 0;
+
+    padding: 15px 25px;
+
+    gap: 10px;
+
+    font-size: 14px;
+
+    white-space: nowrap;
+  }
+}
+
+
+/* ==========================================================
+   SMALL PHONES
+   321px - 400px
+   ========================================================== */
+
+@media (max-width: 400px) {
+
+  .our-story {
+
+    gap: 28px;
+
+    padding: 38px 13px 48px;
+  }
+
+
+  .our-story-page {
+
+    padding: 38px 13px 48px;
+  }
+
+
+  /* ===================== */
+  /* IMAGE */
+  /* ===================== */
+
+  .our-story-image img {
+
+    height: 285px;
+
+    border-radius: 20px;
+
     object-position: center 40%;
   }
 
+
+  /* ===================== */
+  /* TAG */
+  /* ===================== */
+
+  .our-story-tag {
+
+    font-size: 9px;
+
+    letter-spacing: 2.6px;
+
+    margin-bottom: 11px;
+  }
+
+
+  /* ===================== */
+  /* HEADING */
+  /* ===================== */
+
+  .our-story-content h2 {
+
+    font-size: 34px;
+
+    line-height: 1.06;
+
+    margin-bottom: 16px;
+  }
+
+
+  /* ===================== */
+  /* TEXT */
+  /* ===================== */
+
+  .our-story-content p {
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    margin-bottom: 12px;
+  }
+
+
+  /* ===================== */
+  /* BUTTON */
+  /* ===================== */
+
+  .story-btn {
+
+    padding: 14px 21px;
+
+    font-size: 13px;
+
+    gap: 8px;
+  }
+
+  .story-btn svg {
+
+    width: 16px;
+    height: 16px;
+  }
+}
+
+
+/* ==========================================================
+   VERY SMALL PHONES
+   320px AND BELOW
+   ========================================================== */
+
+@media (max-width: 320px) {
+
+  .our-story {
+
+    gap: 25px;
+
+    padding: 32px 11px 42px;
+  }
+
+
+  .our-story-page {
+
+    padding: 92px 11px 42px;
+  }
+
+
+  /* ===================== */
+  /* IMAGE */
+  /* ===================== */
+
+  .our-story-image img {
+
+    height: 250px;
+
+    border-radius: 18px;
+
+    object-position: center 40%;
+  }
+
+
+  /* ===================== */
+  /* TAG */
+  /* ===================== */
+
+  .our-story-tag {
+
+    font-size: 8px;
+
+    letter-spacing: 2.3px;
+
+    margin-bottom: 10px;
+  }
+
+
+  /* ===================== */
+  /* HEADING */
+  /* ===================== */
+
+  .our-story-content h2 {
+
+    font-size: 31px;
+
+    line-height: 1.07;
+
+    margin-bottom: 14px;
+  }
+
+
+  /* ===================== */
+  /* TEXT */
+  /* ===================== */
+
+  .our-story-content p {
+
+    font-size: 12.5px;
+
+    line-height: 1.65;
+  }
+
+
+  /* ===================== */
+  /* BUTTON */
+  /* ===================== */
+
+  .story-btn {
+
+    padding: 13px 18px;
+
+    font-size: 12.5px;
+
+    gap: 7px;
+  }
+
+  .story-btn svg {
+
+    width: 15px;
+    height: 15px;
+  }
 }
