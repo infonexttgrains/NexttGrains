@@ -20,7 +20,7 @@ import {
   IoWalletOutline,
   IoTimeOutline,
 } from "react-icons/io5";
-
+import { PiHandWavingLight } from "react-icons/pi";
 export default function Account() {
   const navigate = useNavigate();
   const [insights, setInsights] = useState({});
@@ -265,8 +265,10 @@ if (loading) {
 
             <div>
 
-              <h1>
-Hello, {profile.name ? profile.name.split(" ")[0] : "User"} 👋              </h1>
+<h1 className="ngAcc_heroTitle">
+  Hello, {profile.name ? profile.name.split(" ")[0] : "User"}
+  <PiHandWavingLight className="ngAcc_helloIcon" />
+</h1>
 
               <p>
                 Here's what's happening with your pantry.

@@ -202,7 +202,7 @@
 
     justify-content:center;
 
-    color:#266b42;
+    color:#15361D;
 
     font-size:30px;
 
@@ -264,7 +264,7 @@
 
 .ngAddressArrowBtn:hover{
 
-    background:#266b42;
+    background:#15361D;
 
     color:#fff;
 
@@ -335,7 +335,7 @@
 
     font-size:58px;
 
-    color:#266b42;
+    color:#15361D;
 
     margin-bottom:18px;
 
@@ -349,7 +349,7 @@
 
     font-weight:700;
 
-    color:#266b42;
+    color:#15361D;
 
 }
 
@@ -404,7 +404,7 @@
 
     transform:translateY(-3px);
 
-    border-color:#266b42;
+    border-color:#15361D;
 
     box-shadow:0 12px 28px rgba(24,183,90,.15);
 
@@ -424,7 +424,7 @@
 
     font-size:28px;
 
-    color:#266b42;
+    color:#15361D;
 
 }
 
@@ -450,7 +450,7 @@
 
 .ngAddressAddCard:hover .ngAddressAddArrow{
 
-    color:#266b42;
+    color:#15361D;
 
     transform:translateX(5px);
 
@@ -485,7 +485,7 @@
 
 .ngAddressSavedCard:hover{
 
-    border-color:#266b42;
+    border-color:#15361D;
 
     transform:translateY(-2px);
 
@@ -517,7 +517,7 @@
 
     align-items:center;
 
-    color:#18b75a;
+    color:#15361D;
 
     font-size:24px;
 
@@ -565,7 +565,7 @@
 
     background:#18b75a15;
 
-    color:#18b75a;
+    color:#15361D;
 
     font-size:12px;
 
@@ -579,7 +579,7 @@
 
     border:none;
 
-    color:#18b75a;
+    color:#15361D;
 
     font-size:14px;
 
@@ -593,7 +593,7 @@
 
 .ngAddressEditBtn:hover{
 
-    color:#0f9446;
+    color:#15361D;
 
 }
 
@@ -625,7 +625,7 @@
 
     border-radius:14px;
 
-    background:#266b42;
+    background:#15361D;
 
     color:#fff;
 
@@ -641,7 +641,7 @@
 
 .ngAddressContinueBtn:hover{
 
-    background:#266b42;
+    background:#15361D ;
 
     transform:translateY(-2px);
 
@@ -953,7 +953,7 @@ padding:0 18px;
 
 border:none;
 
-background:#266b42;
+background:#15361D;
 
 color:#fff;
 
@@ -1015,7 +1015,7 @@ padding:0 20px;
 
 border:none;
 
-background:#266b42;
+background:#15361D;
 
 color:#fff;
 
@@ -1033,7 +1033,7 @@ transition:.25s;
 
 .ngAddressSaveBtn:hover{
 
-background:#266b42;
+background:#15361D;
 
 }
 
@@ -1049,7 +1049,7 @@ border:none;
 
 border-radius:10px;
 
-background:#266b42;
+background:#15361D;
 
 color:#fff;
 
@@ -1065,7 +1065,7 @@ transition:.25s;
 
 .ngAddressEmptyAddBtn:hover{
 
-background:#266b42;
+background:#15361D;
 
 }
 .ngAddressActionButtons{
@@ -1190,4 +1190,914 @@ padding:28px;
 
 .ngAddressBackBtn:hover{
     background:#ececec;
+}
+
+/* =========================================================
+   NEXTTGRAINS ADDRESS
+   FINAL RESPONSIVE OVERRIDES
+   Desktop / Laptop remains unchanged
+========================================================= */
+
+
+/* =========================================================
+   TABLET
+   769px - 1024px
+========================================================= */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    .ngAddressDrawer {
+        width: min(430px, 100vw);
+        max-width: 100vw;
+    }
+
+    .ngAddressHeader {
+        padding: 0 20px;
+    }
+
+    .ngAddressScrollArea {
+        padding: 18px;
+    }
+
+    .ngAddressCurrentLocationCard {
+        padding: 12px 14px;
+    }
+
+    .ngAddressCurrentLeft {
+        gap: 12px;
+        min-width: 0;
+    }
+
+    .ngAddressCurrentLeft > div:last-child {
+        min-width: 0;
+    }
+
+    .ngAddressCurrentLeft h4,
+    .ngAddressCurrentLeft p {
+        overflow-wrap: anywhere;
+    }
+
+    .ngAddressSavedCard {
+        padding: 15px;
+        gap: 10px;
+    }
+
+    .ngAddressSavedLeft {
+        min-width: 0;
+        gap: 12px;
+    }
+
+    .ngAddressSavedContent {
+        min-width: 0;
+    }
+
+    .ngAddressSavedContent p {
+        overflow-wrap: anywhere;
+    }
+
+    .ngAddressActionButtons {
+        flex-shrink: 0;
+    }
+
+    .ngAddressFormGrid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .ngAddressFormContainer {
+        padding: 16px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   0px - 768px
+========================================================= */
+
+@media (max-width: 768px) {
+
+    /* ---------- DRAWER ---------- */
+
+    .ngAddressDrawer {
+        width: 100%;
+        max-width: 100vw;
+        right: 0;
+    }
+
+    /* ---------- HEADER ---------- */
+
+    .ngAddressHeader {
+        height: 64px;
+        min-height: 64px;
+        padding: 0 16px;
+    }
+
+    .ngAddressHeading {
+        font-size: 19px;
+        line-height: 24px;
+        max-width: calc(100% - 55px);
+        overflow-wrap: anywhere;
+    }
+
+    .ngAddressCloseBtn {
+        width: 40px;
+        height: 40px;
+        flex-shrink: 0;
+    }
+
+    /* ---------- SCROLL AREA ---------- */
+
+    .ngAddressScrollArea {
+        width: 100%;
+        padding: 15px;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+
+    /* ---------- CURRENT LOCATION ---------- */
+
+    .ngAddressCurrentLocationCard {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 13px;
+        border-radius: 14px;
+        gap: 10px;
+    }
+
+    .ngAddressCurrentLeft {
+        min-width: 0;
+        flex: 1;
+        gap: 11px;
+    }
+
+    .ngAddressLocationIconBox {
+        width: 44px;
+        height: 44px;
+        border-radius: 13px;
+        font-size: 23px;
+    }
+
+    .ngAddressCurrentLeft > div:last-child {
+        min-width: 0;
+    }
+
+    .ngAddressCurrentLeft h4 {
+        font-size: 14px;
+        line-height: 19px;
+        overflow-wrap: anywhere;
+    }
+
+    .ngAddressCurrentLeft p {
+        font-size: 11px;
+        line-height: 16px;
+        overflow-wrap: anywhere;
+    }
+
+    .ngAddressArrowBtn {
+        width: 34px;
+        height: 34px;
+        font-size: 18px;
+        flex-shrink: 0;
+    }
+
+    /* ---------- MAP ---------- */
+
+    .ngAddressMapWrapper {
+        width: 100%;
+        margin-top: 12px;
+        overflow: hidden;
+        border-radius: 14px;
+    }
+
+    .ngAddressMapWrapper .leaflet-container {
+        width: 100% !important;
+        height: 240px !important;
+        min-height: 240px;
+    }
+
+    /* ---------- SAVED SECTION ---------- */
+
+    .ngAddressSavedSection {
+        gap: 13px;
+    }
+
+    .ngAddressSectionTitle {
+        font-size: 17px;
+        line-height: 22px;
+    }
+
+    /* ---------- SAVED ADDRESS CARD ---------- */
+
+    .ngAddressSavedCard {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 14px;
+        gap: 10px;
+        border-radius: 14px;
+    }
+
+    .ngAddressSavedLeft {
+        min-width: 0;
+        flex: 1;
+        gap: 11px;
+    }
+
+    .ngAddressSavedIcon {
+        width: 43px;
+        height: 43px;
+        min-width: 43px;
+        border-radius: 12px;
+        font-size: 21px;
+    }
+
+    .ngAddressSavedContent {
+        min-width: 0;
+        flex: 1;
+    }
+
+    .ngAddressSavedContent h4 {
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    .ngAddressSavedContent p {
+        font-size: 12px;
+        line-height: 18px;
+        margin-top: 5px;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+
+    /* ---------- EDIT / DELETE ---------- */
+
+    .ngAddressActionButtons {
+        flex-shrink: 0;
+        gap: 6px;
+    }
+
+    .ngAddressEditBtn,
+    .ngAddressDeleteBtn {
+        width: 34px;
+        height: 34px;
+        font-size: 16px;
+    }
+
+    /* ---------- ADD ADDRESS ---------- */
+
+    .ngAddressAddCard {
+        width: 100%;
+        box-sizing: border-box;
+        margin-top: 14px;
+        padding: 14px;
+        border-radius: 14px;
+    }
+
+    .ngAddressAddLeft {
+        min-width: 0;
+        gap: 10px;
+    }
+
+    .ngAddressAddIcon {
+        font-size: 24px;
+        flex-shrink: 0;
+    }
+
+    .ngAddressAddLeft span {
+        font-size: 14px;
+        line-height: 19px;
+    }
+
+    .ngAddressAddArrow {
+        flex-shrink: 0;
+        font-size: 19px;
+    }
+
+    /* ---------- EMPTY STATE ---------- */
+
+    .ngAddressEmptyCard {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 24px 16px;
+        border-radius: 14px;
+    }
+
+    .ngAddressEmptyIcon {
+        font-size: 48px;
+        margin-bottom: 13px;
+    }
+
+    .ngAddressEmptyCard h4 {
+        font-size: 17px;
+    }
+
+    .ngAddressEmptyCard p {
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    /* =====================================================
+       ADDRESS FORM
+    ===================================================== */
+
+    .ngAddressFormContainer {
+        width: 100%;
+        box-sizing: border-box;
+        margin-top: 15px;
+        padding: 15px;
+        border-radius: 14px;
+    }
+
+    .ngAddressFormContainer h3 {
+        font-size: 17px;
+        line-height: 22px;
+        margin-top: 0;
+    }
+
+    /* IMPORTANT:
+       Mobile = single column
+    */
+
+    .ngAddressFormGrid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .ngAddressFull {
+        grid-column: 1;
+    }
+
+    .ngAddressInputGroup {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .ngAddressInputGroup label {
+        font-size: 11px;
+    }
+
+    .ngAddressInput {
+        width: 100%;
+        height: 44px;
+        min-height: 44px;
+        box-sizing: border-box;
+        padding: 0 12px;
+        font-size: 14px;
+        border-radius: 9px;
+    }
+
+    /* ---------- ADDRESS TYPE ---------- */
+
+    .ngAddressTypeRow {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+        margin-top: 15px;
+    }
+
+    .ngAddressTypeBtn,
+    .ngAddressTypeActive {
+        width: 100%;
+        height: 40px;
+        padding: 0 8px;
+        font-size: 12px;
+        box-sizing: border-box;
+    }
+
+    /* ---------- FORM BUTTONS ---------- */
+
+    .ngAddressButtonRow {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 9px;
+        margin-top: 18px;
+    }
+
+    .ngAddressCancelBtn,
+    .ngAddressSaveBtn {
+        width: 100%;
+        height: 44px;
+        padding: 0 10px;
+        font-size: 13px;
+        box-sizing: border-box;
+    }
+
+    /* ---------- FOOTER ---------- */
+
+    .ngAddressFooter {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 12px 15px;
+        padding-bottom: max(12px, env(safe-area-inset-bottom));
+    }
+
+    .ngAddressContinueBtn {
+        width: 100%;
+        height: 50px;
+        min-height: 50px;
+        border-radius: 11px;
+        font-size: 15px;
+    }
+
+    /* ---------- FULL PAGE ---------- */
+
+    .ngAddressFullPage {
+        width: 100%;
+        max-width: 100%;
+        height: 100dvh;
+        min-height: 100dvh;
+    }
+
+    .ngAddressFullPage .ngAddressScrollArea {
+        padding: 15px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   481px - 600px
+========================================================= */
+
+@media (min-width: 481px) and (max-width: 600px) {
+
+    .ngAddressScrollArea {
+        padding: 18px;
+    }
+
+    .ngAddressMapWrapper .leaflet-container {
+        height: 250px !important;
+        min-height: 250px;
+    }
+
+    .ngAddressSavedCard {
+        padding: 15px;
+    }
+
+    .ngAddressFormContainer {
+        padding: 17px;
+    }
+
+    .ngAddressInput {
+        height: 45px;
+    }
+}
+
+
+/* =========================================================
+   NORMAL PHONE
+   361px - 480px
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .ngAddressHeader {
+        height: 60px;
+        min-height: 60px;
+        padding: 0 13px;
+    }
+
+    .ngAddressHeading {
+        font-size: 17px;
+        line-height: 22px;
+    }
+
+    .ngAddressCloseBtn {
+        width: 36px;
+        height: 36px;
+        font-size: 20px;
+    }
+
+    .ngAddressScrollArea {
+        padding: 12px;
+    }
+
+    .ngAddressCurrentLocationCard {
+        padding: 11px;
+        border-radius: 13px;
+    }
+
+    .ngAddressCurrentLeft {
+        gap: 9px;
+    }
+
+    .ngAddressLocationIconBox {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+        border-radius: 11px;
+        font-size: 21px;
+    }
+
+    .ngAddressCurrentLeft h4 {
+        font-size: 13px;
+        line-height: 17px;
+    }
+
+    .ngAddressCurrentLeft p {
+        font-size: 10.5px;
+        line-height: 15px;
+    }
+
+    .ngAddressArrowBtn {
+        width: 31px;
+        height: 31px;
+        font-size: 16px;
+    }
+
+    .ngAddressMapWrapper .leaflet-container {
+        height: 220px !important;
+        min-height: 220px;
+    }
+
+    .ngAddressSectionTitle {
+        font-size: 16px;
+    }
+
+    .ngAddressSavedCard {
+        padding: 12px;
+        border-radius: 13px;
+    }
+
+    .ngAddressSavedLeft {
+        gap: 9px;
+    }
+
+    .ngAddressSavedIcon {
+        width: 39px;
+        height: 39px;
+        min-width: 39px;
+        font-size: 19px;
+        border-radius: 10px;
+    }
+
+    .ngAddressSavedContent h4 {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .ngAddressSavedContent p {
+        font-size: 11px;
+        line-height: 16px;
+    }
+
+    .ngAddressEditBtn,
+    .ngAddressDeleteBtn {
+        width: 31px;
+        height: 31px;
+        font-size: 15px;
+    }
+
+    .ngAddressActionButtons {
+        gap: 4px;
+    }
+
+    .ngAddressAddCard {
+        padding: 13px;
+        border-radius: 13px;
+    }
+
+    .ngAddressAddLeft span {
+        font-size: 13px;
+    }
+
+    .ngAddressFormContainer {
+        padding: 13px;
+        border-radius: 13px;
+    }
+
+    .ngAddressFormContainer h3 {
+        font-size: 16px;
+    }
+
+    .ngAddressInput {
+        height: 42px;
+        min-height: 42px;
+        font-size: 13px;
+    }
+
+    .ngAddressTypeRow {
+        gap: 6px;
+    }
+
+    .ngAddressTypeBtn,
+    .ngAddressTypeActive {
+        height: 38px;
+        font-size: 11px;
+    }
+
+    .ngAddressButtonRow {
+        gap: 7px;
+    }
+
+    .ngAddressCancelBtn,
+    .ngAddressSaveBtn {
+        height: 42px;
+        font-size: 12px;
+    }
+
+    .ngAddressFooter {
+        padding: 10px 12px;
+        padding-bottom: max(10px, env(safe-area-inset-bottom));
+    }
+
+    .ngAddressContinueBtn {
+        height: 48px;
+        min-height: 48px;
+        font-size: 14px;
+    }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   320px - 360px
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .ngAddressHeader {
+        height: 56px;
+        min-height: 56px;
+        padding: 0 10px;
+    }
+
+    .ngAddressHeading {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .ngAddressCloseBtn {
+        width: 34px;
+        height: 34px;
+    }
+
+    .ngAddressScrollArea {
+        padding: 10px;
+    }
+
+    .ngAddressCurrentLocationCard {
+        padding: 10px;
+    }
+
+    .ngAddressLocationIconBox {
+        width: 37px;
+        height: 37px;
+        min-width: 37px;
+        font-size: 19px;
+    }
+
+    .ngAddressCurrentLeft {
+        gap: 8px;
+    }
+
+    .ngAddressCurrentLeft h4 {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .ngAddressCurrentLeft p {
+        font-size: 9.5px;
+        line-height: 14px;
+    }
+
+    .ngAddressArrowBtn {
+        width: 29px;
+        height: 29px;
+    }
+
+    .ngAddressMapWrapper .leaflet-container {
+        height: 200px !important;
+        min-height: 200px;
+    }
+
+    .ngAddressSavedCard {
+        padding: 10px;
+    }
+
+    .ngAddressSavedLeft {
+        gap: 8px;
+    }
+
+    .ngAddressSavedIcon {
+        width: 36px;
+        height: 36px;
+        min-width: 36px;
+        font-size: 17px;
+    }
+
+    .ngAddressSavedContent h4 {
+        font-size: 13px;
+        line-height: 17px;
+    }
+
+    .ngAddressSavedContent p {
+        font-size: 10px;
+        line-height: 14px;
+    }
+
+    .ngAddressEditBtn,
+    .ngAddressDeleteBtn {
+        width: 28px;
+        height: 28px;
+        font-size: 14px;
+    }
+
+    .ngAddressActionButtons {
+        gap: 3px;
+    }
+
+    .ngAddressAddCard {
+        padding: 11px;
+    }
+
+    .ngAddressAddLeft span {
+        font-size: 12px;
+    }
+
+    .ngAddressFormContainer {
+        padding: 11px;
+    }
+
+    .ngAddressFormGrid {
+        gap: 10px;
+    }
+
+    .ngAddressInput {
+        height: 40px;
+        min-height: 40px;
+        padding: 0 10px;
+        font-size: 12px;
+    }
+
+    .ngAddressTypeRow {
+        gap: 5px;
+    }
+
+    .ngAddressTypeBtn,
+    .ngAddressTypeActive {
+        height: 36px;
+        font-size: 10px;
+        padding: 0 5px;
+    }
+
+    .ngAddressButtonRow {
+        gap: 6px;
+    }
+
+    .ngAddressCancelBtn,
+    .ngAddressSaveBtn {
+        height: 40px;
+        font-size: 11px;
+    }
+
+    .ngAddressFooter {
+        padding: 9px 10px;
+        padding-bottom: max(9px, env(safe-area-inset-bottom));
+    }
+
+    .ngAddressContinueBtn {
+        height: 46px;
+        min-height: 46px;
+        font-size: 13px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL DEVICES
+   BELOW 320px
+========================================================= */
+
+@media (max-width: 319px) {
+
+    .ngAddressScrollArea {
+        padding: 8px;
+    }
+
+    .ngAddressHeading {
+        font-size: 15px;
+    }
+
+    .ngAddressCurrentLeft p {
+        display: none;
+    }
+
+    .ngAddressMapWrapper .leaflet-container {
+        height: 185px !important;
+        min-height: 185px;
+    }
+
+    .ngAddressSavedCard {
+        padding: 9px;
+    }
+
+    .ngAddressSavedIcon {
+        width: 33px;
+        height: 33px;
+        min-width: 33px;
+    }
+
+    .ngAddressSavedContent h4 {
+        font-size: 12px;
+    }
+
+    .ngAddressSavedContent p {
+        font-size: 9px;
+        line-height: 13px;
+    }
+
+    .ngAddressEditBtn,
+    .ngAddressDeleteBtn {
+        width: 26px;
+        height: 26px;
+        font-size: 12px;
+    }
+
+    .ngAddressTypeBtn,
+    .ngAddressTypeActive {
+        font-size: 9px;
+        padding: 0 3px;
+    }
+
+    .ngAddressInput {
+        font-size: 11px;
+    }
+
+    .ngAddressContinueBtn {
+        font-size: 12px;
+    }
+}
+
+
+/* =========================================================
+   TOUCH DEVICES
+   Better tap targets
+========================================================= */
+
+@media (hover: none) and (pointer: coarse) {
+
+    .ngAddressCloseBtn,
+    .ngAddressArrowBtn,
+    .ngAddressEditBtn,
+    .ngAddressDeleteBtn,
+    .ngAddressTypeBtn,
+    .ngAddressTypeActive,
+    .ngAddressCancelBtn,
+    .ngAddressSaveBtn,
+    .ngAddressContinueBtn {
+        -webkit-tap-highlight-color: transparent;
+        touch-action: manipulation;
+    }
+
+}
+
+
+/* =========================================================
+   SAFE AREA
+   iPhone / modern phones
+========================================================= */
+
+@supports (padding: max(0px)) {
+
+    .ngAddressDrawer {
+        padding-bottom: env(safe-area-inset-bottom);
+    }
+
+    .ngAddressFooter {
+        padding-bottom: max(
+            12px,
+            env(safe-area-inset-bottom)
+        );
+    }
+
+}
+
+
+/* =========================================================
+   PREVENT HORIZONTAL OVERFLOW
+========================================================= */
+
+.ngAddressDrawer,
+.ngAddressScrollArea,
+.ngAddressFormContainer,
+.ngAddressSavedCard,
+.ngAddressCurrentLocationCard {
+    box-sizing: border-box;
+}
+
+.ngAddressScrollArea {
+    overflow-x: hidden;
+}
+
+.ngAddressInput,
+.ngAddressFormContainer,
+.ngAddressFormGrid,
+.ngAddressSavedCard,
+.ngAddressCurrentLocationCard {
+    max-width: 100%;
 }

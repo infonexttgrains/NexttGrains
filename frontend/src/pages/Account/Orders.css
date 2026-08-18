@@ -12,9 +12,10 @@
 }
 
 .ngOrders_container h1{
+    font-family:"Cormorant Garamond",serif;
     font-size:38px;
     font-weight:700;
-    color:#214d33;
+    color:#15361D;
     margin-bottom:8px;
 }
 
@@ -30,7 +31,7 @@
     justify-content:center;
     align-items:center;
     font-size:22px;
-    color:#24593b;
+    color:#15361D;
 }
 
 .ngOrders_top{
@@ -55,7 +56,7 @@
 
 .ngOrders_search svg{
     font-size:22px;
-    color:#4d6b57;
+    color:#15361D;
 }
 
 .ngOrders_search input{
@@ -129,7 +130,7 @@ border-radius:18px;
 
 .ngOrders_info h3{
     font-size:18px;
-    color:#22492f;
+    color:#15361D;
     margin-bottom:2px;
 }
 
@@ -166,7 +167,7 @@ border-radius:18px;
 
 .ngOrders_priceBox h2{
     font-size:30px;
-    color:#1d4b30;
+    color:#15361D;
 }
 
 .ngOrders_priceBox small{
@@ -227,21 +228,15 @@ border-radius:18px;
 }
 
 .ngOrders_outlineBtn{
-
     display:flex;
     align-items:center;
     justify-content:center;
     gap:8px;
-
     padding:13px 24px;
-
-    border:2px solid #2d6a4f;
+    border:2px solid #15361D;
     background:#fff;
-
-    color:#2d6a4f;
-
+    color:#15361D;
     border-radius:14px;
-
     font-size:15px;
     font-weight:600;
 
@@ -252,7 +247,7 @@ border-radius:18px;
 
 .ngOrders_outlineBtn:hover{
 
-    background:#2d6a4f;
+    background:#15361D;
     color:#fff;
 
 }
@@ -266,7 +261,7 @@ border-radius:18px;
 
     padding:13px 26px;
 
-    background:linear-gradient(135deg,#3d7a57,#23563a);
+    background:linear-gradient(135deg,#15361D,#23563a);
 
     color:#fff;
 
@@ -321,7 +316,7 @@ border-radius:18px;
 
     font-size:34px;
 
-    color:#214d33;
+    color:#15361D;
 
     margin-bottom:14px;
 
@@ -367,6 +362,130 @@ border-radius:18px;
     }
 
 }
+
+.ngOrders_productTitle{
+
+font-size:18px;
+
+font-weight:700;
+
+color:#15361D;
+
+margin-bottom:4px;
+
+line-height:1.3;
+
+}
+.ngOrders_shortDesc{
+
+font-size:13px;
+
+color:#777;
+
+margin-bottom:8px;
+
+}
+.ngOrders_priceRow{
+
+display:flex;
+
+align-items:center;
+
+gap:14px;
+
+margin-bottom:8px;
+
+}
+
+.ngOrders_price{
+
+font-size:17px;
+
+font-weight:700;
+
+color:#1b5e20;
+
+}
+
+.ngOrders_qty{
+
+font-size:13px;
+
+background:#eef7ef;
+
+padding:3px 10px;
+
+border-radius:20px;
+
+color:#2d6a4f;
+
+}
+.ngOrders_meta{
+
+display:flex;
+
+gap:18px;
+
+font-size:13px;
+
+color:#888;
+
+margin-bottom:5px;
+
+flex-wrap:wrap;
+
+}
+.ngOrders_payment{
+
+font-size:13px;
+
+color:#666;
+
+}
+.ngOrders_priceBox{
+
+min-width:150px;
+
+align-items:flex-end;
+
+gap:8px;
+
+}
+.ngOrders_total{
+
+font-size:22px;
+
+font-weight:700;
+
+color:#1f4d34;
+
+}
+
+.ngOrders_totalLabel{
+
+font-size:13px;
+
+color:#888;
+
+}
+.ngOrders_outlineBtn,
+.ngOrders_trackBtn{
+
+height:46px;
+
+padding:0 22px;
+
+font-size:14px;
+
+}
+.ngOrders_cardBottom{
+
+margin-top:18px;
+
+padding-top:16px;
+
+}
+
 /* ===========================
    TABLET
 =========================== */
@@ -543,126 +662,968 @@ border-radius:18px;
 }
 
 }
+/* =========================================================
+   NEXTTGRAINS ORDERS
+   FINAL FULL RESPONSIVE
+   DESKTOP / LAPTOP DESIGN REMAINS UNCHANGED
+========================================================= */
 
-.ngOrders_productTitle{
 
-font-size:18px;
+/* =========================================================
+   LARGE TABLET
+   993px - 1200px
+========================================================= */
 
-font-weight:700;
+@media (min-width: 993px) and (max-width: 1200px) {
 
-color:#203f2d;
+    .ngOrders_container {
+        width: 94%;
+    }
 
-margin-bottom:4px;
+    .ngOrders_card {
+        padding: 12px 20px;
+    }
 
-line-height:1.3;
+    .ngOrders_cardTop {
+        gap: 25px;
+    }
 
-}
-.ngOrders_shortDesc{
+    .ngOrders_orderInfo {
+        gap: 18px;
+    }
 
-font-size:13px;
+    .ngOrders_imageBox {
+        width: 125px;
+        height: 125px;
+    }
 
-color:#777;
-
-margin-bottom:8px;
-
-}
-.ngOrders_priceRow{
-
-display:flex;
-
-align-items:center;
-
-gap:14px;
-
-margin-bottom:8px;
-
-}
-
-.ngOrders_price{
-
-font-size:17px;
-
-font-weight:700;
-
-color:#1b5e20;
+    .ngOrders_priceBox {
+        min-width: 135px;
+    }
 
 }
 
-.ngOrders_qty{
 
-font-size:13px;
+/* =========================================================
+   TABLET
+   769px - 992px
+========================================================= */
 
-background:#eef7ef;
+@media (min-width: 769px) and (max-width: 992px) {
 
-padding:3px 10px;
+    .ngOrders_page {
+        padding: 30px 0 65px;
+    }
 
-border-radius:20px;
+    .ngOrders_container {
+        width: 94%;
+        max-width: 100%;
+    }
 
-color:#2d6a4f;
+    .ngOrders_container h1 {
+        font-size: 34px;
+    }
+
+    .ngOrders_container > p {
+        font-size: 15px;
+        margin-bottom: 28px;
+    }
+
+
+    /* ---------- FILTERS ---------- */
+
+    .ngOrders_top {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 180px 160px;
+        gap: 14px;
+        align-items: stretch;
+    }
+
+    .ngOrders_search {
+        min-width: 0;
+        width: 100%;
+    }
+
+    .ngOrders_top select {
+        width: 100%;
+        min-width: 0;
+    }
+
+
+    /* ---------- CARD ---------- */
+
+    .ngOrders_card {
+        padding: 18px;
+    }
+
+    .ngOrders_cardTop {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 22px;
+    }
+
+    .ngOrders_orderInfo {
+        width: 100%;
+        min-width: 0;
+        align-items: center;
+    }
+
+    .ngOrders_imageBox {
+        width: 120px;
+        height: 120px;
+    }
+
+    .ngOrders_info {
+        min-width: 0;
+        flex: 1;
+    }
+
+
+    /* ---------- TEXT ---------- */
+
+    .ngOrders_productTitle {
+        font-size: 18px;
+        line-height: 1.3;
+    }
+
+    .ngOrders_shortDesc {
+        font-size: 13px;
+        line-height: 1.5;
+
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+    }
+
+    .ngOrders_priceBox {
+        width: 100%;
+        min-width: 0;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .ngOrders_status {
+        padding: 7px 15px;
+    }
+
+    .ngOrders_total {
+        font-size: 22px;
+    }
+
+
+    /* ---------- BUTTONS ---------- */
+
+    .ngOrders_cardBottom {
+        justify-content: flex-end;
+    }
 
 }
-.ngOrders_meta{
 
-display:flex;
 
-gap:18px;
+/* =========================================================
+   MOBILE
+   481px - 768px
+========================================================= */
 
-font-size:13px;
+@media (min-width: 481px) and (max-width: 768px) {
 
-color:#888;
+    .ngOrders_page {
+        width: 100%;
+        padding: 22px 0 55px;
+        overflow-x: hidden;
+    }
 
-margin-bottom:5px;
+    .ngOrders_container {
+        width: 94%;
+        max-width: 100%;
+    }
 
-flex-wrap:wrap;
+
+    /* ---------- HEADER ---------- */
+
+    .ngOrders_container h1 {
+        font-size: 30px;
+        line-height: 1.15;
+    }
+
+    .ngOrders_container > p {
+        font-size: 14px;
+        line-height: 1.5;
+        margin-bottom: 25px;
+    }
+
+
+    /* ---------- FILTER AREA ---------- */
+
+    .ngOrders_top {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+        margin-bottom: 25px;
+    }
+
+    .ngOrders_search {
+        width: 100%;
+        min-width: 0;
+        height: 50px;
+        padding: 0 16px;
+        box-sizing: border-box;
+    }
+
+    .ngOrders_search input {
+        min-width: 0;
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .ngOrders_top select {
+        width: 100%;
+        height: 50px;
+        font-size: 14px;
+        padding: 0 15px;
+    }
+
+
+    /* ---------- LIST ---------- */
+
+    .ngOrders_list {
+        gap: 16px;
+    }
+
+
+    /* ---------- CARD ---------- */
+
+    .ngOrders_card {
+        width: 100%;
+        padding: 17px;
+        border-radius: 18px;
+        box-sizing: border-box;
+    }
+
+    .ngOrders_card:hover {
+        transform: none;
+    }
+
+
+    /* ---------- CARD TOP ---------- */
+
+    .ngOrders_cardTop {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 18px;
+    }
+
+
+    /* ---------- PRODUCT ---------- */
+
+    .ngOrders_orderInfo {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        gap: 15px;
+        min-width: 0;
+    }
+
+    .ngOrders_imageBox {
+        width: 105px;
+        height: 105px;
+        border-radius: 15px;
+        flex: 0 0 105px;
+    }
+
+    .ngOrders_info {
+        min-width: 0;
+        width: 100%;
+    }
+
+
+    /* ---------- PRODUCT TEXT ---------- */
+
+    .ngOrders_productTitle {
+        font-size: 17px;
+        line-height: 1.3;
+        margin-bottom: 5px;
+
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+
+    .ngOrders_shortDesc {
+        font-size: 12px;
+        line-height: 1.5;
+        margin-bottom: 8px;
+
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+
+
+    /* ---------- PRICE ---------- */
+
+    .ngOrders_priceRow {
+        gap: 9px;
+        flex-wrap: wrap;
+        margin-bottom: 8px;
+    }
+
+    .ngOrders_price {
+        font-size: 16px;
+    }
+
+    .ngOrders_qty {
+        font-size: 11px;
+        padding: 3px 8px;
+    }
+
+
+    /* ---------- ORDER META ---------- */
+
+    .ngOrders_meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px 12px;
+        font-size: 11px;
+        line-height: 1.4;
+    }
+
+    .ngOrders_payment {
+        font-size: 11px;
+        line-height: 1.5;
+        overflow-wrap: anywhere;
+    }
+
+
+    /* ---------- STATUS / TOTAL ---------- */
+
+    .ngOrders_priceBox {
+        width: 100%;
+        min-width: 0;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        gap: 10px;
+    }
+
+    .ngOrders_status {
+        padding: 7px 13px;
+        font-size: 11px;
+        white-space: nowrap;
+    }
+
+    .ngOrders_total {
+        font-size: 20px;
+    }
+
+    .ngOrders_totalLabel {
+        font-size: 11px;
+    }
+
+
+    /* ---------- BOTTOM ---------- */
+
+    .ngOrders_cardBottom {
+        width: 100%;
+        margin-top: 17px;
+        padding-top: 15px;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .ngOrders_outlineBtn,
+    .ngOrders_trackBtn {
+        width: 100%;
+        min-width: 0;
+        height: 44px;
+        padding: 0 12px;
+        font-size: 13px;
+        border-radius: 11px;
+        box-sizing: border-box;
+    }
+
+
+    /* ---------- EMPTY ---------- */
+
+    .ngOrders_empty {
+        padding: 70px 25px;
+    }
+
+    .ngOrders_empty h2 {
+        font-size: 30px;
+    }
 
 }
-.ngOrders_payment{
 
-font-size:13px;
 
-color:#666;
+/* =========================================================
+   NORMAL PHONE
+   361px - 480px
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .ngOrders_page {
+        width: 100%;
+        padding: 16px 0 45px;
+        overflow-x: hidden;
+    }
+
+    .ngOrders_container {
+        width: calc(100% - 24px);
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+
+    /* ---------- HEADER ---------- */
+
+    .ngOrders_container h1 {
+        font-size: 27px;
+        line-height: 1.15;
+        margin-bottom: 6px;
+    }
+
+    .ngOrders_container > p {
+        font-size: 13px;
+        line-height: 1.5;
+        margin-bottom: 21px;
+    }
+
+
+    /* ---------- FILTERS ---------- */
+
+    .ngOrders_top {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+        margin-bottom: 22px;
+    }
+
+    .ngOrders_search {
+        width: 100%;
+        min-width: 0;
+        height: 47px;
+        padding: 0 13px;
+        border-radius: 12px;
+        box-sizing: border-box;
+    }
+
+    .ngOrders_search svg {
+        font-size: 19px;
+        flex-shrink: 0;
+    }
+
+    .ngOrders_search input {
+        width: 100%;
+        min-width: 0;
+        margin-left: 8px;
+        font-size: 13px;
+    }
+
+    .ngOrders_top select {
+        width: 100%;
+        height: 47px;
+        border-radius: 12px;
+        padding: 0 13px;
+        font-size: 13px;
+    }
+
+
+    /* ---------- LIST ---------- */
+
+    .ngOrders_list {
+        gap: 13px;
+    }
+
+
+    /* ---------- CARD ---------- */
+
+    .ngOrders_card {
+        width: 100%;
+        padding: 13px;
+        border-radius: 17px;
+        box-sizing: border-box;
+    }
+
+    .ngOrders_card:hover {
+        transform: none;
+        box-shadow: 0 15px 45px rgba(0,0,0,.06);
+    }
+
+
+    /* ---------- PRODUCT AREA ---------- */
+
+    .ngOrders_cardTop {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
+
+    .ngOrders_orderInfo {
+        width: 100%;
+        min-width: 0;
+
+        display: flex;
+        align-items: flex-start;
+        gap: 11px;
+    }
+
+
+    /* ---------- IMAGE ---------- */
+
+    .ngOrders_imageBox {
+        width: 82px;
+        height: 82px;
+        flex: 0 0 82px;
+        border-radius: 12px;
+    }
+
+
+    /* ---------- INFO ---------- */
+
+    .ngOrders_info {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .ngOrders_productTitle {
+        font-size: 14px;
+        line-height: 1.3;
+        margin-bottom: 4px;
+
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+
+    .ngOrders_shortDesc {
+        font-size: 10.5px;
+        line-height: 1.4;
+        margin-bottom: 6px;
+
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+
+
+    /* ---------- PRICE / QTY ---------- */
+
+    .ngOrders_priceRow {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-bottom: 6px;
+    }
+
+    .ngOrders_price {
+        font-size: 14px;
+    }
+
+    .ngOrders_qty {
+        font-size: 9px;
+        padding: 3px 7px;
+    }
+
+
+    /* ---------- META ---------- */
+
+    .ngOrders_meta {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+
+        font-size: 9px;
+        line-height: 1.35;
+
+        margin-bottom: 4px;
+    }
+
+    .ngOrders_payment {
+        font-size: 9px;
+        line-height: 1.4;
+    }
+
+
+    /* ---------- STATUS / TOTAL ---------- */
+
+    .ngOrders_priceBox {
+        width: 100%;
+        min-width: 0;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        gap: 8px;
+    }
+
+    .ngOrders_status {
+        max-width: 65%;
+        padding: 6px 10px;
+        font-size: 9px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .ngOrders_total {
+        font-size: 18px;
+    }
+
+    .ngOrders_totalLabel {
+        font-size: 9px;
+    }
+
+
+    /* ---------- BUTTONS ---------- */
+
+    .ngOrders_cardBottom {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 8px;
+
+        margin-top: 14px;
+        padding-top: 13px;
+    }
+
+    .ngOrders_outlineBtn,
+    .ngOrders_trackBtn {
+        width: 100%;
+        height: 43px;
+
+        padding: 0 12px;
+
+        font-size: 12px;
+        border-radius: 10px;
+
+        box-sizing: border-box;
+    }
+
+    .ngOrders_outlineBtn svg,
+    .ngOrders_trackBtn svg {
+        font-size: 16px;
+    }
+
+
+    /* ---------- EMPTY ---------- */
+
+    .ngOrders_empty {
+        padding: 55px 18px;
+        border-radius: 18px;
+    }
+
+    .ngOrders_empty h2 {
+        font-size: 24px;
+        line-height: 1.2;
+    }
+
+    .ngOrders_empty p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
 
 }
-.ngOrders_priceBox{
 
-min-width:150px;
 
-align-items:flex-end;
+/* =========================================================
+   SMALL PHONE
+   320px - 360px
+========================================================= */
 
-gap:8px;
+@media (max-width: 360px) {
+
+    .ngOrders_page {
+        padding: 14px 0 40px;
+    }
+
+    .ngOrders_container {
+        width: calc(100% - 18px);
+    }
+
+
+    /* ---------- HEADER ---------- */
+
+    .ngOrders_container h1 {
+        font-size: 24px;
+    }
+
+    .ngOrders_container > p {
+        font-size: 12px;
+        margin-bottom: 18px;
+    }
+
+
+    /* ---------- FILTERS ---------- */
+
+    .ngOrders_top {
+        gap: 8px;
+        margin-bottom: 18px;
+    }
+
+    .ngOrders_search {
+        height: 44px;
+        padding: 0 11px;
+    }
+
+    .ngOrders_search input {
+        font-size: 12px;
+    }
+
+    .ngOrders_top select {
+        height: 44px;
+        font-size: 12px;
+    }
+
+
+    /* ---------- CARD ---------- */
+
+    .ngOrders_card {
+        padding: 11px;
+        border-radius: 15px;
+    }
+
+    .ngOrders_cardTop {
+        gap: 13px;
+    }
+
+    .ngOrders_orderInfo {
+        gap: 9px;
+    }
+
+
+    /* ---------- IMAGE ---------- */
+
+    .ngOrders_imageBox {
+        width: 70px;
+        height: 70px;
+        flex: 0 0 70px;
+        border-radius: 10px;
+    }
+
+
+    /* ---------- TEXT ---------- */
+
+    .ngOrders_productTitle {
+        font-size: 12px;
+        line-height: 1.3;
+    }
+
+    .ngOrders_shortDesc {
+        font-size: 9px;
+        line-height: 1.35;
+    }
+
+    .ngOrders_price {
+        font-size: 13px;
+    }
+
+    .ngOrders_qty {
+        font-size: 8px;
+        padding: 2px 6px;
+    }
+
+
+    /* ---------- META ---------- */
+
+    .ngOrders_meta {
+        font-size: 8px;
+    }
+
+    .ngOrders_payment {
+        font-size: 8px;
+    }
+
+
+    /* ---------- STATUS ---------- */
+
+    .ngOrders_status {
+        max-width: 60%;
+        padding: 5px 8px;
+        font-size: 8px;
+    }
+
+    .ngOrders_total {
+        font-size: 16px;
+    }
+
+    .ngOrders_totalLabel {
+        font-size: 8px;
+    }
+
+
+    /* ---------- BUTTONS ---------- */
+
+    .ngOrders_cardBottom {
+        gap: 7px;
+        margin-top: 12px;
+        padding-top: 11px;
+    }
+
+    .ngOrders_outlineBtn,
+    .ngOrders_trackBtn {
+        height: 40px;
+        font-size: 10px;
+        padding: 0 10px;
+    }
 
 }
-.ngOrders_total{
 
-font-size:22px;
 
-font-weight:700;
+/* =========================================================
+   VERY SMALL DEVICES
+   BELOW 320px
+========================================================= */
 
-color:#1f4d34;
+@media (max-width: 319px) {
+
+    .ngOrders_container {
+        width: calc(100% - 14px);
+    }
+
+    .ngOrders_container h1 {
+        font-size: 22px;
+    }
+
+    .ngOrders_container > p {
+        font-size: 11px;
+    }
+
+
+    .ngOrders_card {
+        padding: 9px;
+    }
+
+
+    .ngOrders_imageBox {
+        width: 62px;
+        height: 62px;
+        flex-basis: 62px;
+    }
+
+
+    .ngOrders_productTitle {
+        font-size: 11px;
+    }
+
+    .ngOrders_shortDesc {
+        font-size: 8px;
+    }
+
+
+    .ngOrders_price {
+        font-size: 12px;
+    }
+
+
+    .ngOrders_qty {
+        display: none;
+    }
+
+
+    .ngOrders_meta,
+    .ngOrders_payment {
+        font-size: 7.5px;
+    }
+
+
+    .ngOrders_status {
+        font-size: 7px;
+        padding: 5px 7px;
+    }
+
+
+    .ngOrders_total {
+        font-size: 15px;
+    }
+
+
+    .ngOrders_totalLabel {
+        font-size: 7px;
+    }
+
+
+    .ngOrders_outlineBtn,
+    .ngOrders_trackBtn {
+        height: 38px;
+        font-size: 9px;
+        padding: 0 8px;
+    }
 
 }
 
-.ngOrders_totalLabel{
 
-font-size:13px;
+/* =========================================================
+   TOUCH DEVICES
+========================================================= */
 
-color:#888;
+@media (hover: none) and (pointer: coarse) {
 
-}
-.ngOrders_outlineBtn,
-.ngOrders_trackBtn{
-
-height:46px;
-
-padding:0 22px;
-
-font-size:14px;
+    .ngOrders_outlineBtn,
+    .ngOrders_trackBtn {
+        -webkit-tap-highlight-color: transparent;
+        touch-action: manipulation;
+    }
 
 }
-.ngOrders_cardBottom{
 
-margin-top:18px;
 
-padding-top:16px;
+/* =========================================================
+   GLOBAL SAFETY FOR THIS PAGE
+========================================================= */
 
+.ngOrders_page,
+.ngOrders_container,
+.ngOrders_card,
+.ngOrders_cardTop,
+.ngOrders_orderInfo,
+.ngOrders_info,
+.ngOrders_priceBox {
+    box-sizing: border-box;
+}
+
+.ngOrders_page {
+    overflow-x: hidden;
+}
+
+.ngOrders_page img {
+    max-width: 100%;
 }

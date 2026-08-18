@@ -171,7 +171,7 @@
 
     font-size:22px;
 
-    color:#2F6D39;
+    color:#15361D;
 
 }
 
@@ -187,7 +187,7 @@
 
 .ngAcc_menuItem strong{
 
-    color:#2F6D39;
+    color:#15361D;
 
     font-size:14px;
 
@@ -205,7 +205,7 @@
 
     border:none;
 
-    background:#2F6D39;
+    background:#15361D;
 
     color:white;
 
@@ -233,7 +233,7 @@
 
 .ngAcc_logoutBtn:hover{
 
-    background:#25552D;
+    background:#15361D;
 
     transform:translateY(-2px);
 
@@ -260,8 +260,8 @@
 
     background:linear-gradient(
         135deg,
-        #2F6D39,
-        #4C8D4F
+        #15361D,
+        #2A5A35
     );
 
     color:white;
@@ -344,7 +344,7 @@
 
 .ngAcc_statCard h2{
 
-    color:#234F1E;
+    color:#15361D;
 
     font-size:34px;
 
@@ -382,7 +382,7 @@
 
     font-size:30px;
 
-    color:#234F1E;
+    color:#15361D;
 
     font-family:"Cormorant Garamond",serif;
 
@@ -402,7 +402,7 @@
 
     cursor:pointer;
 
-    color:#2F6D39;
+    color:#15361D;
 
     font-weight:600;
 
@@ -500,13 +500,13 @@
 
     font-size:32px;
 
-    color:#2F6D39;
+    color:#15361D;
 
 }
 
 .ngAcc_recentOrderLeft h3{
 
-    color:#234F1E;
+    color:#15361D;
 
     font-size:20px;
 
@@ -657,7 +657,7 @@
 
     font-size:20px;
 
-    color:#234F1E;
+    color:#15361D;
 
     margin-bottom:18px;
 
@@ -681,7 +681,7 @@
 
 .ngAcc_recommendedBottom h2{
 
-    color:#234F1E;
+    color:#15361D;
 
     font-size:28px;
 
@@ -693,7 +693,7 @@
 
     border:none;
 
-    background:#2F6D39;
+    background:#15361D;
 
     color:white;
 
@@ -713,7 +713,7 @@
 
 .ngAcc_recommendedBottom button:hover{
 
-    background:#234F1E;
+    background:#15361D;
 
 }
 
@@ -767,7 +767,7 @@
 
     font-size:34px;
 
-    color:#2F6D39;
+    color:#15361D;
 
     margin-bottom:18px;
 
@@ -775,7 +775,7 @@
 
 .ngAcc_quickCard h4{
 
-    color:#234F1E;
+    color:#15361D;
 
     font-size:22px;
 
@@ -868,7 +868,7 @@
 
     background:#DDBB52;
 
-    color:#234F1E;
+    color:#15361D;
 
     padding:8px 18px;
 
@@ -908,7 +908,7 @@
 
     background:white;
 
-    color:#2F6D39;
+    color:#15361D;
 
     padding:15px 34px;
 
@@ -1010,7 +1010,7 @@
 
     font-size:36px;
 
-    color:#2F6D39;
+    color:#15361D;
 
     margin-bottom:20px;
 
@@ -1018,7 +1018,7 @@
 
 .ngAcc_insightCard h3{
 
-    color:#234F1E;
+    color:#15361D;
 
     font-size:22px;
 
@@ -1034,7 +1034,7 @@
 
     font-size:34px;
 
-    color:#2F6D39;
+    color:#15361D;
 
     margin-bottom:10px;
 
@@ -1082,7 +1082,7 @@
 
     font-size:40px;
 
-    color:#234F1E;
+    color:#15361D;
 
     margin-bottom:14px;
 
@@ -1104,7 +1104,7 @@
 
     border:none;
 
-    background:#2F6D39;
+    background:#15361D;
 
     color:white;
 
@@ -1130,7 +1130,7 @@
 
 .ngAcc_shopNowBtn:hover{
 
-    background:#234F1E;
+    background:#15361D;
 
     transform:translateY(-3px);
 
@@ -1197,6 +1197,20 @@
 
 }
 
+.ngAcc_heroTitle {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.ngAcc_helloIcon {
+    font-size: 30px;
+    color: #e6c86e;
+    flex-shrink: 0;
+    stroke-width: 1.5;
+    transform: translateY(2px);
+}
 /* ==========================================
    TABLET
 ========================================== */
@@ -1436,5 +1450,1935 @@
     width:100%;
 
 }
+
+}
+/* ==========================================================
+   NEXTTGRAINS ACCOUNT PAGE
+   FINAL RESPONSIVE OVERRIDES
+   DESKTOP / LAPTOP DESIGN REMAINS UNCHANGED
+========================================================== */
+
+
+/* ==========================================================
+   TABLET
+   769px - 1100px
+========================================================== */
+
+@media (min-width: 769px) and (max-width: 1100px) {
+
+    .ngAcc_page {
+        padding: 28px 24px 55px;
+        overflow-x: hidden;
+    }
+
+    .ngAcc_wrapper {
+        width: 100%;
+        max-width: 100%;
+        grid-template-columns: 270px minmax(0, 1fr);
+        gap: 22px;
+    }
+
+
+    /* ---------------- SIDEBAR ---------------- */
+
+    .ngAcc_sidebar {
+        padding: 22px;
+        border-radius: 24px;
+        position: sticky;
+        top: 20px;
+    }
+
+    .ngAcc_profileCard {
+        gap: 12px;
+        margin-bottom: 25px;
+        padding-bottom: 22px;
+    }
+
+    .ngAcc_avatar {
+        width: 62px;
+        height: 62px;
+    }
+
+    .ngAcc_profileCard h2 {
+        font-size: 19px;
+        overflow-wrap: anywhere;
+    }
+
+    .ngAcc_profileCard p {
+        font-size: 12px;
+    }
+
+    .ngAcc_menu {
+        gap: 7px;
+    }
+
+    .ngAcc_menuItem {
+        padding: 13px 12px;
+    }
+
+    .ngAcc_menuItem > div {
+        gap: 10px;
+    }
+
+    .ngAcc_menuItem span {
+        font-size: 13px;
+    }
+
+    .ngAcc_menuItem svg {
+        font-size: 19px;
+    }
+
+    .ngAcc_logoutBtn {
+        height: 48px;
+        margin-top: 22px;
+        font-size: 13px;
+    }
+
+
+    /* ---------------- CONTENT ---------------- */
+
+    .ngAcc_content {
+        min-width: 0;
+        gap: 25px;
+    }
+
+
+    /* ---------------- HERO ---------------- */
+
+    .ngAcc_hero {
+        padding: 32px;
+        border-radius: 25px;
+    }
+
+    .ngAcc_hero h1 {
+        font-size: 38px;
+    }
+
+    .ngAcc_hero p {
+        font-size: 14px;
+    }
+
+
+    /* ---------------- STATS ---------------- */
+
+    .ngAcc_stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .ngAcc_statCard {
+        padding: 22px;
+        border-radius: 21px;
+    }
+
+
+    /* ---------------- SECTION HEADER ---------------- */
+
+    .ngAcc_sectionHeader {
+        margin-bottom: 17px;
+    }
+
+    .ngAcc_sectionHeader h2 {
+        font-size: 27px;
+    }
+
+
+    /* ---------------- RECENT ORDERS ---------------- */
+
+    .ngAcc_recentOrders {
+        gap: 14px;
+    }
+
+    .ngAcc_recentOrderCard {
+        padding: 18px;
+        border-radius: 20px;
+        gap: 15px;
+    }
+
+    .ngAcc_recentOrderLeft {
+        gap: 14px;
+        min-width: 0;
+    }
+
+    .ngAcc_recentOrderIcon {
+        width: 55px;
+        height: 55px;
+        flex-shrink: 0;
+    }
+
+    .ngAcc_recentOrderIcon svg {
+        font-size: 26px;
+    }
+
+    .ngAcc_recentOrderLeft h3 {
+        font-size: 17px;
+        overflow-wrap: anywhere;
+    }
+
+    .ngAcc_recentOrderLeft p {
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+
+    /* ---------------- RECOMMENDED ---------------- */
+
+    .ngAcc_recommendedGrid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
+
+    .ngAcc_recommendedCard {
+        border-radius: 21px;
+    }
+
+    .ngAcc_recommendedCard img {
+        height: 190px;
+    }
+
+    .ngAcc_recommendedContent {
+        padding: 17px;
+    }
+
+    .ngAcc_recommendedContent h3 {
+        font-size: 18px;
+        min-height: 50px;
+    }
+
+
+    /* ---------------- QUICK ACTIONS ---------------- */
+
+    .ngAcc_quickActionGrid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
+
+    .ngAcc_quickCard {
+        padding: 22px;
+        border-radius: 21px;
+    }
+
+
+    /* ---------------- INSIGHTS ---------------- */
+
+    .ngAcc_insightGrid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
+
+    .ngAcc_insightCard {
+        padding: 23px;
+    }
+
+
+    /* ---------------- MEMBERSHIP ---------------- */
+
+    .ngAcc_membershipCard {
+        padding: 32px;
+        gap: 25px;
+    }
+
+    .ngAcc_membershipLeft {
+        max-width: 70%;
+    }
+
+    .ngAcc_membershipLeft h2 {
+        font-size: 35px;
+    }
+
+    .ngAcc_membershipCircle {
+        width: 125px;
+        height: 125px;
+    }
+
+    .ngAcc_membershipCircle svg {
+        font-size: 55px;
+    }
+
+
+    /* ---------------- BOTTOM CTA ---------------- */
+
+    .ngAcc_accountBottomCard {
+        padding: 30px;
+        gap: 25px;
+    }
+
+    .ngAcc_accountBottomCard h2 {
+        font-size: 34px;
+    }
+
+}
+
+
+/* ==========================================================
+   TABLET / SMALL LAPTOP
+   601px - 768px
+========================================================== */
+
+@media (min-width: 601px) and (max-width: 768px) {
+
+    .ngAcc_page {
+        padding: 24px 20px 55px;
+    }
+
+    .ngAcc_wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+    }
+
+    .ngAcc_sidebar,
+    .ngAcc_content {
+        width: 100%;
+        min-width: 0;
+    }
+
+
+    /* ---------------- SIDEBAR ---------------- */
+
+    .ngAcc_sidebar {
+        position: relative;
+        top: 0;
+        padding: 22px;
+        border-radius: 24px;
+    }
+
+    .ngAcc_profileCard {
+        margin-bottom: 22px;
+    }
+
+    .ngAcc_avatar {
+        width: 65px;
+        height: 65px;
+    }
+
+
+    /* ---------------- MENU ---------------- */
+
+    .ngAcc_menu {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    .ngAcc_menuItem {
+        padding: 13px;
+    }
+
+    .ngAcc_logoutBtn {
+        margin-top: 20px;
+    }
+
+
+    /* ---------------- CONTENT ---------------- */
+
+    .ngAcc_content {
+        gap: 22px;
+    }
+
+
+    /* ---------------- HERO ---------------- */
+
+    .ngAcc_hero {
+        padding: 30px;
+        border-radius: 23px;
+    }
+
+    .ngAcc_hero h1 {
+        font-size: 34px;
+    }
+
+
+    /* ---------------- STATS ---------------- */
+
+    .ngAcc_stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+    }
+
+    .ngAcc_statCard {
+        padding: 21px;
+    }
+
+
+    /* ---------------- RECENT ORDERS ---------------- */
+
+    .ngAcc_recentOrderCard {
+        padding: 18px;
+    }
+
+    .ngAcc_recentOrderLeft {
+        min-width: 0;
+    }
+
+
+    /* ---------------- RECOMMENDED ---------------- */
+
+    .ngAcc_recommendedGrid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+    }
+
+    .ngAcc_recommendedCard img {
+        height: 185px;
+    }
+
+    .ngAcc_recommendedContent {
+        padding: 16px;
+    }
+
+
+    /* ---------------- QUICK ACTIONS ---------------- */
+
+    .ngAcc_quickActionGrid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+    }
+
+
+    /* ---------------- INSIGHTS ---------------- */
+
+    .ngAcc_insightGrid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+    }
+
+
+    /* ---------------- MEMBERSHIP ---------------- */
+
+    .ngAcc_membershipCard {
+        flex-direction: column;
+        text-align: center;
+        padding: 32px;
+        gap: 25px;
+    }
+
+    .ngAcc_membershipLeft {
+        max-width: 100%;
+    }
+
+    .ngAcc_membershipLeft h2 {
+        font-size: 32px;
+    }
+
+
+    /* ---------------- CTA ---------------- */
+
+    .ngAcc_accountBottomCard {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+        gap: 22px;
+    }
+
+    .ngAcc_accountBottomCard p {
+        max-width: 100%;
+    }
+
+    .ngAcc_shopNowBtn {
+        width: 100%;
+        justify-content: center;
+    }
+
+}
+
+
+/* ==========================================================
+   MOBILE
+   481px - 600px
+========================================================== */
+
+@media (min-width: 481px) and (max-width: 600px) {
+
+    .ngAcc_page {
+        padding: 18px 16px 45px;
+    }
+
+    .ngAcc_wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .ngAcc_sidebar,
+    .ngAcc_content {
+        width: 100%;
+        min-width: 0;
+    }
+
+
+    /* ---------------- SIDEBAR ---------------- */
+
+    .ngAcc_sidebar {
+        position: relative;
+        top: 0;
+        padding: 20px;
+        border-radius: 22px;
+    }
+
+    .ngAcc_profileCard {
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+    }
+
+    .ngAcc_avatar {
+        width: 62px;
+        height: 62px;
+    }
+
+    .ngAcc_profileCard h2 {
+        font-size: 21px;
+    }
+
+
+    /* ---------------- MENU ---------------- */
+
+    .ngAcc_menu {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 7px;
+    }
+
+    .ngAcc_menuItem {
+        padding: 12px 10px;
+        border-radius: 14px;
+    }
+
+    .ngAcc_menuItem > div {
+        gap: 8px;
+        min-width: 0;
+    }
+
+    .ngAcc_menuItem svg {
+        font-size: 18px;
+        flex-shrink: 0;
+    }
+
+    .ngAcc_menuItem span {
+        font-size: 12px;
+    }
+
+    .ngAcc_logoutBtn {
+        height: 48px;
+        margin-top: 18px;
+    }
+
+
+    /* ---------------- HERO ---------------- */
+
+    .ngAcc_hero {
+        padding: 25px 22px;
+        border-radius: 21px;
+    }
+
+    .ngAcc_hero h1 {
+        font-size: 31px;
+        line-height: 1.1;
+    }
+
+    .ngAcc_hero p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+
+    /* ---------------- STATS ---------------- */
+
+    .ngAcc_stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 11px;
+    }
+
+    .ngAcc_statCard {
+        padding: 18px;
+        border-radius: 18px;
+    }
+
+    .ngAcc_statCard span {
+        font-size: 12px;
+    }
+
+    .ngAcc_statCard h2 {
+        font-size: 29px;
+    }
+
+    .ngAcc_statCard p {
+        font-size: 11px;
+    }
+
+
+    /* ---------------- SECTION HEADER ---------------- */
+
+    .ngAcc_sectionHeader {
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 14px;
+    }
+
+    .ngAcc_sectionHeader h2 {
+        font-size: 25px;
+    }
+
+    .ngAcc_viewAllBtn {
+        font-size: 12px;
+        flex-shrink: 0;
+    }
+
+
+    /* ---------------- RECENT ORDERS ---------------- */
+
+    .ngAcc_recentOrders {
+        gap: 10px;
+    }
+
+    .ngAcc_recentOrderCard {
+        padding: 15px;
+        border-radius: 18px;
+
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .ngAcc_recentOrderLeft {
+        min-width: 0;
+        flex: 1;
+        gap: 10px;
+    }
+
+    .ngAcc_recentOrderIcon {
+        width: 48px;
+        height: 48px;
+        border-radius: 13px;
+        flex-shrink: 0;
+    }
+
+    .ngAcc_recentOrderIcon svg {
+        font-size: 23px;
+    }
+
+    .ngAcc_recentOrderLeft h3 {
+        font-size: 15px;
+        margin-bottom: 4px;
+
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+
+    .ngAcc_recentOrderLeft p {
+        font-size: 10px;
+        line-height: 1.4;
+    }
+
+    .ngAcc_recentOrderRight {
+        width: auto;
+        flex-shrink: 0;
+    }
+
+    .ngAcc_status {
+        width: auto;
+        padding: 7px 10px;
+        font-size: 9px;
+        white-space: nowrap;
+    }
+
+
+    /* ---------------- RECOMMENDED ---------------- */
+
+    .ngAcc_recommendedGrid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 11px;
+    }
+
+    .ngAcc_recommendedCard {
+        border-radius: 17px;
+    }
+
+    .ngAcc_recommendedCard img {
+        height: 150px;
+    }
+
+    .ngAcc_recommendedContent {
+        padding: 12px;
+    }
+
+    .ngAcc_organicTag {
+        padding: 5px 9px;
+        font-size: 9px;
+        margin-bottom: 9px;
+    }
+
+    .ngAcc_recommendedContent h3 {
+        font-size: 15px;
+        line-height: 1.3;
+        min-height: 39px;
+        margin-bottom: 12px;
+
+        overflow-wrap: anywhere;
+    }
+
+    .ngAcc_recommendedBottom h2 {
+        font-size: 21px;
+    }
+
+    .ngAcc_recommendedBottom button {
+        width: 60px;
+        height: 34px;
+        border-radius: 9px;
+        font-size: 11px;
+    }
+
+
+    /* ---------------- QUICK ACTIONS ---------------- */
+
+    .ngAcc_quickActionGrid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    .ngAcc_quickCard {
+        padding: 15px 8px;
+        border-radius: 16px;
+    }
+
+    .ngAcc_quickCard svg {
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+
+    .ngAcc_quickCard h4 {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    .ngAcc_quickCard p {
+        font-size: 9px;
+        line-height: 1.4;
+    }
+
+
+    /* ---------------- INSIGHTS ---------------- */
+
+    .ngAcc_insightGrid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    .ngAcc_insightCard {
+        padding: 15px 9px;
+        border-radius: 16px;
+    }
+
+    .ngAcc_insightCard svg {
+        font-size: 25px;
+        margin-bottom: 11px;
+    }
+
+    .ngAcc_insightCard h3 {
+        font-size: 15px;
+        line-height: 1.25;
+        margin-bottom: 10px;
+    }
+
+    .ngAcc_insightCard strong {
+        font-size: 22px;
+    }
+
+    .ngAcc_insightCard p {
+        font-size: 9px;
+        line-height: 1.4;
+    }
+
+
+    /* ---------------- MEMBERSHIP ---------------- */
+
+    .ngAcc_membershipCard {
+        padding: 25px 18px;
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        border-radius: 22px;
+    }
+
+    .ngAcc_membershipLeft {
+        max-width: 100%;
+    }
+
+    .ngAcc_membershipLeft h2 {
+        font-size: 28px;
+    }
+
+    .ngAcc_membershipLeft p {
+        font-size: 12px;
+        line-height: 1.7;
+    }
+
+    .ngAcc_membershipBtn {
+        width: 100%;
+    }
+
+    .ngAcc_membershipCircle {
+        width: 105px;
+        height: 105px;
+    }
+
+    .ngAcc_membershipCircle svg {
+        font-size: 48px;
+    }
+
+
+    /* ---------------- BOTTOM CTA ---------------- */
+
+    .ngAcc_accountBottomCard {
+        padding: 24px 18px;
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        border-radius: 21px;
+    }
+
+    .ngAcc_accountBottomCard h2 {
+        font-size: 28px;
+        line-height: 1.2;
+    }
+
+    .ngAcc_accountBottomCard p {
+        font-size: 12px;
+        line-height: 1.7;
+    }
+
+    .ngAcc_shopNowBtn {
+        width: 100%;
+        height: 52px;
+        justify-content: center;
+    }
+
+}
+
+
+/* ==========================================================
+   PHONE
+   361px - 480px
+========================================================== */
+
+@media (max-width: 480px) {
+
+    .ngAcc_page {
+        padding: 12px 12px 40px;
+        overflow-x: hidden;
+    }
+
+    .ngAcc_wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .ngAcc_sidebar,
+    .ngAcc_content {
+        width: 100%;
+        min-width: 0;
+    }
+
+
+    /* ======================================================
+       SIDEBAR
+    ====================================================== */
+
+    .ngAcc_sidebar {
+        position: relative;
+        top: 0;
+
+        padding: 17px;
+
+        border-radius: 19px;
+    }
+
+    .ngAcc_profileCard {
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 12px;
+
+        margin-bottom: 17px;
+
+        padding-bottom: 17px;
+    }
+
+    .ngAcc_avatar {
+
+        width: 54px;
+
+        height: 54px;
+
+        border-width: 3px;
+
+        flex-shrink: 0;
+    }
+
+    .ngAcc_profileCard h2 {
+
+        font-size: 18px;
+
+        line-height: 1.15;
+
+        overflow-wrap: anywhere;
+    }
+
+    .ngAcc_profileCard p {
+
+        font-size: 10px;
+
+        margin-top: 3px;
+    }
+
+
+    /* ======================================================
+       MENU
+    ====================================================== */
+
+    .ngAcc_menu {
+
+        display: grid;
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 6px;
+    }
+
+    .ngAcc_menuItem {
+
+        padding: 11px 9px;
+
+        border-radius: 12px;
+
+        min-width: 0;
+    }
+
+    .ngAcc_menuItem > div {
+
+        gap: 7px;
+
+        min-width: 0;
+    }
+
+    .ngAcc_menuItem svg {
+
+        font-size: 17px;
+
+        flex-shrink: 0;
+    }
+
+    .ngAcc_menuItem span {
+
+        font-size: 10px;
+
+        white-space: nowrap;
+
+        overflow: hidden;
+
+        text-overflow: ellipsis;
+    }
+
+    .ngAcc_menuItem strong {
+
+        font-size: 10px;
+
+        flex-shrink: 0;
+    }
+
+    .ngAcc_logoutBtn {
+
+        height: 44px;
+
+        margin-top: 15px;
+
+        border-radius: 12px;
+
+        font-size: 12px;
+    }
+
+
+    /* ======================================================
+       CONTENT
+    ====================================================== */
+
+    .ngAcc_content {
+
+        gap: 17px;
+    }
+
+
+    /* ======================================================
+       HERO
+    ====================================================== */
+
+    .ngAcc_hero {
+
+        padding: 22px 18px;
+
+        border-radius: 19px;
+    }
+
+    .ngAcc_hero h1 {
+
+        font-size: 28px;
+
+        line-height: 1.1;
+
+        margin-bottom: 7px;
+    }
+
+    .ngAcc_hero p {
+
+        font-size: 11px;
+
+        line-height: 1.55;
+    }
+
+
+    /* ======================================================
+       STATS
+    ====================================================== */
+
+    .ngAcc_stats {
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 8px;
+    }
+
+    .ngAcc_statCard {
+
+        padding: 16px;
+
+        border-radius: 16px;
+    }
+
+    .ngAcc_statCard span {
+
+        font-size: 10px;
+
+        margin-bottom: 6px;
+    }
+
+    .ngAcc_statCard h2 {
+
+        font-size: 26px;
+
+        margin-bottom: 4px;
+    }
+
+    .ngAcc_statCard p {
+
+        font-size: 9px;
+    }
+
+
+    /* ======================================================
+       SECTION HEADER
+    ====================================================== */
+
+    .ngAcc_sectionHeader {
+
+        display: flex;
+
+        flex-direction: row;
+
+        justify-content: space-between;
+
+        align-items: center;
+
+        gap: 8px;
+
+        margin-bottom: 11px;
+    }
+
+    .ngAcc_sectionHeader h2 {
+
+        font-size: 22px;
+
+        line-height: 1.15;
+    }
+
+    .ngAcc_viewAllBtn {
+
+        font-size: 10px;
+
+        gap: 4px;
+
+        white-space: nowrap;
+    }
+
+    .ngAcc_viewAllBtn svg {
+
+        font-size: 13px;
+    }
+
+
+    /* ======================================================
+       RECENT ORDERS
+    ====================================================== */
+
+    .ngAcc_recentOrders {
+
+        gap: 8px;
+    }
+
+    .ngAcc_recentOrderCard {
+
+        padding: 12px;
+
+        border-radius: 15px;
+
+        display: flex;
+
+        flex-direction: row;
+
+        align-items: center;
+
+        gap: 7px;
+    }
+
+    .ngAcc_recentOrderLeft {
+
+        flex: 1;
+
+        min-width: 0;
+
+        gap: 9px;
+    }
+
+    .ngAcc_recentOrderIcon {
+
+        width: 42px;
+
+        height: 42px;
+
+        border-radius: 11px;
+
+        flex-shrink: 0;
+    }
+
+    .ngAcc_recentOrderIcon svg {
+
+        font-size: 20px;
+    }
+
+    .ngAcc_recentOrderLeft h3 {
+
+        font-size: 12px;
+
+        line-height: 1.25;
+
+        margin-bottom: 3px;
+
+        overflow-wrap: anywhere;
+
+        word-break: break-word;
+    }
+
+    .ngAcc_recentOrderLeft p {
+
+        font-size: 8px;
+
+        line-height: 1.4;
+
+        overflow-wrap: anywhere;
+    }
+
+    .ngAcc_recentOrderRight {
+
+        width: auto;
+
+        flex-shrink: 0;
+    }
+
+    .ngAcc_status {
+
+        width: auto;
+
+        padding: 6px 8px;
+
+        font-size: 8px;
+
+        white-space: nowrap;
+    }
+
+
+    /* ======================================================
+       RECOMMENDED
+    ====================================================== */
+
+    .ngAcc_recommendedGrid {
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 8px;
+    }
+
+    .ngAcc_recommendedCard {
+
+        border-radius: 15px;
+    }
+
+    .ngAcc_recommendedCard img {
+
+        height: 125px;
+    }
+
+    .ngAcc_recommendedContent {
+
+        padding: 10px;
+    }
+
+    .ngAcc_organicTag {
+
+        padding: 4px 7px;
+
+        font-size: 7px;
+
+        gap: 3px;
+
+        margin-bottom: 7px;
+    }
+
+    .ngAcc_organicTag svg {
+
+        font-size: 10px;
+    }
+
+    .ngAcc_recommendedContent h3 {
+
+        font-size: 13px;
+
+        line-height: 1.25;
+
+        min-height: 33px;
+
+        margin-bottom: 9px;
+
+        overflow-wrap: anywhere;
+
+        word-break: break-word;
+    }
+
+    .ngAcc_recommendedBottom h2 {
+
+        font-size: 18px;
+    }
+
+    .ngAcc_recommendedBottom button {
+
+        width: 52px;
+
+        height: 30px;
+
+        border-radius: 8px;
+
+        font-size: 9px;
+    }
+
+
+    /* ======================================================
+       QUICK ACTIONS
+    ====================================================== */
+
+    .ngAcc_quickActionGrid {
+
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+
+        gap: 6px;
+    }
+
+    .ngAcc_quickCard {
+
+        padding: 13px 6px;
+
+        border-radius: 14px;
+
+        min-width: 0;
+    }
+
+    .ngAcc_quickCard svg {
+
+        font-size: 22px;
+
+        margin-bottom: 8px;
+    }
+
+    .ngAcc_quickCard h4 {
+
+        font-size: 13px;
+
+        line-height: 1.2;
+
+        margin-bottom: 4px;
+
+        overflow-wrap: anywhere;
+    }
+
+    .ngAcc_quickCard p {
+
+        font-size: 7.5px;
+
+        line-height: 1.35;
+    }
+
+
+    /* ======================================================
+       INSIGHTS
+    ====================================================== */
+
+    .ngAcc_insightGrid {
+
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+
+        gap: 6px;
+    }
+
+    .ngAcc_insightCard {
+
+        padding: 13px 7px;
+
+        border-radius: 14px;
+
+        min-width: 0;
+    }
+
+    .ngAcc_insightCard svg {
+
+        font-size: 22px;
+
+        margin-bottom: 9px;
+    }
+
+    .ngAcc_insightCard h3 {
+
+        font-size: 12px;
+
+        line-height: 1.2;
+
+        margin-bottom: 8px;
+
+        overflow-wrap: anywhere;
+    }
+
+    .ngAcc_insightCard strong {
+
+        font-size: 19px;
+
+        margin-bottom: 6px;
+
+        overflow-wrap: anywhere;
+    }
+
+    .ngAcc_insightCard p {
+
+        font-size: 7px;
+
+        line-height: 1.35;
+    }
+
+
+    /* ======================================================
+       MEMBERSHIP
+    ====================================================== */
+
+    .ngAcc_membershipCard {
+
+        padding: 23px 15px;
+
+        border-radius: 19px;
+
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 17px;
+    }
+
+    .ngAcc_membershipBadge {
+
+        padding: 6px 12px;
+
+        font-size: 9px;
+
+        margin-bottom: 10px;
+    }
+
+    .ngAcc_membershipLeft {
+
+        max-width: 100%;
+    }
+
+    .ngAcc_membershipLeft h2 {
+
+        font-size: 25px;
+
+        line-height: 1.15;
+
+        margin-bottom: 10px;
+    }
+
+    .ngAcc_membershipLeft p {
+
+        font-size: 10px;
+
+        line-height: 1.6;
+
+        margin-bottom: 17px;
+    }
+
+    .ngAcc_membershipBtn {
+
+        width: 100%;
+
+        padding: 12px 20px;
+
+        font-size: 11px;
+    }
+
+    .ngAcc_membershipCircle {
+
+        width: 90px;
+
+        height: 90px;
+    }
+
+    .ngAcc_membershipCircle svg {
+
+        font-size: 40px;
+    }
+
+
+    /* ======================================================
+       BOTTOM CTA
+    ====================================================== */
+
+    .ngAcc_accountBottomCard {
+
+        padding: 21px 15px;
+
+        border-radius: 18px;
+
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 17px;
+    }
+
+    .ngAcc_accountBottomCard h2 {
+
+        font-size: 24px;
+
+        line-height: 1.15;
+
+        margin-bottom: 9px;
+    }
+
+    .ngAcc_accountBottomCard p {
+
+        font-size: 10px;
+
+        line-height: 1.6;
+    }
+
+    .ngAcc_shopNowBtn {
+
+        width: 100%;
+
+        height: 47px;
+
+        justify-content: center;
+
+        border-radius: 12px;
+
+        font-size: 11px;
+    }
+
+}
+
+
+/* ==========================================================
+   VERY SMALL PHONES
+   320px - 360px
+========================================================== */
+
+@media (max-width: 360px) {
+
+    .ngAcc_page {
+
+        padding: 9px 9px 35px;
+    }
+
+    .ngAcc_wrapper {
+
+        gap: 12px;
+    }
+
+
+    /* SIDEBAR */
+
+    .ngAcc_sidebar {
+
+        padding: 14px;
+
+        border-radius: 17px;
+    }
+
+    .ngAcc_avatar {
+
+        width: 48px;
+
+        height: 48px;
+    }
+
+    .ngAcc_profileCard {
+
+        gap: 9px;
+
+        margin-bottom: 14px;
+
+        padding-bottom: 14px;
+    }
+
+    .ngAcc_profileCard h2 {
+
+        font-size: 16px;
+    }
+
+    .ngAcc_profileCard p {
+
+        font-size: 8px;
+    }
+
+    .ngAcc_menu {
+
+        gap: 5px;
+    }
+
+    .ngAcc_menuItem {
+
+        padding: 9px 7px;
+
+        border-radius: 10px;
+    }
+
+    .ngAcc_menuItem svg {
+
+        font-size: 15px;
+    }
+
+    .ngAcc_menuItem span {
+
+        font-size: 8.5px;
+    }
+
+    .ngAcc_menuItem strong {
+
+        font-size: 8px;
+    }
+
+    .ngAcc_logoutBtn {
+
+        height: 40px;
+
+        font-size: 10px;
+
+        margin-top: 12px;
+    }
+
+
+    /* HERO */
+
+    .ngAcc_hero {
+
+        padding: 19px 15px;
+
+        border-radius: 17px;
+    }
+
+    .ngAcc_hero h1 {
+
+        font-size: 24px;
+    }
+
+    .ngAcc_hero p {
+
+        font-size: 9px;
+    }
+
+
+    /* STATS */
+
+    .ngAcc_statCard {
+
+        padding: 13px;
+
+        border-radius: 14px;
+    }
+
+    .ngAcc_statCard span {
+
+        font-size: 8px;
+    }
+
+    .ngAcc_statCard h2 {
+
+        font-size: 23px;
+    }
+
+    .ngAcc_statCard p {
+
+        font-size: 7px;
+    }
+
+
+    /* SECTION HEADERS */
+
+    .ngAcc_sectionHeader h2 {
+
+        font-size: 19px;
+    }
+
+    .ngAcc_viewAllBtn {
+
+        font-size: 8px;
+    }
+
+
+    /* ORDERS */
+
+    .ngAcc_recentOrderCard {
+
+        padding: 9px;
+
+        border-radius: 12px;
+    }
+
+    .ngAcc_recentOrderIcon {
+
+        width: 36px;
+
+        height: 36px;
+
+        border-radius: 9px;
+    }
+
+    .ngAcc_recentOrderIcon svg {
+
+        font-size: 17px;
+    }
+
+    .ngAcc_recentOrderLeft {
+
+        gap: 7px;
+    }
+
+    .ngAcc_recentOrderLeft h3 {
+
+        font-size: 10px;
+    }
+
+    .ngAcc_recentOrderLeft p {
+
+        font-size: 7px;
+    }
+
+    .ngAcc_status {
+
+        padding: 5px 6px;
+
+        font-size: 6.5px;
+    }
+
+
+    /* PRODUCTS */
+
+    .ngAcc_recommendedGrid {
+
+        gap: 6px;
+    }
+
+    .ngAcc_recommendedCard img {
+
+        height: 105px;
+    }
+
+    .ngAcc_recommendedContent {
+
+        padding: 8px;
+    }
+
+    .ngAcc_organicTag {
+
+        font-size: 6px;
+
+        padding: 3px 5px;
+    }
+
+    .ngAcc_recommendedContent h3 {
+
+        font-size: 11px;
+
+        min-height: 28px;
+    }
+
+    .ngAcc_recommendedBottom h2 {
+
+        font-size: 15px;
+    }
+
+    .ngAcc_recommendedBottom button {
+
+        width: 44px;
+
+        height: 27px;
+
+        font-size: 8px;
+    }
+
+
+    /* QUICK ACTIONS */
+
+    .ngAcc_quickActionGrid {
+
+        gap: 4px;
+    }
+
+    .ngAcc_quickCard {
+
+        padding: 11px 4px;
+
+        border-radius: 11px;
+    }
+
+    .ngAcc_quickCard svg {
+
+        font-size: 19px;
+
+        margin-bottom: 6px;
+    }
+
+    .ngAcc_quickCard h4 {
+
+        font-size: 10px;
+    }
+
+    .ngAcc_quickCard p {
+
+        font-size: 6px;
+    }
+
+
+    /* INSIGHTS */
+
+    .ngAcc_insightGrid {
+
+        gap: 4px;
+    }
+
+    .ngAcc_insightCard {
+
+        padding: 10px 5px;
+
+        border-radius: 11px;
+    }
+
+    .ngAcc_insightCard svg {
+
+        font-size: 18px;
+
+        margin-bottom: 7px;
+    }
+
+    .ngAcc_insightCard h3 {
+
+        font-size: 9px;
+    }
+
+    .ngAcc_insightCard strong {
+
+        font-size: 16px;
+    }
+
+    .ngAcc_insightCard p {
+
+        font-size: 6px;
+    }
+
+
+    /* MEMBERSHIP */
+
+    .ngAcc_membershipCard {
+
+        padding: 19px 12px;
+
+        border-radius: 16px;
+    }
+
+    .ngAcc_membershipLeft h2 {
+
+        font-size: 21px;
+    }
+
+    .ngAcc_membershipLeft p {
+
+        font-size: 8px;
+    }
+
+    .ngAcc_membershipCircle {
+
+        width: 75px;
+
+        height: 75px;
+    }
+
+    .ngAcc_membershipCircle svg {
+
+        font-size: 32px;
+    }
+
+
+    /* CTA */
+
+    .ngAcc_accountBottomCard {
+
+        padding: 18px 12px;
+
+        border-radius: 16px;
+    }
+
+    .ngAcc_accountBottomCard h2 {
+
+        font-size: 21px;
+    }
+
+    .ngAcc_accountBottomCard p {
+
+        font-size: 8px;
+    }
+
+    .ngAcc_shopNowBtn {
+
+        height: 43px;
+
+        font-size: 9px;
+    }
+
+}
+
+
+/* ==========================================================
+   EXTRA SMALL
+   BELOW 320px
+========================================================== */
+
+@media (max-width: 319px) {
+
+    .ngAcc_page {
+
+        padding: 7px;
+    }
+
+    .ngAcc_sidebar {
+
+        padding: 11px;
+    }
+
+    .ngAcc_avatar {
+
+        width: 43px;
+
+        height: 43px;
+    }
+
+    .ngAcc_profileCard h2 {
+
+        font-size: 14px;
+    }
+
+    .ngAcc_profileCard p {
+
+        font-size: 7px;
+    }
+
+    .ngAcc_menuItem {
+
+        padding: 8px 5px;
+    }
+
+    .ngAcc_menuItem span {
+
+        font-size: 7px;
+    }
+
+    .ngAcc_menuItem strong {
+
+        font-size: 7px;
+    }
+
+    .ngAcc_hero {
+
+        padding: 16px 12px;
+    }
+
+    .ngAcc_hero h1 {
+
+        font-size: 21px;
+    }
+
+    .ngAcc_hero p {
+
+        font-size: 8px;
+    }
+
+    .ngAcc_statCard {
+
+        padding: 11px;
+    }
+
+    .ngAcc_statCard h2 {
+
+        font-size: 20px;
+    }
+
+    .ngAcc_recentOrderLeft h3 {
+
+        font-size: 9px;
+    }
+
+    .ngAcc_recentOrderLeft p {
+
+        font-size: 6px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .ngAcc_heroTitle {
+        gap: 8px;
+    }
+
+    .ngAcc_helloIcon {
+        font-size: 26px;
+        transform: translateY(1px);
+    }
+
+}
+@media (max-width: 480px) {
+
+    .ngAcc_helloIcon {
+        font-size: 23px;
+    }
 
 }

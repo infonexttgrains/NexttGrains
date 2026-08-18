@@ -76,3 +76,874 @@ font-size:15px;
 .ngWishlist_page .shop-product-grid{
     grid-template-columns:repeat(4,1fr);
 }
+
+/* =========================================================
+   NEXTTGRAINS WISHLIST
+   FINAL RESPONSIVE DESIGN
+   Desktop/Laptop remains unchanged
+========================================================= */
+
+
+/* =========================================================
+   LARGE TABLET / SMALL LAPTOP
+   1025px - 1200px
+========================================================= */
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+
+    .ngWishlist_page {
+        padding: 20px 28px 70px;
+    }
+
+    .ngWishlist_container {
+        width: 94%;
+        max-width: 1450px;
+    }
+
+    .ngWishlist_page .shop-product-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 24px;
+    }
+
+    .ngWishlist_heading h1 {
+        font-size: 36px;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+   769px - 1024px
+========================================================= */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    .ngWishlist_page {
+        padding: 20px 24px 70px;
+    }
+
+    .ngWishlist_container {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .ngWishlist_topBar {
+        margin-bottom: 22px;
+    }
+
+    .ngWishlist_heading {
+        margin-bottom: 26px;
+    }
+
+    .ngWishlist_heading h1 {
+        font-size: 34px;
+    }
+
+    .ngWishlist_heading p {
+        font-size: 14px;
+    }
+
+    .ngWishlist_page .shop-product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   0px - 768px
+========================================================= */
+
+@media (max-width: 768px) {
+
+    /* ---------- PAGE ---------- */
+
+    .ngWishlist_page {
+        width: 100%;
+        min-height: 100vh;
+        padding: 16px 14px 60px;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+
+    .ngWishlist_container {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+
+
+    /* ---------- TOP BAR ---------- */
+
+    .ngWishlist_topBar {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .ngWishlist_backBtn {
+        min-height: 42px;
+        padding: 10px 16px;
+        gap: 7px;
+        border-radius: 10px;
+        font-size: 14px;
+        box-sizing: border-box;
+    }
+
+
+    /* ---------- HEADING ---------- */
+
+    .ngWishlist_heading {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-bottom: 22px;
+    }
+
+    .ngWishlist_heading h1 {
+        font-size: 32px;
+        line-height: 1.15;
+        margin: 0;
+    }
+
+    .ngWishlist_heading p {
+        margin-top: 6px;
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+
+    /* =====================================================
+       PRODUCT GRID
+    ===================================================== */
+
+    .ngWishlist_page .shop-products-scroll {
+        width: 100%;
+        max-width: 100%;
+        overflow: visible;
+        box-sizing: border-box;
+    }
+
+    .ngWishlist_page .shop-product-grid {
+        width: 100%;
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+        box-sizing: border-box;
+    }
+
+
+    /* =====================================================
+       PRODUCT CARD
+    ===================================================== */
+
+    .ngWishlist_page .shop-product-card {
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+
+    /* =====================================================
+       PRODUCT IMAGE
+    ===================================================== */
+
+    .ngWishlist_page .shop-product-image {
+        width: 100%;
+        min-width: 0;
+        aspect-ratio: 1 / 1;
+        height: auto;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+
+    .ngWishlist_page .shop-product-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+
+    /* ---------- PRODUCT BADGES ---------- */
+
+    .ngWishlist_page .shop-discount,
+    .ngWishlist_page .shop-organic {
+        font-size: 9px;
+        line-height: 1;
+        padding: 6px 7px;
+        white-space: nowrap;
+    }
+
+
+    /* ---------- WISHLIST HEART ---------- */
+
+    .ngWishlist_page .shop-wishlist {
+        width: 34px;
+        height: 34px;
+        min-width: 34px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .ngWishlist_page .shop-wishlist svg {
+        width: 17px;
+        height: 17px;
+    }
+
+
+    /* =====================================================
+       PRODUCT CONTENT
+    ===================================================== */
+
+    .ngWishlist_page .shop-product-content {
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+        padding: 12px;
+    }
+
+
+    /* ---------- META ---------- */
+
+    .ngWishlist_page .shop-product-meta {
+        width: 100%;
+        min-width: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 7px;
+    }
+
+    .ngWishlist_page .shop-rating,
+    .ngWishlist_page .shop-delivery {
+        font-size: 11px;
+        white-space: nowrap;
+    }
+
+
+    /* ---------- PRODUCT TITLE ---------- */
+
+    .ngWishlist_page .shop-product-content h4 {
+        font-size: 15px;
+        line-height: 20px;
+        margin: 8px 0 5px;
+
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+
+
+    /* ---------- DESCRIPTION ---------- */
+
+    .ngWishlist_page .shop-product-desc {
+        font-size: 11px;
+        line-height: 17px;
+
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+
+    .ngWishlist_page .shop-product-qty {
+        white-space: nowrap;
+    }
+
+
+    /* =====================================================
+       PRODUCT FOOTER
+    ===================================================== */
+
+    .ngWishlist_page .shop-product-footer {
+        width: 100%;
+        min-width: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+        box-sizing: border-box;
+    }
+
+
+    /* ---------- PRICE ---------- */
+
+    .ngWishlist_page .shop-product-footer > div {
+        min-width: 0;
+        display: flex;
+        align-items: baseline;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .ngWishlist_page .shop-product-footer strong {
+        font-size: 16px;
+    }
+
+    .ngWishlist_page .shop-product-footer span {
+        font-size: 11px;
+    }
+
+
+    /* ---------- ADD BUTTON ---------- */
+
+    .ngWishlist_page .shop-add-btn {
+        min-width: 70px;
+        height: 36px;
+        padding: 0 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        flex-shrink: 0;
+        font-size: 11px;
+        box-sizing: border-box;
+    }
+
+    .ngWishlist_page .shop-add-btn svg {
+        width: 15px;
+        height: 15px;
+    }
+
+
+    /* ---------- NO PRODUCTS ---------- */
+
+    .ngWishlist_page .shopNoProduct {
+        grid-column: 1 / -1;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+}
+
+
+/* =========================================================
+   LARGE MOBILE
+   481px - 600px
+========================================================= */
+
+@media (min-width: 481px) and (max-width: 600px) {
+
+    .ngWishlist_page {
+        padding: 16px 16px 60px;
+    }
+
+    .ngWishlist_page .shop-product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 17px;
+    }
+
+    .ngWishlist_page .shop-product-content {
+        padding: 13px;
+    }
+
+    .ngWishlist_page .shop-product-content h4 {
+        font-size: 15px;
+    }
+
+    .ngWishlist_page .shop-product-desc {
+        font-size: 11.5px;
+    }
+
+    .ngWishlist_page .shop-add-btn {
+        min-width: 76px;
+    }
+
+}
+
+
+/* =========================================================
+   NORMAL PHONE
+   361px - 480px
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .ngWishlist_page {
+        padding: 14px 12px 55px;
+    }
+
+
+    /* ---------- TOP ---------- */
+
+    .ngWishlist_topBar {
+        margin-bottom: 17px;
+    }
+
+    .ngWishlist_backBtn {
+        min-height: 40px;
+        padding: 9px 13px;
+        font-size: 13px;
+        border-radius: 9px;
+    }
+
+
+    /* ---------- HEADING ---------- */
+
+    .ngWishlist_heading {
+        margin-bottom: 18px;
+    }
+
+    .ngWishlist_heading h1 {
+        font-size: 27px;
+        line-height: 32px;
+    }
+
+    .ngWishlist_heading p {
+        margin-top: 4px;
+        font-size: 12px;
+        line-height: 17px;
+    }
+
+
+    /* ---------- GRID ---------- */
+
+    .ngWishlist_page .shop-product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+
+    /* ---------- IMAGE ---------- */
+
+    .ngWishlist_page .shop-product-image {
+        aspect-ratio: 1 / 1;
+    }
+
+
+    .ngWishlist_page .shop-discount,
+    .ngWishlist_page .shop-organic {
+        font-size: 8px;
+        padding: 5px 6px;
+    }
+
+
+    .ngWishlist_page .shop-wishlist {
+        width: 31px;
+        height: 31px;
+        min-width: 31px;
+    }
+
+    .ngWishlist_page .shop-wishlist svg {
+        width: 15px;
+        height: 15px;
+    }
+
+
+    /* ---------- CONTENT ---------- */
+
+    .ngWishlist_page .shop-product-content {
+        padding: 9px;
+    }
+
+
+    .ngWishlist_page .shop-product-meta {
+        gap: 4px;
+    }
+
+    .ngWishlist_page .shop-rating,
+    .ngWishlist_page .shop-delivery {
+        font-size: 9px;
+    }
+
+    .ngWishlist_page .shop-rating svg {
+        width: 12px;
+        height: 12px;
+    }
+
+    .ngWishlist_page .shop-delivery svg {
+        width: 11px;
+        height: 11px;
+    }
+
+
+    /* ---------- TITLE ---------- */
+
+    .ngWishlist_page .shop-product-content h4 {
+        font-size: 13px;
+        line-height: 17px;
+        margin: 6px 0 4px;
+    }
+
+
+    /* ---------- DESCRIPTION ---------- */
+
+    .ngWishlist_page .shop-product-desc {
+        font-size: 9.5px;
+        line-height: 14px;
+        margin-bottom: 7px;
+    }
+
+
+    /* ---------- FOOTER ---------- */
+
+    .ngWishlist_page .shop-product-footer {
+        gap: 5px;
+    }
+
+    .ngWishlist_page .shop-product-footer > div {
+        gap: 3px;
+    }
+
+    .ngWishlist_page .shop-product-footer strong {
+        font-size: 14px;
+    }
+
+    .ngWishlist_page .shop-product-footer span {
+        font-size: 9px;
+    }
+
+
+    /* ---------- ADD ---------- */
+
+    .ngWishlist_page .shop-add-btn {
+        min-width: 58px;
+        height: 32px;
+        padding: 0 7px;
+        gap: 3px;
+        font-size: 9px;
+        border-radius: 7px;
+    }
+
+    .ngWishlist_page .shop-add-btn svg {
+        width: 13px;
+        height: 13px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL PHONE
+   320px - 360px
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .ngWishlist_page {
+        padding: 12px 9px 50px;
+    }
+
+
+    .ngWishlist_topBar {
+        margin-bottom: 15px;
+    }
+
+    .ngWishlist_backBtn {
+        min-height: 37px;
+        padding: 8px 11px;
+        gap: 5px;
+        font-size: 12px;
+    }
+
+
+    .ngWishlist_heading {
+        margin-bottom: 15px;
+    }
+
+    .ngWishlist_heading h1 {
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+    .ngWishlist_heading p {
+        font-size: 11px;
+        line-height: 15px;
+    }
+
+
+    /* ---------- GRID ---------- */
+
+    .ngWishlist_page .shop-product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 9px;
+    }
+
+
+    /* ---------- IMAGE ---------- */
+
+    .ngWishlist_page .shop-product-image {
+        aspect-ratio: 1 / 1;
+    }
+
+
+    .ngWishlist_page .shop-discount,
+    .ngWishlist_page .shop-organic {
+        font-size: 7px;
+        padding: 4px 5px;
+    }
+
+
+    .ngWishlist_page .shop-wishlist {
+        width: 28px;
+        height: 28px;
+        min-width: 28px;
+    }
+
+    .ngWishlist_page .shop-wishlist svg {
+        width: 13px;
+        height: 13px;
+    }
+
+
+    /* ---------- CONTENT ---------- */
+
+    .ngWishlist_page .shop-product-content {
+        padding: 7px;
+    }
+
+
+    .ngWishlist_page .shop-rating,
+    .ngWishlist_page .shop-delivery {
+        font-size: 8px;
+    }
+
+
+    .ngWishlist_page .shop-product-content h4 {
+        font-size: 12px;
+        line-height: 15px;
+        margin: 5px 0 3px;
+    }
+
+
+    .ngWishlist_page .shop-product-desc {
+        font-size: 8.5px;
+        line-height: 12px;
+    }
+
+
+    /* ---------- PRICE ---------- */
+
+    .ngWishlist_page .shop-product-footer strong {
+        font-size: 13px;
+    }
+
+    .ngWishlist_page .shop-product-footer span {
+        font-size: 8px;
+    }
+
+
+    /* ---------- BUTTON ---------- */
+
+    .ngWishlist_page .shop-add-btn {
+        min-width: 50px;
+        height: 29px;
+        padding: 0 5px;
+        font-size: 8px;
+        gap: 2px;
+    }
+
+    .ngWishlist_page .shop-add-btn svg {
+        width: 11px;
+        height: 11px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL DEVICES
+   BELOW 320px
+========================================================= */
+
+@media (max-width: 319px) {
+
+    .ngWishlist_page {
+        padding-left: 7px;
+        padding-right: 7px;
+    }
+
+    .ngWishlist_page .shop-product-grid {
+        gap: 7px;
+    }
+
+    .ngWishlist_page .shop-product-content {
+        padding: 6px;
+    }
+
+    .ngWishlist_heading h1 {
+        font-size: 22px;
+    }
+
+    .ngWishlist_page .shop-product-content h4 {
+        font-size: 11px;
+        line-height: 14px;
+    }
+
+    .ngWishlist_page .shop-product-desc {
+        font-size: 8px;
+        line-height: 11px;
+    }
+
+    .ngWishlist_page .shop-product-footer strong {
+        font-size: 12px;
+    }
+
+    .ngWishlist_page .shop-product-footer span {
+        display: none;
+    }
+
+    .ngWishlist_page .shop-add-btn {
+        min-width: 45px;
+        height: 27px;
+        font-size: 7px;
+        padding: 0 4px;
+    }
+
+}
+
+
+/* =========================================================
+   EMPTY WISHLIST PAGE
+========================================================= */
+
+.ngWishlist_emptyPage {
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+
+/* Tablet */
+
+@media (max-width: 768px) {
+
+    .ngWishlist_emptyPage {
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .ngWishlist_emptyPage .ngWishlist_emptyIcon {
+        font-size: 70px;
+    }
+
+    .ngWishlist_emptyPage h2 {
+        font-size: 28px;
+        line-height: 34px;
+    }
+
+    .ngWishlist_emptyPage p {
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    .ngWishlist_emptyPage .ngWishlist_shopBtn {
+        min-height: 48px;
+        padding: 0 24px;
+    }
+
+}
+
+
+/* Phone */
+
+@media (max-width: 480px) {
+
+    .ngWishlist_emptyPage {
+        padding: 35px 16px;
+    }
+
+    .ngWishlist_emptyPage .ngWishlist_emptyIcon {
+        font-size: 60px;
+    }
+
+    .ngWishlist_emptyPage h2 {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    .ngWishlist_emptyPage p {
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    .ngWishlist_emptyPage .ngWishlist_shopBtn {
+        width: 100%;
+        max-width: 300px;
+        min-height: 48px;
+    }
+
+}
+
+
+/* =========================================================
+   LOADING STATE
+========================================================= */
+
+.ngWishlist_loading {
+    width: 100%;
+    min-height: 60vh;
+    box-sizing: border-box;
+}
+
+
+/* Mobile */
+
+@media (max-width: 480px) {
+
+    .ngWishlist_loading {
+        min-height: 60vh;
+        padding: 30px 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 14px;
+    }
+
+}
+
+
+/* =========================================================
+   TOUCH DEVICES
+========================================================= */
+
+@media (hover: none) and (pointer: coarse) {
+
+    .ngWishlist_backBtn,
+    .ngWishlist_shopBtn,
+    .shop-wishlist,
+    .shop-add-btn {
+        -webkit-tap-highlight-color: transparent;
+        touch-action: manipulation;
+    }
+
+}
+
+
+/* =========================================================
+   PREVENT HORIZONTAL OVERFLOW
+========================================================= */
+
+.ngWishlist_page,
+.ngWishlist_container,
+.ngWishlist_page .shop-products-scroll,
+.ngWishlist_page .shop-product-grid,
+.ngWishlist_page .shop-product-card {
+    box-sizing: border-box;
+}
+
+.ngWishlist_page {
+    overflow-x: hidden;
+}
+
+.ngWishlist_page img {
+    max-width: 100%;
+}
